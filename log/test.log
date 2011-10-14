@@ -1,0 +1,494 @@
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (188.3ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 13:56:41 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", nil], ["name", "Some User"], ["salt", nil], ["updated_at", Fri, 14 Oct 2011 13:56:41 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (36.0ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 18:38:57 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", nil], ["name", "Some User"], ["salt", nil], ["updated_at", Fri, 14 Oct 2011 18:38:57 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('USER@FOOBAR.COM') LIMIT 1
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 18:38:57 UTC +00:00], ["email", "USER@FOOBAR.COM"], ["encrypted_password", nil], ["name", "Some User"], ["salt", nil], ["updated_at", Fri, 14 Oct 2011 18:38:57 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (2.5ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SOMEUSERNAME') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 18:38:57 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", nil], ["name", "Some User"], ["salt", nil], ["updated_at", Fri, 14 Oct 2011 18:38:57 UTC +00:00], ["username", "SOMEUSERNAME"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (33.5ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 18:43:44 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", nil], ["name", "Some User"], ["salt", nil], ["updated_at", Fri, 14 Oct 2011 18:43:44 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (5.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1[0m
+  [1m[35m (4.5ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('USER@FOOBAR.COM') LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 18:43:45 UTC +00:00], ["email", "USER@FOOBAR.COM"], ["encrypted_password", nil], ["name", "Some User"], ["salt", nil], ["updated_at", Fri, 14 Oct 2011 18:43:45 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SOMEUSERNAME') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (9.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 18:43:45 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", nil], ["name", "Some User"], ["salt", nil], ["updated_at", Fri, 14 Oct 2011 18:43:45 UTC +00:00], ["username", "SOMEUSERNAME"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (1.9ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (5.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 18:43:45 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", nil], ["name", "Some User"], ["salt", nil], ["updated_at", Fri, 14 Oct 2011 18:43:45 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (18.1ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 18:53:30 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "20057ae5d4de84fa8d65756bec4e1e4369c951cb33d72db3c1f4aa882da2efdd"], ["name", "Some User"], ["salt", "d407b9cf9aa7a52e3850cdc8143abd23568e17ea8cffbf3c8003762c2c469337"], ["updated_at", Fri, 14 Oct 2011 18:53:30 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('USER@FOOBAR.COM') LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 18:53:31 UTC +00:00], ["email", "USER@FOOBAR.COM"], ["encrypted_password", "b8f3b0b290b68fcfd320d3c1443e51209f670b51451f0b5c9232f116be1b0729"], ["name", "Some User"], ["salt", "3be614708fd4c39577e77d33265c823c549152dfef401137dd8036019fde3735"], ["updated_at", Fri, 14 Oct 2011 18:53:31 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SOMEUSERNAME') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 18:53:31 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "b8f3b0b290b68fcfd320d3c1443e51209f670b51451f0b5c9232f116be1b0729"], ["name", "Some User"], ["salt", "3be614708fd4c39577e77d33265c823c549152dfef401137dd8036019fde3735"], ["updated_at", Fri, 14 Oct 2011 18:53:31 UTC +00:00], ["username", "SOMEUSERNAME"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (2.5ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (6.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 18:53:31 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "b8f3b0b290b68fcfd320d3c1443e51209f670b51451f0b5c9232f116be1b0729"], ["name", "Some User"], ["salt", "3be614708fd4c39577e77d33265c823c549152dfef401137dd8036019fde3735"], ["updated_at", Fri, 14 Oct 2011 18:53:31 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 18:53:31 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "b8f3b0b290b68fcfd320d3c1443e51209f670b51451f0b5c9232f116be1b0729"], ["name", "Some User"], ["salt", "3be614708fd4c39577e77d33265c823c549152dfef401137dd8036019fde3735"], ["updated_at", Fri, 14 Oct 2011 18:53:31 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 18:53:31 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "b8f3b0b290b68fcfd320d3c1443e51209f670b51451f0b5c9232f116be1b0729"], ["name", "Some User"], ["salt", "3be614708fd4c39577e77d33265c823c549152dfef401137dd8036019fde3735"], ["updated_at", Fri, 14 Oct 2011 18:53:31 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 18:53:31 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "b8f3b0b290b68fcfd320d3c1443e51209f670b51451f0b5c9232f116be1b0729"], ["name", "Some User"], ["salt", "3be614708fd4c39577e77d33265c823c549152dfef401137dd8036019fde3735"], ["updated_at", Fri, 14 Oct 2011 18:53:31 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (17.0ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:18:58 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "e209803c3349f48a51cf937cef63091aadd84b04c4720163013ee0a8340961e9"], ["name", "Some User"], ["salt", "a7e38b5292ec3fcc6a566370a5da4d4a111c7dc1629aae1c6d2e5d8f29440252"], ["updated_at", Fri, 14 Oct 2011 19:18:58 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('USER@FOOBAR.COM') LIMIT 1
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["email", "USER@FOOBAR.COM"], ["encrypted_password", "5c5db44364b3e3e7a0321e5e495e114c7a7d866d4ec3f5698ffa12642b818e35"], ["name", "Some User"], ["salt", "5dc8a16465dea35f3dfcb39024bbd54abed9f1c383d4bc53ff8f320e9d7aaac7"], ["updated_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SOMEUSERNAME') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (3.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "5c5db44364b3e3e7a0321e5e495e114c7a7d866d4ec3f5698ffa12642b818e35"], ["name", "Some User"], ["salt", "5dc8a16465dea35f3dfcb39024bbd54abed9f1c383d4bc53ff8f320e9d7aaac7"], ["updated_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["username", "SOMEUSERNAME"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "5c5db44364b3e3e7a0321e5e495e114c7a7d866d4ec3f5698ffa12642b818e35"], ["name", "Some User"], ["salt", "5dc8a16465dea35f3dfcb39024bbd54abed9f1c383d4bc53ff8f320e9d7aaac7"], ["updated_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "5c5db44364b3e3e7a0321e5e495e114c7a7d866d4ec3f5698ffa12642b818e35"], ["name", "Some User"], ["salt", "5dc8a16465dea35f3dfcb39024bbd54abed9f1c383d4bc53ff8f320e9d7aaac7"], ["updated_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "5c5db44364b3e3e7a0321e5e495e114c7a7d866d4ec3f5698ffa12642b818e35"], ["name", "Some User"], ["salt", "5dc8a16465dea35f3dfcb39024bbd54abed9f1c383d4bc53ff8f320e9d7aaac7"], ["updated_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "5c5db44364b3e3e7a0321e5e495e114c7a7d866d4ec3f5698ffa12642b818e35"], ["name", "Some User"], ["salt", "5dc8a16465dea35f3dfcb39024bbd54abed9f1c383d4bc53ff8f320e9d7aaac7"], ["updated_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "5c5db44364b3e3e7a0321e5e495e114c7a7d866d4ec3f5698ffa12642b818e35"], ["name", "Some User"], ["salt", "5dc8a16465dea35f3dfcb39024bbd54abed9f1c383d4bc53ff8f320e9d7aaac7"], ["updated_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@foobar.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "5c5db44364b3e3e7a0321e5e495e114c7a7d866d4ec3f5698ffa12642b818e35"], ["name", "Some User"], ["salt", "5dc8a16465dea35f3dfcb39024bbd54abed9f1c383d4bc53ff8f320e9d7aaac7"], ["updated_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'bar@foo.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "5c5db44364b3e3e7a0321e5e495e114c7a7d866d4ec3f5698ffa12642b818e35"], ["name", "Some User"], ["salt", "5dc8a16465dea35f3dfcb39024bbd54abed9f1c383d4bc53ff8f320e9d7aaac7"], ["updated_at", Fri, 14 Oct 2011 19:18:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@foobar.com' LIMIT 1[0m
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (4.0ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (39.6ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "d049c3a33f2ea6f97305325d578aa60f1ae6183a3a886caf678db9ff5db8ddf0"], ["name", "Some User"], ["salt", "491c6305fbcb171b628b844b0a6ace582b30c16a33905d276147f3d10bb982da"], ["updated_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('') LIMIT 1
+  [1m[36m (8.4ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('USER@FOOBAR.COM') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["email", "USER@FOOBAR.COM"], ["encrypted_password", "d049c3a33f2ea6f97305325d578aa60f1ae6183a3a886caf678db9ff5db8ddf0"], ["name", "Some User"], ["salt", "491c6305fbcb171b628b844b0a6ace582b30c16a33905d276147f3d10bb982da"], ["updated_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SOMEUSERNAME') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "d049c3a33f2ea6f97305325d578aa60f1ae6183a3a886caf678db9ff5db8ddf0"], ["name", "Some User"], ["salt", "491c6305fbcb171b628b844b0a6ace582b30c16a33905d276147f3d10bb982da"], ["updated_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["username", "SOMEUSERNAME"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (2.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "d049c3a33f2ea6f97305325d578aa60f1ae6183a3a886caf678db9ff5db8ddf0"], ["name", "Some User"], ["salt", "491c6305fbcb171b628b844b0a6ace582b30c16a33905d276147f3d10bb982da"], ["updated_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "d049c3a33f2ea6f97305325d578aa60f1ae6183a3a886caf678db9ff5db8ddf0"], ["name", "Some User"], ["salt", "491c6305fbcb171b628b844b0a6ace582b30c16a33905d276147f3d10bb982da"], ["updated_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "d049c3a33f2ea6f97305325d578aa60f1ae6183a3a886caf678db9ff5db8ddf0"], ["name", "Some User"], ["salt", "491c6305fbcb171b628b844b0a6ace582b30c16a33905d276147f3d10bb982da"], ["updated_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "d049c3a33f2ea6f97305325d578aa60f1ae6183a3a886caf678db9ff5db8ddf0"], ["name", "Some User"], ["salt", "491c6305fbcb171b628b844b0a6ace582b30c16a33905d276147f3d10bb982da"], ["updated_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "d049c3a33f2ea6f97305325d578aa60f1ae6183a3a886caf678db9ff5db8ddf0"], ["name", "Some User"], ["salt", "491c6305fbcb171b628b844b0a6ace582b30c16a33905d276147f3d10bb982da"], ["updated_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@foobar.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (1.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "d049c3a33f2ea6f97305325d578aa60f1ae6183a3a886caf678db9ff5db8ddf0"], ["name", "Some User"], ["salt", "491c6305fbcb171b628b844b0a6ace582b30c16a33905d276147f3d10bb982da"], ["updated_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'bar@foo.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (7.5ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "d049c3a33f2ea6f97305325d578aa60f1ae6183a3a886caf678db9ff5db8ddf0"], ["name", "Some User"], ["salt", "491c6305fbcb171b628b844b0a6ace582b30c16a33905d276147f3d10bb982da"], ["updated_at", Fri, 14 Oct 2011 19:25:34 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@foobar.com' LIMIT 1[0m
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (18.9ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "036ee6590f3afb180d955e828c80de9e9b87834711208e82c26811f20c28d828"], ["name", "Some User"], ["salt", "0f45d68e2b1d801c4d89c97582203e7d7542b044df033c9314b301203f33dbfc"], ["updated_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('USER@FOOBAR.COM') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["email", "USER@FOOBAR.COM"], ["encrypted_password", "036ee6590f3afb180d955e828c80de9e9b87834711208e82c26811f20c28d828"], ["name", "Some User"], ["salt", "0f45d68e2b1d801c4d89c97582203e7d7542b044df033c9314b301203f33dbfc"], ["updated_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SOMEUSERNAME') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "036ee6590f3afb180d955e828c80de9e9b87834711208e82c26811f20c28d828"], ["name", "Some User"], ["salt", "0f45d68e2b1d801c4d89c97582203e7d7542b044df033c9314b301203f33dbfc"], ["updated_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["username", "SOMEUSERNAME"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (1.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "036ee6590f3afb180d955e828c80de9e9b87834711208e82c26811f20c28d828"], ["name", "Some User"], ["salt", "0f45d68e2b1d801c4d89c97582203e7d7542b044df033c9314b301203f33dbfc"], ["updated_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "036ee6590f3afb180d955e828c80de9e9b87834711208e82c26811f20c28d828"], ["name", "Some User"], ["salt", "0f45d68e2b1d801c4d89c97582203e7d7542b044df033c9314b301203f33dbfc"], ["updated_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "036ee6590f3afb180d955e828c80de9e9b87834711208e82c26811f20c28d828"], ["name", "Some User"], ["salt", "0f45d68e2b1d801c4d89c97582203e7d7542b044df033c9314b301203f33dbfc"], ["updated_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (2.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "036ee6590f3afb180d955e828c80de9e9b87834711208e82c26811f20c28d828"], ["name", "Some User"], ["salt", "0f45d68e2b1d801c4d89c97582203e7d7542b044df033c9314b301203f33dbfc"], ["updated_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "036ee6590f3afb180d955e828c80de9e9b87834711208e82c26811f20c28d828"], ["name", "Some User"], ["salt", "0f45d68e2b1d801c4d89c97582203e7d7542b044df033c9314b301203f33dbfc"], ["updated_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@foobar.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "036ee6590f3afb180d955e828c80de9e9b87834711208e82c26811f20c28d828"], ["name", "Some User"], ["salt", "0f45d68e2b1d801c4d89c97582203e7d7542b044df033c9314b301203f33dbfc"], ["updated_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'bar@foo.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "036ee6590f3afb180d955e828c80de9e9b87834711208e82c26811f20c28d828"], ["name", "Some User"], ["salt", "0f45d68e2b1d801c4d89c97582203e7d7542b044df033c9314b301203f33dbfc"], ["updated_at", Fri, 14 Oct 2011 19:39:55 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@foobar.com' LIMIT 1[0m
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (21.5ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "4f64d4960064bae805b23067de496aa839b2061e6633540ca5dc82dab3b51344"], ["name", "Some User"], ["salt", "555418fa75f2f2ff653b7a3f7c2ec636b865bb8a7c21b30473819d4c8b132078"], ["updated_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('USER@FOOBAR.COM') LIMIT 1
+  [1m[36mSQL (7.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["email", "USER@FOOBAR.COM"], ["encrypted_password", "4f64d4960064bae805b23067de496aa839b2061e6633540ca5dc82dab3b51344"], ["name", "Some User"], ["salt", "555418fa75f2f2ff653b7a3f7c2ec636b865bb8a7c21b30473819d4c8b132078"], ["updated_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SOMEUSERNAME') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (8.0ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "4f64d4960064bae805b23067de496aa839b2061e6633540ca5dc82dab3b51344"], ["name", "Some User"], ["salt", "555418fa75f2f2ff653b7a3f7c2ec636b865bb8a7c21b30473819d4c8b132078"], ["updated_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["username", "SOMEUSERNAME"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "4f64d4960064bae805b23067de496aa839b2061e6633540ca5dc82dab3b51344"], ["name", "Some User"], ["salt", "555418fa75f2f2ff653b7a3f7c2ec636b865bb8a7c21b30473819d4c8b132078"], ["updated_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "4f64d4960064bae805b23067de496aa839b2061e6633540ca5dc82dab3b51344"], ["name", "Some User"], ["salt", "555418fa75f2f2ff653b7a3f7c2ec636b865bb8a7c21b30473819d4c8b132078"], ["updated_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "4f64d4960064bae805b23067de496aa839b2061e6633540ca5dc82dab3b51344"], ["name", "Some User"], ["salt", "555418fa75f2f2ff653b7a3f7c2ec636b865bb8a7c21b30473819d4c8b132078"], ["updated_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "4f64d4960064bae805b23067de496aa839b2061e6633540ca5dc82dab3b51344"], ["name", "Some User"], ["salt", "555418fa75f2f2ff653b7a3f7c2ec636b865bb8a7c21b30473819d4c8b132078"], ["updated_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "4f64d4960064bae805b23067de496aa839b2061e6633540ca5dc82dab3b51344"], ["name", "Some User"], ["salt", "555418fa75f2f2ff653b7a3f7c2ec636b865bb8a7c21b30473819d4c8b132078"], ["updated_at", Fri, 14 Oct 2011 19:41:28 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@foobar.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:41:29 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "f65be0e3814d86476c91f88c26dc309f753bfb4840f2a439dc8f168230ab3e6e"], ["name", "Some User"], ["salt", "b42177054dcbbd1cf9363b62c4c7ee8a93085f6cc1d3f4be92509b6398ff652e"], ["updated_at", Fri, 14 Oct 2011 19:41:29 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'bar@foo.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:41:29 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "f65be0e3814d86476c91f88c26dc309f753bfb4840f2a439dc8f168230ab3e6e"], ["name", "Some User"], ["salt", "b42177054dcbbd1cf9363b62c4c7ee8a93085f6cc1d3f4be92509b6398ff652e"], ["updated_at", Fri, 14 Oct 2011 19:41:29 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@foobar.com' LIMIT 1[0m
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (40.0ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "38717c63a692eb2fd2ed72b9ea0ba5c9392539b2fb89735011bf0d65c413e47f"], ["name", "Some User"], ["salt", "7f487d735a7620c7e80a9c91ede9d4a77145c5d4135823ad621d822efef27d1a"], ["updated_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('USER@FOOBAR.COM') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["email", "USER@FOOBAR.COM"], ["encrypted_password", "38717c63a692eb2fd2ed72b9ea0ba5c9392539b2fb89735011bf0d65c413e47f"], ["name", "Some User"], ["salt", "7f487d735a7620c7e80a9c91ede9d4a77145c5d4135823ad621d822efef27d1a"], ["updated_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SOMEUSERNAME') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "38717c63a692eb2fd2ed72b9ea0ba5c9392539b2fb89735011bf0d65c413e47f"], ["name", "Some User"], ["salt", "7f487d735a7620c7e80a9c91ede9d4a77145c5d4135823ad621d822efef27d1a"], ["updated_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["username", "SOMEUSERNAME"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "38717c63a692eb2fd2ed72b9ea0ba5c9392539b2fb89735011bf0d65c413e47f"], ["name", "Some User"], ["salt", "7f487d735a7620c7e80a9c91ede9d4a77145c5d4135823ad621d822efef27d1a"], ["updated_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "38717c63a692eb2fd2ed72b9ea0ba5c9392539b2fb89735011bf0d65c413e47f"], ["name", "Some User"], ["salt", "7f487d735a7620c7e80a9c91ede9d4a77145c5d4135823ad621d822efef27d1a"], ["updated_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "38717c63a692eb2fd2ed72b9ea0ba5c9392539b2fb89735011bf0d65c413e47f"], ["name", "Some User"], ["salt", "7f487d735a7620c7e80a9c91ede9d4a77145c5d4135823ad621d822efef27d1a"], ["updated_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "38717c63a692eb2fd2ed72b9ea0ba5c9392539b2fb89735011bf0d65c413e47f"], ["name", "Some User"], ["salt", "7f487d735a7620c7e80a9c91ede9d4a77145c5d4135823ad621d822efef27d1a"], ["updated_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "38717c63a692eb2fd2ed72b9ea0ba5c9392539b2fb89735011bf0d65c413e47f"], ["name", "Some User"], ["salt", "7f487d735a7620c7e80a9c91ede9d4a77145c5d4135823ad621d822efef27d1a"], ["updated_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@foobar.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (1.8ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "38717c63a692eb2fd2ed72b9ea0ba5c9392539b2fb89735011bf0d65c413e47f"], ["name", "Some User"], ["salt", "7f487d735a7620c7e80a9c91ede9d4a77145c5d4135823ad621d822efef27d1a"], ["updated_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'bar@foo.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE LOWER("users"."username") = LOWER('SomeUserName') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('user@foobar.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["email", "user@foobar.com"], ["encrypted_password", "38717c63a692eb2fd2ed72b9ea0ba5c9392539b2fb89735011bf0d65c413e47f"], ["name", "Some User"], ["salt", "7f487d735a7620c7e80a9c91ede9d4a77145c5d4135823ad621d822efef27d1a"], ["updated_at", Fri, 14 Oct 2011 19:43:59 UTC +00:00], ["username", "SomeUserName"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@foobar.com' LIMIT 1[0m
