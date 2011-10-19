@@ -10,13 +10,13 @@
 
 html
 {
-	width:900px;
+	width:1000px;
 	margin-left:auto;
 	margin-right:auto;
 }
 
  /*****************************************************************************
- * User's Profile (top)		   												  *
+ * User's Profile (top)		   												  * CURRENTLY NOT USED
  *****************************************************************************/
 
 #top_profile
@@ -30,38 +30,45 @@ html
  * Content Buttons (Games, Statistics, Leaderboards, Achievements)		  	  *
  *****************************************************************************/
 
-#profile_button a, #games_button a, #statistics_button a, 
-#leaderboards_button a, #achievements_button a
+div#profile_button, div#games_button, div#statistics_button, 
+div#leaderboards_button, div#achievements_button
 {
 	width:400px;
+	height:50px; 
+}
+
+a.feed
+{
+	width:40px;
 	height:50px;
-	border-style:solid;
-	border-color:#AAA;
+	display:block;
+	background-color:#CCC;
+	float:left;
+	text-indent:-9999px;
+}
+
+a.feed:hover
+{
 	background-color:#BBB;
+}
+
+a.button
+{
 	font-family:Arial, Helvetica, sans-serif;
 	font-weight:bold;
 	font-size:18px;
-	text-indent:20px;
+	width:352px;
+	height:50px;
 	line-height:50px;
 	color:#FFF;
 	display:block;
 	text-decoration:none;
+	float:left;
+	padding-left:8px;
+	background-color:#BBB;
 }
 
-#profile_button a, #games_button a, #statistics_button a,
-#leaderboards_button a, #achievements_button a
-{
-	border-width:1px;
-}
-
-#games_button a, 	   #statistics_button a, 
-#leaderboards_button a, #achievements_button a
-{
-	border-top:0;
-}
-
-#profile_button a:hover, #games_button a:hover, #statistics_button a:hover,
-#leaderboards_button a:hover, #achievements_button a:hover
+a.button:hover
 {
 	background-color:#CCC;
 }
@@ -86,11 +93,20 @@ html
 
 #navigation a.button_open
 {
+	/* Changes button's color when 
+	 * area is expanded (current button) */
 	background-color:#CCC;
 }
 
+#navigation a.feed_open
+{
+	/* Changes feed's color when 
+	 * feed is loaded (current feed) */
+	background-color:#BBB;
+}
+
  /*****************************************************************************
- * Main Content	(Games, Statistics, Leaderboards, Achievements)				  *
+ * Buttons Content	(Games, Statistics, Leaderboards, Achievements)			  *
  *****************************************************************************/
 
 #navigation
@@ -104,6 +120,7 @@ html
 #achievements
 {
 	background-color:#EEE;
+	padding:12px;
 }
 
 #profile
@@ -137,11 +154,49 @@ html
  
 #content_area
 {
-	width:496px;
+	width:598px;
 	height:254px;
-	float:right;
+	float:left;
+}
+
+#profile_content, #games_content, #statistics_content,
+#leaderboards_content, #achievements_content
+{
+	width:430px;
+	height:250px;
+	position:absolute;
+	padding:10px;
 	background-color:#EEE;
-	border:1px solid #AAA;
+}
+
+#profile_content
+{
+	z-index:100;
+	height:100px;
+}
+
+#games_content
+{
+	z-index:200;
+	height:100px;
+}
+
+#statistics_content
+{
+	z-index:300;
+	height:100px;
+}
+
+#leaderboards_content
+{
+	z-index:400;
+	height:100px;
+}
+
+#achievements_content
+{
+	z-index:500;
+	height:370px;
 }
 
 /******************************************************************************
@@ -151,6 +206,7 @@ html
 #bottom_footer
 {
 	width:900px;
+	clear:both;
 }
 
 #bottom_footer p
