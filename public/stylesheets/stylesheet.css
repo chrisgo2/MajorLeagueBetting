@@ -16,24 +16,12 @@ html
 }
 
  /*****************************************************************************
- * User's Profile (top)		   												  * CURRENTLY NOT USED
- *****************************************************************************/
-
-#top_profile
-{
-	width:400px;
-	height:200px;
-	border:1px solid #EEE;
-}
-
- /*****************************************************************************
  * Content Buttons (Games, Statistics, Leaderboards, Achievements)		  	  *
  *****************************************************************************/
 
 div#profile_button, div#games_button, div#statistics_button, 
 div#leaderboards_button, div#achievements_button
 {
-	width:400px;
 	height:50px; 
 }
 
@@ -57,14 +45,12 @@ a.button
 	font-family:Arial, Helvetica, sans-serif;
 	font-weight:bold;
 	font-size:18px;
-	width:352px;
+	width:360px;
 	height:50px;
 	line-height:50px;
 	color:#FFF;
 	display:block;
 	text-decoration:none;
-	float:left;
-	padding-left:8px;
 	background-color:#BBB;
 }
 
@@ -111,7 +97,7 @@ a.button:hover
 
 #navigation
 {
-	width:400px;
+	width:360px;
 	background-color:#EEE;
 	float:left;
 }
@@ -154,16 +140,13 @@ a.button:hover
  
 #content_area
 {
-	width:598px;
-	height:254px;
 	float:left;
 }
 
 #profile_content, #games_content, #statistics_content,
 #leaderboards_content, #achievements_content
 {
-	width:430px;
-	height:250px;
+	width:600px;
 	position:absolute;
 	padding:10px;
 	background-color:#EEE;
