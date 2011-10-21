@@ -16,7 +16,7 @@ html
 }
 
  /*****************************************************************************
- * Content Buttons (Games, Statistics, Leaderboards, Achievements)		  	  *
+ * Expandable buttons (left column)                                           *
  *****************************************************************************/
 
 div#profile_button, div#games_button, div#statistics_button, 
@@ -79,7 +79,7 @@ a.button:hover
 
 #navigation a.button_open
 {
-	/* Changes button's color when 
+	/* Changes active button's color when 
 	 * area is expanded (current button) */
 	background-color:#CCC;
 }
@@ -92,7 +92,7 @@ a.button:hover
 }
 
  /*****************************************************************************
- * Buttons Content	(Games, Statistics, Leaderboards, Achievements)			  *
+ * Expandable buttons content (expanded when button is clicked)               *
  *****************************************************************************/
 
 #navigation
@@ -102,8 +102,7 @@ a.button:hover
 	float:left;
 }
 
-#profile, #games, #statistics, #leaderboards, 
-#achievements
+#profile, #games, #statistics, #leaderboards, #achievements
 {
 	background-color:#EEE;
 	padding:12px;
@@ -135,7 +134,7 @@ a.button:hover
 }
 
 /******************************************************************************
- * Content area (Main feed that expands on right side)						  *
+ * Content feed (right column)                                                *
  *****************************************************************************/
  
 #content_area
