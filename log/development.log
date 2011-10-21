@@ -431,3 +431,69 @@ Migrating to AddEmailUniquenessIndex (20111014172812)
   [1m[35m (4.1ms)[0m  PRAGMA index_list("users")
   [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_username')[0m
   [1m[35m (0.1ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20111014075000)
+Migrating to AddEmailUniquenessIndex (20111014172812)
+Migrating to CreateLeagues (20111014211301)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "leagues" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "short_name" varchar(255), "sport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("leagues")
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "index_leagues_on_name" ON "leagues" ("name")[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111014211301')
+Migrating to CreateTeams (20111014211517)
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "conference" varchar(255), "league_id" integer, "stat_type" varchar(255), "stat_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("teams")
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "index_teams_on_name" ON "teams" ("name")[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111014211517')
+  [1m[36m (0.8ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("leagues")[0m
+  [1m[35m (0.2ms)[0m  PRAGMA index_info('index_leagues_on_name')
+  [1m[36m (6.9ms)[0m  [1mPRAGMA index_list("teams")[0m
+  [1m[35m (0.2ms)[0m  PRAGMA index_info('index_teams_on_name')
+  [1m[36m (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.2ms)[0m  PRAGMA index_info('index_users_on_username')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20111014075000)
+Migrating to AddEmailUniquenessIndex (20111014172812)
+Migrating to CreateLeagues (20111014211301)
+Migrating to CreateTeams (20111014211517)
+Migrating to CreateGames (20111014213227)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "home_team_id" integer, "away_team_id" integer, "game_type" varchar(255), "league_id" integer, "game_stat_id" integer, "start_time" datetime, "end_time" datetime, "location" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111014213227')
+Migrating to CreateBetLinks (20111014214015)
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "bet_links" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bet_type" varchar(255), "bet_id" integer, "wager" integer, "is_win" boolean, "wager_selection" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111014214015')
+Migrating to CreateHead2headBets (20111014215206)
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "head2head_bets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "game_id" integer, "is_spread" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111014215206')
+Migrating to CreateOverunderBets (20111014215247)
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "overunder_bets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "game_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111014215247')
+Migrating to CreateGeneralBets (20111014215322)
+  [1m[36m (4.1ms)[0m  [1mCREATE TABLE "general_bets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "item_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111014215322')
+Migrating to CreateFootballTeamStats (20111014215528)
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "football_team_stats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "winner_id" integer, "loser_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111014215528')
+Migrating to CreateFootballGameStats (20111014215636)
+  [1m[36m (6.5ms)[0m  [1mCREATE TABLE "football_game_stats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111014215636')
+  [1m[36m (1.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("bet_links")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("football_game_stats")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("football_team_stats")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("games")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("general_bets")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("head2head_bets")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("leagues")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_leagues_on_name')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("overunder_bets")[0m
+  [1m[35m (0.2ms)[0m  PRAGMA index_list("teams")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_teams_on_name')[0m
+  [1m[35m (0.2ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_username')[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_users_on_email')

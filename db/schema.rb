@@ -11,7 +11,86 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111014172812) do
+ActiveRecord::Schema.define(:version => 20111014215636) do
+
+  create_table "bet_links", :force => true do |t|
+    t.string   "bet_type"
+    t.integer  "bet_id"
+    t.integer  "wager"
+    t.boolean  "is_win"
+    t.string   "wager_selection"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "football_game_stats", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "football_team_stats", :force => true do |t|
+    t.integer  "winner_id"
+    t.integer  "loser_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "games", :force => true do |t|
+    t.integer  "home_team_id"
+    t.integer  "away_team_id"
+    t.string   "game_type"
+    t.integer  "league_id"
+    t.integer  "game_stat_id"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "general_bets", :force => true do |t|
+    t.string   "type"
+    t.integer  "item_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "head2head_bets", :force => true do |t|
+    t.string   "type"
+    t.integer  "game_id"
+    t.boolean  "is_spread"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "leagues", :force => true do |t|
+    t.string   "name"
+    t.string   "short_name"
+    t.string   "sport"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "leagues", ["name"], :name => "index_leagues_on_name", :unique => true
+
+  create_table "overunder_bets", :force => true do |t|
+    t.string   "type"
+    t.integer  "game_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "teams", :force => true do |t|
+    t.string   "name"
+    t.string   "conference"
+    t.integer  "league_id"
+    t.string   "stat_type"
+    t.integer  "stat_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "teams", ["name"], :name => "index_teams_on_name", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "name"
