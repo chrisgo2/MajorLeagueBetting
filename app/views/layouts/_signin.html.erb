@@ -1,0 +1,17 @@
+<a href="login" class="signin">
+  <span>Sign in</span></a> </div>
+<% field_set_tag 'signin_menu' do %>
+    <%= form_for(:session, :url => sessions_path) do |f| %>
+        <p>
+          <%= f.label :username %>:
+          <%= f.text_field :username %>
+        </p>
+        <p>
+          <%= f.label :password %>:
+          <%= f.text_field :password %>
+        </p>
+        <p class="remember">
+          <%= f.submit "Sign in" %>
+        </p>
+    <% end %>
+<% end %>
