@@ -17,6 +17,7 @@ end
 gem 'execjs'
 gem 'therubyracer'
 gem 'jquery-rails'
+gem 'nokogiri'
 
 # Use unicorn as the web server
 # gem 'unicorn'
