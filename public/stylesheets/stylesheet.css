@@ -239,12 +239,12 @@ a.button:hover
     width:520px;
     min-height:500px;
 }
-a:link, a:visited {
+a:link #stephen, a:visited #stephen {
     color:#27b;
     text-decoration:none;
 }
 a:hover {
-    text-decoration:underline;
+    /*text-decoration:underline;*/
 }
 a img {
     border-width:0;
