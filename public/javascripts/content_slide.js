@@ -40,7 +40,7 @@ function content_clicked ($button, $content)
 		}
 		// content area collapsed
 		if ( $content.hasClass("content_open") == false ) {
-			$content.slideDown("fast", function() {
+			$content.slideDown("slow", function() {
 				// Animation done
 				$content.addClass("content_open");
 				$button.addClass("button_open");
@@ -51,7 +51,7 @@ function content_clicked ($button, $content)
 		}
 		// content area is expanded
 		else {
-			$content.slideUp("fast", function() {
+			$content.slideUp("slow", function() {
 				// Animation done
 				$content.removeClass("content_open");
 				$button.removeClass("button_open");
@@ -81,6 +81,7 @@ function content_stream_clicked ($stream_button, $stream_content)
 		if ( $stream_content.hasClass("content_open") == false ) {
 			$stream_content.slideDown('fast', function(){});
 			$stream_content.addClass("content_open");
+            $stream_button.addClass("feed_open");
 			$previous_feed = $stream_content;
 			$previous_stream = $stream_button;
 		}
@@ -126,6 +127,7 @@ $(function ()
 	var $achievements_content = $("#achievements_content");
 	
 	// Are any of these buttons clicked?
+    // If so, must collapse previous, and expand new
 	content_clicked($profile_button, $profile);
 	content_clicked($games_button, $games);
 	content_clicked($statistics_button, $statistics);
