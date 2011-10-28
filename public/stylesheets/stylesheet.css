@@ -286,7 +286,7 @@ a.button:hover
     width:520px;
     min-height:500px;
 }
-a:link #stephen, a:visited #stephen {
+a:link .signin, a:visited .signin {
     color:#27b;
     text-decoration:none;
 }
@@ -416,8 +416,8 @@ a.signin.menu-open span {
     font-weight:bold;
 }
 #signin_submit::-moz-focus-inner {
-padding:0;
-border:0;
+    padding:0;
+    border:0;
 }
 #signin_submit:hover, #signin_submit:focus {
     background-position:0 -5px;
