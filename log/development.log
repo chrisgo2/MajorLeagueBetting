@@ -5883,3 +5883,175 @@ AbstractController::ActionNotFound (The action 'new' could not be found for Sess
 
 Rendered /home/stephen/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.0ms)
 >>>>>>> bc94ce3744ce5b6cdaf77c546a690cefb60b10c7
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-28 14:13:21 -0700
+  Processing by HomeController#public as HTML
+Rendered home/public.html.erb within layouts/application (11.1ms)
+Rendered sessions/_signin.html.erb (1.6ms)
+Rendered layouts/_header.html.erb (21.1ms)
+Completed 200 OK in 93ms (Views: 92.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-28 14:13:22 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-28 14:13:22 -0700
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-28 14:13:22 -0700
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-10-28 14:13:22 -0700
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-10-28 14:13:22 -0700
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-28 14:13:22 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-28 14:13:22 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-28 14:13:22 -0700
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-10-28 14:13:22 -0700
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-10-28 14:13:22 -0700
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-28 14:13:22 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-28 14:13:26 -0700
+  Processing by HomeController#public as HTML
+Rendered home/public.html.erb within layouts/application (0.0ms)
+Rendered sessions/_signin.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-28 14:13:26 -0700
+Served asset /home.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-28 14:13:26 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-28 14:13:26 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-10-28 14:13:26 -0700
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-28 14:13:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-10-28 14:13:26 -0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-28 14:13:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-28 14:13:26 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-10-28 14:13:26 -0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-10-28 14:13:26 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-28 14:13:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-28 14:16:11 -0700
+  Processing by HomeController#public as HTML
+Rendered home/public.html.erb within layouts/application (0.0ms)
+Rendered sessions/_signin.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/defaults.css" for 127.0.0.1 at 2011-10-28 14:16:11 -0700
+Served asset /defaults.css - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.css"):
+  
+
+Rendered /Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-28 14:16:11 -0700
+Served asset /defaults.js - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-28 14:16:13 -0700
+  Processing by HomeController#public as HTML
+Rendered home/public.html.erb within layouts/application (0.0ms)
+Rendered sessions/_signin.html.erb (1.4ms)
+Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/defaults.css" for 127.0.0.1 at 2011-10-28 14:16:13 -0700
+Served asset /defaults.css - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.css"):
+  
+
+Rendered /Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-10-28 14:16:13 -0700
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-10-28 14:16:14 -0700
+
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+
+Rendered /Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-10-28 14:16:17 -0700
+
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+
+Rendered /Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
