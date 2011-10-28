@@ -1,37 +1,39 @@
 <a href="login" class="signin">
-  <span>Sign in</span></a> </div>
-<% field_set_tag 'signin_menu' do %>
-    <%= form_for(:session, :url => signin_path) do |f| %>
-        <p>
-          <%= f.label :username %>:
-          <%= f.text_field :username %>
-        </p>
-        <p>
-          <%= f.label :password %>:
-          <%= f.text_field :password %>
-        </p>
-        <p class="remember">
-          <%= f.submit "Sign in" %>
-        </p>
-    <% end %>
-<% end %>
+  <span>Sign in</span></a>
+<fieldset id="signin_menu">
+  <%= form_for(:session, :url => signin_path) do |f| %>
+      <p>
+        <%= f.label :username %><br/>
+        <%= f.text_field :username %>
+      </p>
+      <p>
+        <%= f.label :password %><br/>
+        <%= f.password_field :password %>
+      </p>
+      <p class="remember">
+        <%= f.submit "Sign in" %>
+      </p>
+  <% end %>
+</fieldset>
 
 <script type="text/javascript">
-  jQuery(function($) {
-      $(".signin").click(function(e) {
-      	e.preventDefault();
+    jQuery(function($) {
         $("fieldset#signin_menu").toggle();
-        $(".signin").toggleClass("menu-open");
-      });
 
-      $("fieldset#signin_menu").mouseup(function() {
-        return false
-      });
-      $(document).mouseup(function(e) {
-        if($(e.target).parent("a.signin").length==0) {
-        	$(".signin").removeClass("menu-open");
-            $("fieldset#signin_menu").hide();
-        }
-      });
-  });
+        $(".signin").click(function(e) {
+            e.preventDefault();
+            $("fieldset#signin_menu").toggle();
+            $(".signin").toggleClass("menu-open");
+        });
+
+        $("fieldset#signin_menu").mouseup(function() {
+            return false
+        });
+        $(document).mouseup(function(e) {
+            if ($(e.target).parent("a.signin").length == 0) {
+                $(".signin").removeClass("menu-open");
+                $("fieldset#signin_menu").hide();
+            }
+        });
+    });
 </script>
