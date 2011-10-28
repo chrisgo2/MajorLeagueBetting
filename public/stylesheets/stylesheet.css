@@ -19,6 +19,53 @@ html
 
  /*****************************************************************************
  *                                                                            *
+ * Topbar Home / Sign-in                                                      *
+ *                                                                            *
+ *****************************************************************************/
+
+#topbar
+{
+    width:100%;
+    height:50px;
+    background-color:#EEE;
+}
+
+#home
+{
+    width:100px;
+    height:50px;
+    float:left;
+    margin-left:40px;
+    text-align:left;
+    line-height:50px;
+}
+
+#home a
+{
+    font-size:1.2em;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration:none;
+    color:#AAA;
+}
+
+#sign-in
+{
+    width:150px;
+    height:50px;
+    float:right;
+    margin-right:40px;
+    text-align:right;
+    line-height:50px;
+}
+
+#sign-in a
+{
+    color:#BBB;
+    text-decoration:none;
+}
+
+ /*****************************************************************************
+ *                                                                            *
  * Expandable buttons (left column)                                           *
  *                                                                            *
  *****************************************************************************/
@@ -172,7 +219,7 @@ a.button:hover
 #leaderboards_content, 
 #achievements_content
 {
-	width:600px;
+    width:578px;
 	position:absolute;
 	padding:10px;
 	background-color:#F9F9F9;
