@@ -5451,3 +5451,108 @@ Served asset /home.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-28 13:36:15 -0700
 Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-28 14:07:39 -0700
+  Processing by HomeController#public as HTML
+Rendered home/public.html.erb within layouts/application (10.8ms)
+Compiled sessions.css  (18ms)  (pid 518)
+Compiled sessions.js  (120ms)  (pid 518)
+Compiled application.js  (3ms)  (pid 518)
+Rendered sessions/_signin.html.erb (1.8ms)
+Completed 200 OK in 420ms (Views: 419.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-28 14:07:41 -0700
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-28 14:07:41 -0700
+Served asset /home.css - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-28 14:07:41 -0700
+Served asset /scaffolds.css - 200 OK (16ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-10-28 14:07:41 -0700
+Served asset /users.css - 200 OK (6ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-10-28 14:07:41 -0700
+Served asset /sessions.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-28 14:07:41 -0700
+Served asset /jquery.js - 200 OK (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-28 14:07:41 -0700
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-28 14:07:41 -0700
+Served asset /home.js - 200 OK (4ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-10-28 14:07:41 -0700
+Served asset /sessions.js - 200 OK (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-10-28 14:07:41 -0700
+Served asset /users.js - 200 OK (19ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-28 14:07:41 -0700
+Served asset /application.js - 200 OK (22ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-28 14:07:54 -0700
+  Processing by HomeController#public as HTML
+Rendered home/public.html.erb within layouts/application (0.0ms)
+Rendered sessions/_signin.html.erb (1.2ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-28 14:07:54 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-10-28 14:07:54 -0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-28 14:07:54 -0700
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-10-28 14:07:54 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-28 14:07:54 -0700
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-28 14:07:54 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-28 14:07:54 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-28 14:07:54 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-10-28 14:07:54 -0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-10-28 14:07:54 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-28 14:07:54 -0700
+Served asset /application.js - 304 Not Modified (0ms)
