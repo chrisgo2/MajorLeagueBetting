@@ -45,16 +45,20 @@ html
     color:#AAA;
     width:50px;
     height:50px;
-    background-image:url("../images/home.png");
+    display:block;
+    background-image:url("../images/home-roll.png");
     background-repeat:no-repeat;
     background-position:top left;
     text-indent:-9999px;
 }
 
+#home a:hover
+{
+    background-position:bottom left;
+}
+
 #sign-in
 {
-    width:150px;
-    height:50px;
     float:right;
     margin-right:40px;
     text-align:right;
@@ -63,8 +67,16 @@ html
 
 #sign-in a
 {
+    width:70px;
+    height:50px;
     color:#BBB;
     text-decoration:none;
+}
+
+#sign-in a:hover
+{
+    color:#CCC;
+
 }
 
  /*****************************************************************************
