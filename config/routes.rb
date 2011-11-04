@@ -1,8 +1,15 @@
 Majorleaguebetting::Application.routes.draw do
-  get "home/public"
+  resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
 
+  get "home/public"
   get "users/new"
-  
+
+  #match '/signin', :controller => 'sessions', :action => 'create'
+  match '/signin',  :to => 'sessions#new'
+  #match "/signin", :to => "sessions#new", :via => :post, :as => "session"
+  #match '/signin', :controller => 'sessions', :action => 'create',:via => :post, :as => 'session'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
