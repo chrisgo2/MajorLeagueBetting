@@ -1,12 +1,22 @@
 Majorleaguebetting::Application.routes.draw do
-  get "home/public"
+  get "sessions/new"
 
+  resources :users
+  resources :sessions, :path => "signin", :only => [:new, :create, :destroy]
+
+  get "home/public"
   get "users/new"
+<<<<<<< HEAD
   
   
   
   root :to => "home#public"
   
+=======
+
+  match '/signin',  :to => 'sessions#new'
+
+>>>>>>> 2683bc8a9cee3fadfa2e147e204f4b87281ef783
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -56,7 +66,12 @@ Majorleaguebetting::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+<<<<<<< HEAD
   
+=======
+  #if signed_in?
+  root :to => "home#public"
+>>>>>>> 2683bc8a9cee3fadfa2e147e204f4b87281ef783
 
   # See how all your routes lay out with "rake routes"
 
