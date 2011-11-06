@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <header>
 	<div id="topbar">
 		<% if signed_in? %>
@@ -17,6 +18,25 @@
 	 	<% end %>         
     </div>
 </header>
+=======
+<div id="topbar">
+	<% if signed_in? %>
+		<div id="home">
+        	<a href="">home page</a>
+    	</div>
+		<div id="topnav" class="topnav">
+    		<a href="" class="signin"><span>Sign out</span></a>
+    	</div>
+    <% else %>
+		<div id="topnav" class="topnav">
+	    	<a href="" class="signin"><span>Sign in</span></a>
+	    </div>
+	    <fieldset id="signin_menu">
+	    	<%= render :partial => 'sessions/signin' %>
+	    </fieldset>
+ 	<% end %>         
+</div>
+>>>>>>> 2f8ffd5200e5caa511d49493667115afdf861c98
 <script type="text/javascript">
         jQuery(function($) {
             $(".signin").click(function(e) {
