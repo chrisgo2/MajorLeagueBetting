@@ -4,6 +4,7 @@ class CreateLeagues < ActiveRecord::Migration
       t.string :name
       t.string :short_name
       t.string :sport
+      t.string :logo_path
 
       t.timestamps
     end
