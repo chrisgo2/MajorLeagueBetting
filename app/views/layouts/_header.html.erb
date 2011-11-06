@@ -1,19 +1,24 @@
 <header>
 	<div id="topbar">
-        <div id="home">
-            <a href="">home page</a>
-        </div>
-       <div id="topnav" class="topnav">
-           <a href="" class="signin"><span>Sign in</span></a>
-       </div>
-          <fieldset id="signin_menu">
-            <%= render :partial => 'sessions/signin' %>
-          </fieldset>
+		<% if signed_in? %>
+			<div id="home">
+            	<a href="">home page</a>
+        	</div>
+			<div id="topnav" class="topnav">
+	    		<a href="" class="signin"><span>Sign out</span></a>
+	    	</div>
+	    <% else %>
+			<div id="topnav" class="topnav">
+		    	<a href="" class="signin"><span>Sign in</span></a>
+		    </div>
+		    <fieldset id="signin_menu">
+		    	<%= render :partial => 'sessions/signin' %>
+		    </fieldset>
+	 	<% end %>         
     </div>
 </header>
 <script type="text/javascript">
         jQuery(function($) {
-            $("#signin_menu").toggle();
             $(".signin").click(function(e) {
                 e.preventDefault();
                 $("fieldset#signin_menu").toggle();

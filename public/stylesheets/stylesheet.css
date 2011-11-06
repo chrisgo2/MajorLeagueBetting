@@ -22,6 +22,54 @@ html
  * Topbar Home / Sign-in                                                      *
  *                                                                            *
  *****************************************************************************/
+<<<<<<< HEAD
+
+#topbar
+{
+    width:100%;
+    height:50px;
+    background-color:#EEE;
+}
+
+#home
+{
+    width:50px;
+    height:50px;
+    float:left;
+    margin-left:40px;
+}
+
+#home a:link, 
+#home a:active, 
+#home a:visited
+{
+    color:#AAA;
+    width:50px;
+    height:50px;
+    background-image:url("../images/home.png");
+    background-repeat:no-repeat;
+    background-position:top left;
+    text-indent:-9999px;
+}
+
+#sign-in
+{
+    width:150px;
+    height:50px;
+    float:right;
+    margin-right:40px;
+    text-align:right;
+    line-height:50px;
+}
+
+#sign-in a
+{
+    color:#BBB;
+    text-decoration:none;
+}
+
+ /*****************************************************************************
+=======
 
 #topbar
 {
@@ -80,6 +128,7 @@ html
 }
 
  /*****************************************************************************
+>>>>>>> 1fa29c28bb1486b9e3b92477ace0135c45312cb8
  *                                                                            *
  * Expandable buttons (left column)                                           *
  *                                                                            *
@@ -284,15 +333,29 @@ a.button:hover
 }
 
 /*********************************************************
+* Home_Public:   *
+*********************************************************/
+
+.welcomeForm {
+    width: 400px;
+    padding: 40px 0 0 0px;
+}
+
+.signupForm {
+    padding: 40px 0 0 10px;
+    width: 390px;
+}
+
+/*********************************************************
 * Decorative classes: news posts, signatures     *
 *********************************************************/
 
-.fltLeft
+.lFloat
 {
     float: left;
 }
 
-.fltRight
+.rFloat
 {
     float: right;
 }
