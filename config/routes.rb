@@ -9,22 +9,11 @@ Majorleaguebetting::Application.routes.draw do
   resources :sessions, :path => "signin", :only => [:create, :destroy]
 
   get "home/public"
-<<<<<<< HEAD
-  get "users/new"
-<<<<<<< HEAD
-  
-  
-  
-  root :to => "home#public"
-  
-=======
-=======
->>>>>>> 3e855e6b238430ece36635421faa09f34023fd79
+ 
 
   match '/signin',  :to => 'sessions#new'
   match '/signup', :to => 'users#new'
 
->>>>>>> 2683bc8a9cee3fadfa2e147e204f4b87281ef783
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -74,17 +63,9 @@ Majorleaguebetting::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-<<<<<<< HEAD
-<<<<<<< HEAD
-  
-=======
-  #if signed_in?
-  root :to => "home#public"
->>>>>>> 2683bc8a9cee3fadfa2e147e204f4b87281ef783
 
-=======
+
   #  root :to => "home#public"
->>>>>>> 3e855e6b238430ece36635421faa09f34023fd79
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

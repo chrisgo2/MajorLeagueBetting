@@ -6406,3 +6406,1954 @@ ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
   
 
 Rendered /Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20111014075000)
+Migrating to AddEmailUniquenessIndex (20111014172812)
+Migrating to CreateLeagues (20111014211301)
+Migrating to CreateTeams (20111014211517)
+Migrating to CreateGames (20111014213227)
+Migrating to CreateBetLinks (20111014214015)
+Migrating to CreateHead2headBets (20111014215206)
+Migrating to CreateOverunderBets (20111014215247)
+Migrating to CreateGeneralBets (20111014215322)
+Migrating to CreateFootballTeamStats (20111014215528)
+Migrating to CreateFootballGameStats (20111014215636)
+Migrating to ModifyStatsTable (20111021205742)
+  [1m[35m (0.9ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bet_links")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("football_game_stats")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("football_team_stats")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("games")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("general_bets")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("head2head_bets")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("leagues")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_leagues_on_name')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("overunder_bets")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("teams")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_teams_on_name')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_username')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 13:57:53 -0800
+  Processing by HomeController#public as HTML
+Rendered users/_signup.html.erb (11.5ms)
+Rendered home/public.html.erb within layouts/application (149.0ms)
+ERROR: compiling _app_views_layouts_application_html_erb___735697659_75310660 RAISED /home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:41: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_layouts_application_html_erb___735697659_75310660(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Major League Betting</title>
+<<<<<<< HEAD
+  ');@output_buffer.append= ( javascript_include_tag :application );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( stylesheet_link_tag    :application );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('=======
+  ');@output_buffer.append= ( render 'layout');@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag :defaults );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('>>>>>>> 1fa29c28bb1486b9e3b92477ace0135c45312cb8
+  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+  <div class="container">
+<<<<<<< HEAD
+    ');@output_buffer.append= ( render :partial => 'layouts/header' );@output_buffer.safe_concat('
+');     flash.each do |key, value| 
+@output_buffer.safe_concat('    	<div class="flash ');@output_buffer.append= ( key );@output_buffer.safe_concat('">
+          ');@output_buffer.append= ( value );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+=======
+');    if signed_in? 
+@output_buffer.safe_concat('
+');     else 
+@output_buffer.safe_concat('        ');@output_buffer.append= ( render :partial => 'layouts/header' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		');@output_buffer.append= ( render 'layouts/index' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('>>>>>>> 1fa29c28bb1486b9e3b92477ace0135c45312cb8
+');     end 
+@output_buffer.safe_concat('    ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+</body>
+<footer>
+</footer>
+');@output_buffer.append= ( debug(params) if Rails.env.development? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</html>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:52:in `render_with_layout'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__755156647__process_action__931194398__callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:82:in `optimized_each'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/etag.rb:23:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/conditionalget.rb:25:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:195:in `context'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:190:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/sendfile.rb:101:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/methodoverride.rb:24:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/runtime.rb:17:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/lock.rb:15:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/handler/webrick.rb:59:in `service'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Completed 500 Internal Server Error in 455ms
+
+ActionView::Template::Error (/home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:41: syntax error, unexpected $end, expecting keyword_end):
+    36: <%= debug(params) if Rails.env.development? %>
+    37: </html>
+  
+
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-11-06 13:57:57 -0800
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-11-06 13:58:07 -0800
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-11-06 13:58:13 -0800
+  Processing by SessionsController#new as HTML
+Rendered sessions/_signin.html.erb (6.5ms)
+Rendered sessions/new.html.erb within layouts/sessions (7.8ms)
+Compiled custom.css  (0ms)  (pid 2337)
+Compiled sessions.css  (45ms)  (pid 2337)
+Compiled sessions.js  (175ms)  (pid 2337)
+Compiled application.js  (6ms)  (pid 2337)
+Compiled jquery.js  (32ms)  (pid 2337)
+Compiled jquery_ujs.js  (1ms)  (pid 2337)
+Completed 200 OK in 456ms (Views: 455.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 13:58:13 -0800
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 13:58:13 -0800
+Served asset /sessions.css - 200 OK (32ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 13:58:13 -0800
+Served asset /users.css - 200 OK (16ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 13:58:13 -0800
+Served asset /scaffolds.css - 200 OK (19ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 13:58:13 -0800
+Served asset /jquery.js - 200 OK (27ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 13:58:13 -0800
+Served asset /custom.css - 200 OK (13ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 13:58:13 -0800
+Served asset /home.css - 200 OK (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 13:58:13 -0800
+Served asset /jquery_ujs.js - 200 OK (15ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 13:58:13 -0800
+Served asset /home.js - 200 OK (107ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 13:58:14 -0800
+Served asset /sessions.js - 200 OK (11ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 13:58:14 -0800
+Served asset /users.js - 200 OK (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 13:58:14 -0800
+Served asset /application.js - 200 OK (21ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-11-06 13:58:24 -0800
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (0.6ms)
+ERROR: compiling _app_views_layouts_application_html_erb___735697659_75310660 RAISED /home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:41: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_layouts_application_html_erb___735697659_75310660(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Major League Betting</title>
+<<<<<<< HEAD
+  ');@output_buffer.append= ( javascript_include_tag :application );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( stylesheet_link_tag    :application );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('=======
+  ');@output_buffer.append= ( render 'layout');@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag :defaults );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('>>>>>>> 1fa29c28bb1486b9e3b92477ace0135c45312cb8
+  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+  <div class="container">
+<<<<<<< HEAD
+    ');@output_buffer.append= ( render :partial => 'layouts/header' );@output_buffer.safe_concat('
+');     flash.each do |key, value| 
+@output_buffer.safe_concat('    	<div class="flash ');@output_buffer.append= ( key );@output_buffer.safe_concat('">
+          ');@output_buffer.append= ( value );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+=======
+');    if signed_in? 
+@output_buffer.safe_concat('
+');     else 
+@output_buffer.safe_concat('        ');@output_buffer.append= ( render :partial => 'layouts/header' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		');@output_buffer.append= ( render 'layouts/index' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('>>>>>>> 1fa29c28bb1486b9e3b92477ace0135c45312cb8
+');     end 
+@output_buffer.safe_concat('    ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+</body>
+<footer>
+</footer>
+');@output_buffer.append= ( debug(params) if Rails.env.development? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</html>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:52:in `render_with_layout'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__811883054__process_action__294360657__callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/etag.rb:23:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/conditionalget.rb:25:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:195:in `context'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:190:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/sendfile.rb:101:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/methodoverride.rb:24:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/runtime.rb:17:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/lock.rb:15:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/handler/webrick.rb:59:in `service'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (/home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:41: syntax error, unexpected $end, expecting keyword_end):
+    36: <%= debug(params) if Rails.env.development? %>
+    37: </html>
+  
+
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 13:58:41 -0800
+  Processing by HomeController#public as HTML
+Rendered users/_signup.html.erb (7.1ms)
+Rendered home/public.html.erb within layouts/application (8.2ms)
+ERROR: compiling _app_views_layouts_application_html_erb___735697659_75310660 RAISED /home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:41: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_layouts_application_html_erb___735697659_75310660(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Major League Betting</title>
+<<<<<<< HEAD
+  ');@output_buffer.append= ( javascript_include_tag :application );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( stylesheet_link_tag    :application );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('=======
+  ');@output_buffer.append= ( render 'layout');@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag :defaults );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('>>>>>>> 1fa29c28bb1486b9e3b92477ace0135c45312cb8
+  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+  <div class="container">
+<<<<<<< HEAD
+    ');@output_buffer.append= ( render :partial => 'layouts/header' );@output_buffer.safe_concat('
+');     flash.each do |key, value| 
+@output_buffer.safe_concat('    	<div class="flash ');@output_buffer.append= ( key );@output_buffer.safe_concat('">
+          ');@output_buffer.append= ( value );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+=======
+');    if signed_in? 
+@output_buffer.safe_concat('
+');     else 
+@output_buffer.safe_concat('        ');@output_buffer.append= ( render :partial => 'layouts/header' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		');@output_buffer.append= ( render 'layouts/index' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('>>>>>>> 1fa29c28bb1486b9e3b92477ace0135c45312cb8
+');     end 
+@output_buffer.safe_concat('    ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+</body>
+<footer>
+</footer>
+');@output_buffer.append= ( debug(params) if Rails.env.development? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</html>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:52:in `render_with_layout'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__755156647__process_action__931194398__callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:82:in `optimized_each'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/etag.rb:23:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/conditionalget.rb:25:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:195:in `context'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:190:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/sendfile.rb:101:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/methodoverride.rb:24:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/runtime.rb:17:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/lock.rb:15:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/handler/webrick.rb:59:in `service'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (/home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:41: syntax error, unexpected $end, expecting keyword_end):
+    36: <%= debug(params) if Rails.env.development? %>
+    37: </html>
+  
+
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 14:00:47 -0800
+  Processing by HomeController#public as HTML
+Rendered users/_signup.html.erb (6.0ms)
+Rendered home/public.html.erb within layouts/application (6.8ms)
+ERROR: compiling _app_views_layouts_application_html_erb___735697659_85932100 RAISED /home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:41: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_layouts_application_html_erb___735697659_85932100(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Major League Betting</title>
+
+  ');@output_buffer.append= ( javascript_include_tag :application );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( stylesheet_link_tag    :application );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  
+  ');@output_buffer.append= ( render 'layout');@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag :defaults );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+  <div class="container">
+
+    ');@output_buffer.append= ( render :partial => 'layouts/header' );@output_buffer.safe_concat('
+');     flash.each do |key, value| 
+@output_buffer.safe_concat('    	<div class="flash ');@output_buffer.append= ( key );@output_buffer.safe_concat('">
+          ');@output_buffer.append= ( value );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+
+');    if signed_in? 
+@output_buffer.safe_concat('
+');     else 
+@output_buffer.safe_concat('        ');@output_buffer.append= ( render :partial => 'layouts/header' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		');@output_buffer.append= ( render 'layouts/index' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+');     end 
+@output_buffer.safe_concat('    ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+</body>
+<footer>
+</footer>
+');@output_buffer.append= ( debug(params) if Rails.env.development? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</html>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:52:in `render_with_layout'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__755156647__process_action__931194398__callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:82:in `optimized_each'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/etag.rb:23:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/conditionalget.rb:25:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:195:in `context'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:190:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/sendfile.rb:101:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/methodoverride.rb:24:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/runtime.rb:17:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/lock.rb:15:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/handler/webrick.rb:59:in `service'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Completed 500 Internal Server Error in 35ms
+
+ActionView::Template::Error (/home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:41: syntax error, unexpected $end, expecting keyword_end):
+    36: <%= debug(params) if Rails.env.development? %>
+    37: </html>
+  
+
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 14:00:49 -0800
+  Processing by HomeController#public as HTML
+Rendered users/_signup.html.erb (10.6ms)
+Rendered home/public.html.erb within layouts/application (12.3ms)
+ERROR: compiling _app_views_layouts_application_html_erb___735697659_85932100 RAISED /home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:41: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_layouts_application_html_erb___735697659_85932100(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Major League Betting</title>
+
+  ');@output_buffer.append= ( javascript_include_tag :application );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( stylesheet_link_tag    :application );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  
+  ');@output_buffer.append= ( render 'layout');@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag :defaults );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+  <div class="container">
+
+    ');@output_buffer.append= ( render :partial => 'layouts/header' );@output_buffer.safe_concat('
+');     flash.each do |key, value| 
+@output_buffer.safe_concat('    	<div class="flash ');@output_buffer.append= ( key );@output_buffer.safe_concat('">
+          ');@output_buffer.append= ( value );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+
+');    if signed_in? 
+@output_buffer.safe_concat('
+');     else 
+@output_buffer.safe_concat('        ');@output_buffer.append= ( render :partial => 'layouts/header' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		');@output_buffer.append= ( render 'layouts/index' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+');     end 
+@output_buffer.safe_concat('    ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+</body>
+<footer>
+</footer>
+');@output_buffer.append= ( debug(params) if Rails.env.development? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</html>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:52:in `render_with_layout'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__755156647__process_action__931194398__callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:82:in `optimized_each'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/etag.rb:23:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/conditionalget.rb:25:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:195:in `context'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:190:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/sendfile.rb:101:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/methodoverride.rb:24:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/runtime.rb:17:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/lock.rb:15:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rack-1.3.2/lib/rack/handler/webrick.rb:59:in `service'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/ubuntu/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (/home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/majorleaguebetting/app/views/layouts/application.html.erb:41: syntax error, unexpected $end, expecting keyword_end):
+    36: <%= debug(params) if Rails.env.development? %>
+    37: </html>
+  
+
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 14:08:31 -0800
+  Processing by HomeController#public as HTML
+Rendered users/_signup.html.erb (99.2ms)
+Rendered home/public.html.erb within layouts/application (101.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/_signin.html.erb (1.8ms)
+Rendered layouts/_header.html.erb (89.0ms)
+Completed 200 OK in 213ms (Views: 210.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:08:31 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:08:31 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:08:31 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:08:31 -0800
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:08:31 -0800
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:08:31 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:08:31 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:08:31 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:08:31 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:08:31 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:08:31 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:08:31 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2011-11-06 14:08:55 -0800
+  Processing by HomeController#public as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aotA9PgqK31yyhpYq5hu2Fm0iCAGyhjD7pQa+DI2UtQ=", "/users/new"=>{"name"=>"ck", "email"=>"ck@ck.com", "username"=>"ck", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Rendered users/_signup.html.erb (6.3ms)
+Rendered home/public.html.erb within layouts/application (8.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered sessions/_signin.html.erb (1.8ms)
+Rendered layouts/_header.html.erb (29.3ms)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:08:55 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:08:55 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:08:55 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:08:55 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:08:55 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:08:55 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:08:56 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:08:56 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:08:56 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:08:56 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:08:56 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:08:56 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2011-11-06 14:09:28 -0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aotA9PgqK31yyhpYq5hu2Fm0iCAGyhjD7pQa+DI2UtQ=", "session"=>{"username"=>"ck", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'ck' LIMIT 1[0m
+Rendered sessions/_signin.html.erb (2.0ms)
+Rendered sessions/new.html.erb within layouts/sessions (2.8ms)
+Completed 200 OK in 56ms (Views: 29.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:09:29 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:09:29 -0800
+Served asset /users.css - 304 Not Modified (36ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:09:29 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:09:29 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:09:29 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:09:29 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:09:29 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:09:29 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:09:29 -0800
+Served asset /home.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:09:29 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:09:29 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:09:29 -0800
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2011-11-06 14:09:42 -0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aotA9PgqK31yyhpYq5hu2Fm0iCAGyhjD7pQa+DI2UtQ=", "session"=>{"username"=>"ck@ck.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'ck@ck.com' LIMIT 1
+Rendered sessions/_signin.html.erb (2.0ms)
+Rendered sessions/new.html.erb within layouts/sessions (2.9ms)
+Completed 200 OK in 114ms (Views: 80.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:09:42 -0800
+Served asset /application.css - 304 Not Modified (37ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:09:42 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:09:42 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:09:42 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:09:42 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:09:42 -0800
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:09:42 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:09:42 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:09:42 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:09:42 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:09:42 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:09:42 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 14:12:21 -0800
+  Processing by HomeController#public as HTML
+Rendered users/_signup.html.erb (7.5ms)
+Rendered home/public.html.erb within layouts/application (142.7ms)
+Compiled application.js  (5ms)  (pid 2431)
+Compiled content_slide.js  (0ms)  (pid 2431)
+Compiled application.css  (4ms)  (pid 2431)
+Compiled stylesheet.css  (0ms)  (pid 2431)
+Rendered layouts/_header.html.erb (396.5ms)
+Completed 500 Internal Server Error in 794ms
+
+ActionView::Template::Error (Could not find table 'users'):
+    1: <header>
+    2: 	<div id="topbar">
+    3: 		<% if signed_in? %>
+    4: 			<div id="home">
+    5:             	<a href="">home page</a>
+    6:         	</div>
+  app/models/user.rb:45:in `authenticate_with_salt'
+  app/helpers/sessions_helper.rb:24:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:4:in `current_user'
+  app/helpers/sessions_helper.rb:13:in `signed_in?'
+  app/views/layouts/_header.html.erb:3:in `_app_views_layouts__header_html_erb___905989169_84188710'
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__351800633_82726670'
+
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.7ms)[0m  CREATE TABLE "bet_links" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bet_type" varchar(255), "bet_id" integer, "wager" integer, "is_win" boolean, "wager_selection" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "football_game_stats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "football_team_stats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "home_team_id" integer, "away_team_id" integer, "game_type" varchar(255), "league_id" integer, "game_stat_id" integer, "start_time" datetime, "end_time" datetime, "location" varchar(255), "created_at" datetime, "updated_at" datetime, "winner_id" integer, "loser_id" integer, "winner_points" integer, "loser_points" integer) [0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "general_bets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "item_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (5.3ms)[0m  [1mCREATE TABLE "head2head_bets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "game_id" integer, "is_spread" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (4.8ms)[0m  CREATE TABLE "leagues" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "short_name" varchar(255), "sport" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("leagues")[0m
+  [1m[35m (3.3ms)[0m  CREATE UNIQUE INDEX "index_leagues_on_name" ON "leagues" ("name")
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "overunder_bets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "game_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "conference" varchar(255), "league_id" integer, "stat_type" varchar(255), "stat_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("teams")[0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX "index_teams_on_name" ON "teams" ("name")
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "username" varchar(255), "email" varchar(255), "encrypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (2.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111021205742')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111014215247')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111014215322')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111014215206')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111014215636')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111014214015')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111014213227')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111014215528')
+  [1m[36m (2.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111014075000')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111014172812')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111014211301')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111014211517')
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20111014075000)
+Migrating to AddEmailUniquenessIndex (20111014172812)
+Migrating to CreateLeagues (20111014211301)
+Migrating to CreateTeams (20111014211517)
+Migrating to CreateGames (20111014213227)
+Migrating to CreateBetLinks (20111014214015)
+Migrating to CreateHead2headBets (20111014215206)
+Migrating to CreateOverunderBets (20111014215247)
+Migrating to CreateGeneralBets (20111014215322)
+Migrating to CreateFootballTeamStats (20111014215528)
+Migrating to CreateFootballGameStats (20111014215636)
+Migrating to ModifyStatsTable (20111021205742)
+  [1m[35m (0.6ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bet_links")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("football_game_stats")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("football_team_stats")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("games")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("general_bets")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("head2head_bets")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("leagues")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_leagues_on_name')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("overunder_bets")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("teams")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_teams_on_name')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_username')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 14:13:52 -0800
+  Processing by HomeController#public as HTML
+Rendered users/_signup.html.erb (6.6ms)
+Rendered home/public.html.erb within layouts/application (143.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/_signin.html.erb (2.7ms)
+Rendered layouts/_header.html.erb (361.1ms)
+Completed 200 OK in 751ms (Views: 748.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 14:13:56 -0800
+  Processing by HomeController#public as HTML
+Rendered users/_signup.html.erb (15.5ms)
+Rendered home/public.html.erb within layouts/application (16.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered sessions/_signin.html.erb (1.9ms)
+Rendered layouts/_header.html.erb (178.3ms)
+Completed 200 OK in 216ms (Views: 214.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:13:57 -0800
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:13:57 -0800
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:13:57 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:13:57 -0800
+Served asset /sessions.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/content_slide.js?body=1" for 127.0.0.1 at 2011-11-06 14:13:57 -0800
+Served asset /content_slide.js - 200 OK (11ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:13:57 -0800
+Served asset /users.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:13:57 -0800
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:13:57 -0800
+Served asset /application.js - 200 OK (21ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:13:57 -0800
+Served asset /custom.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:13:57 -0800
+Served asset /home.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:13:57 -0800
+Served asset /scaffolds.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:13:57 -0800
+Served asset /sessions.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2011-11-06 14:13:57 -0800
+Served asset /stylesheet.css - 200 OK (11ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:13:57 -0800
+Served asset /users.css - 304 Not Modified (6ms)
+
+
+Started POST "/" for 127.0.0.1 at 2011-11-06 14:14:16 -0800
+  Processing by HomeController#public as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aotA9PgqK31yyhpYq5hu2Fm0iCAGyhjD7pQa+DI2UtQ=", "/users/new"=>{"name"=>"", "email"=>"", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Rendered users/_signup.html.erb (5.7ms)
+Rendered home/public.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/_signin.html.erb (2.0ms)
+Rendered layouts/_header.html.erb (27.1ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:14:16 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:14:16 -0800
+Served asset /sessions.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:14:16 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:14:16 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:14:16 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content_slide.js?body=1" for 127.0.0.1 at 2011-11-06 14:14:16 -0800
+Served asset /content_slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:14:16 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:14:16 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:14:16 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:14:16 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:14:16 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:14:16 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:14:16 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2011-11-06 14:14:16 -0800
+Served asset /stylesheet.css - 304 Not Modified (2ms)
+
+
+Started POST "/" for 127.0.0.1 at 2011-11-06 14:30:42 -0800
+  Processing by HomeController#public as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aotA9PgqK31yyhpYq5hu2Fm0iCAGyhjD7pQa+DI2UtQ=", "/users/new"=>{"name"=>"", "email"=>"", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Rendered users/_signup.html.erb (5.6ms)
+Rendered home/public.html.erb within layouts/application (6.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered sessions/_signin.html.erb (1.8ms)
+Rendered layouts/_header.html.erb (23.5ms)
+Completed 200 OK in 53ms (Views: 51.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:30:43 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:30:43 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:30:43 -0800
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:30:43 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:30:43 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content_slide.js?body=1" for 127.0.0.1 at 2011-11-06 14:30:43 -0800
+Served asset /content_slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:30:43 -0800
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:30:43 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:30:43 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:30:43 -0800
+Served asset /home.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:30:43 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:30:43 -0800
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2011-11-06 14:30:43 -0800
+Served asset /stylesheet.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:30:43 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2011-11-06 14:30:49 -0800
+  Processing by HomeController#public as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aotA9PgqK31yyhpYq5hu2Fm0iCAGyhjD7pQa+DI2UtQ=", "/users/new"=>{"name"=>"", "email"=>"", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Rendered users/_signup.html.erb (7.0ms)
+Rendered home/public.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/_signin.html.erb (2.2ms)
+Rendered layouts/_header.html.erb (83.8ms)
+Completed 200 OK in 110ms (Views: 108.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:30:49 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:30:49 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content_slide.js?body=1" for 127.0.0.1 at 2011-11-06 14:30:49 -0800
+Served asset /content_slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:30:49 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:30:49 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:30:49 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:30:49 -0800
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:30:49 -0800
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:30:49 -0800
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:30:49 -0800
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:30:50 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:30:50 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:30:50 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2011-11-06 14:30:50 -0800
+Served asset /stylesheet.css - 304 Not Modified (0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2011-11-06 14:34:28 -0800
+  Processing by HomeController#public as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aotA9PgqK31yyhpYq5hu2Fm0iCAGyhjD7pQa+DI2UtQ=", "/users/new"=>{"name"=>"", "email"=>"", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 91ms
+
+NameError (undefined local variable or method `hi' for #<HomeController:0xa63dcb0>):
+  app/controllers/home_controller.rb:9:in `public'
+
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+Rendered /home/ubuntu/.rvm/gems/ruby-1.9.2-p290@rails3/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.5ms)
+
+
+Started POST "/" for 127.0.0.1 at 2011-11-06 14:34:43 -0800
+  Processing by HomeController#public as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aotA9PgqK31yyhpYq5hu2Fm0iCAGyhjD7pQa+DI2UtQ=", "/users/new"=>{"name"=>"", "email"=>"", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Rendered users/_signup.html.erb (9.6ms)
+Rendered home/public.html.erb within layouts/application (10.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered sessions/_signin.html.erb (6.1ms)
+Rendered layouts/_header.html.erb (29.3ms)
+Completed 200 OK in 76ms (Views: 74.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:43 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:43 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content_slide.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:43 -0800
+Served asset /content_slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:43 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:43 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:43 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:43 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:43 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:43 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:43 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:43 -0800
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:43 -0800
+Served asset /stylesheet.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:43 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:43 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2011-11-06 14:34:46 -0800
+  Processing by HomeController#public as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aotA9PgqK31yyhpYq5hu2Fm0iCAGyhjD7pQa+DI2UtQ=", "/users/new"=>{"name"=>"", "email"=>"", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Rendered users/_signup.html.erb (5.5ms)
+Rendered home/public.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/_signin.html.erb (1.9ms)
+Rendered layouts/_header.html.erb (29.2ms)
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:46 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:46 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:46 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:46 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:46 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content_slide.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:46 -0800
+Served asset /content_slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:46 -0800
+Served asset /home.css - 304 Not Modified (36ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:46 -0800
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:46 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:46 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:46 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:46 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:46 -0800
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:46 -0800
+Served asset /stylesheet.css - 304 Not Modified (0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2011-11-06 14:34:48 -0800
+  Processing by HomeController#public as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aotA9PgqK31yyhpYq5hu2Fm0iCAGyhjD7pQa+DI2UtQ=", "/users/new"=>{"name"=>"", "email"=>"", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Rendered users/_signup.html.erb (73.6ms)
+Rendered home/public.html.erb within layouts/application (74.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered sessions/_signin.html.erb (1.8ms)
+Rendered layouts/_header.html.erb (23.8ms)
+Completed 200 OK in 123ms (Views: 120.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:48 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:48 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content_slide.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:48 -0800
+Served asset /content_slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:48 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:48 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:48 -0800
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:48 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:34:48 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:48 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:48 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:48 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:48 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:48 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2011-11-06 14:34:48 -0800
+Served asset /stylesheet.css - 304 Not Modified (0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2011-11-06 14:35:12 -0800
+  Processing by HomeController#public as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aotA9PgqK31yyhpYq5hu2Fm0iCAGyhjD7pQa+DI2UtQ=", "/users/new"=>{"name"=>"", "email"=>"", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Rendered users/_signup.html.erb (10.7ms)
+Rendered home/public.html.erb within layouts/application (11.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/_signin.html.erb (2.9ms)
+Rendered layouts/_header.html.erb (87.8ms)
+Completed 200 OK in 121ms (Views: 118.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:35:12 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:35:12 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:35:12 -0800
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/content_slide.js?body=1" for 127.0.0.1 at 2011-11-06 14:35:12 -0800
+Served asset /content_slide.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:35:12 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:35:12 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:35:12 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:35:12 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:35:12 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:35:12 -0800
+Served asset /scaffolds.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:35:12 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:35:12 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:35:12 -0800
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2011-11-06 14:35:12 -0800
+Served asset /stylesheet.css - 304 Not Modified (0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2011-11-06 14:38:37 -0800
+  Processing by HomeController#public as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aotA9PgqK31yyhpYq5hu2Fm0iCAGyhjD7pQa+DI2UtQ=", "/users/new"=>{"name"=>"", "email"=>"", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Rendered users/_signup.html.erb (11.2ms)
+Rendered home/public.html.erb within layouts/application (20.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered sessions/_signin.html.erb (3.2ms)
+Rendered layouts/_header.html.erb (38.8ms)
+Completed 200 OK in 81ms (Views: 79.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:38 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:38 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:38 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:38 -0800
+Served asset /application.js - 304 Not Modified (115ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:38 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content_slide.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:38 -0800
+Served asset /content_slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:38 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:38 -0800
+Served asset /application.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:38 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:38 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:38 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:38 -0800
+Served asset /stylesheet.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:38 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:38 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2011-11-06 14:38:41 -0800
+  Processing by HomeController#public as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aotA9PgqK31yyhpYq5hu2Fm0iCAGyhjD7pQa+DI2UtQ=", "/users/new"=>{"name"=>"", "email"=>"", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Rendered users/_signup.html.erb (6.4ms)
+Rendered home/public.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/_signin.html.erb (1.9ms)
+Rendered layouts/_header.html.erb (25.3ms)
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:41 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:41 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:41 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:41 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:41 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content_slide.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:41 -0800
+Served asset /content_slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:41 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:41 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:42 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:42 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:42 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:42 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:42 -0800
+Served asset /stylesheet.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:42 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2011-11-06 14:38:50 -0800
+  Processing by HomeController#public as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aotA9PgqK31yyhpYq5hu2Fm0iCAGyhjD7pQa+DI2UtQ=", "/users/new"=>{"name"=>"", "email"=>"", "username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Rendered users/_signup.html.erb (5.6ms)
+Rendered home/public.html.erb within layouts/application (6.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered sessions/_signin.html.erb (1.8ms)
+Rendered layouts/_header.html.erb (26.6ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:50 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:50 -0800
+Served asset /home.js - 304 Not Modified (36ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:50 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:50 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:50 -0800
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/content_slide.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:50 -0800
+Served asset /content_slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:38:50 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:50 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:50 -0800
+Served asset /home.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:50 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:50 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:50 -0800
+Served asset /stylesheet.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:50 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:38:50 -0800
+Served asset /users.css - 304 Not Modified (0ms)
