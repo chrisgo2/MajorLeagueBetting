@@ -6406,3 +6406,155 @@ ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
   
 
 Rendered /Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 13:08:42 -0800
+  Processing by HomeController#public as HTML
+Rendered users/_signup.html.erb (4.0ms)
+Rendered home/public.html.erb within layouts/application (42.5ms)
+ERROR: compiling _app_views_layouts_application_html_erb__517090653809500245_70308255179960 RAISED /Users/ktrantum/GitHub/MLB/app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/ktrantum/GitHub/MLB/app/views/layouts/application.html.erb:41: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_layouts_application_html_erb__517090653809500245_70308255179960(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Major League Betting</title>
+<<<<<<< HEAD
+  ');@output_buffer.append= ( javascript_include_tag :application );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( stylesheet_link_tag    :application );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('=======
+  ');@output_buffer.append= ( render 'layout');@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag :defaults );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('>>>>>>> 1fa29c28bb1486b9e3b92477ace0135c45312cb8
+  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+  <div class="container">
+<<<<<<< HEAD
+    ');@output_buffer.append= ( render :partial => 'layouts/header' );@output_buffer.safe_concat('
+');     flash.each do |key, value| 
+@output_buffer.safe_concat('    	<div class="flash ');@output_buffer.append= ( key );@output_buffer.safe_concat('">
+          ');@output_buffer.append= ( value );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+=======
+');    if signed_in? 
+@output_buffer.safe_concat('
+');     else 
+@output_buffer.safe_concat('        ');@output_buffer.append= ( render :partial => 'layouts/header' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		');@output_buffer.append= ( render 'layouts/index' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('>>>>>>> 1fa29c28bb1486b9e3b92477ace0135c45312cb8
+');     end 
+@output_buffer.safe_concat('    ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+</body>
+<footer>
+</footer>
+');@output_buffer.append= ( debug(params) if Rails.env.development? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</html>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:52:in `render_with_layout'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/ktrantum/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__3251141731044283408__process_action__1094796524373629654__callbacks'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:82:in `optimized_each'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/rack-1.3.2/lib/rack/etag.rb:23:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/rack-1.3.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:195:in `context'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:190:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/rack-1.3.2/lib/rack/sendfile.rb:101:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/rack-1.3.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/rack-1.3.2/lib/rack/runtime.rb:17:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/rack-1.3.2/lib/rack/lock.rb:15:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/rack-1.3.2/lib/rack/handler/webrick.rb:59:in `service'
+/Users/ktrantum/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/ktrantum/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/ktrantum/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Completed 500 Internal Server Error in 100ms
+
+ActionView::Template::Error (/Users/ktrantum/GitHub/MLB/app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/ktrantum/GitHub/MLB/app/views/layouts/application.html.erb:41: syntax error, unexpected $end, expecting keyword_end):
+    36: <%= debug(params) if Rails.env.development? %>
+    37: </html>
+  
+
+Rendered /Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/ktrantum/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.9ms)
