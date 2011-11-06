@@ -3,16 +3,17 @@
  * Universal Styles: specific to commonly used HTML tag						  *
  *                                                                            *
  *****************************************************************************/
+
 * {
 	margin:0;
 	padding:0;
 }
+
 html {
 	width:1000px;
 	margin-left:auto;
 	margin-right:auto;
 }
-
 
 /******************************************************************************
  *                                                                            *
