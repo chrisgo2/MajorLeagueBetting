@@ -5,7 +5,7 @@
             	<a href="">home page</a>
         	</div>
 			<div id="topnav" class="topnav">
-	    		<a href="" class="signin"><span>Sign out</span></a>
+			<%= link_to "Sign out", signout_path, :method => :delete, :class => "signin" %>
 	    	</div>
 	    <% else %>
 			<div id="topnav" class="topnav">
