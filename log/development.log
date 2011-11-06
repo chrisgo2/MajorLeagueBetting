@@ -10997,3 +10997,198 @@ Rendered /home/stephen/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/actio
 Rendered /home/stephen/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.5ms)
 >>>>>>> cc80c9c4ed98c06e643a7e998d4e93953eb16533
 >>>>>>> a3ed9481519f96c51f55598e600b6afcc6d1a32b
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 14:59:34 -0800
+  Processing by HomeController#public as HTML
+Rendered home/public.html.erb within layouts/application (11.8ms)
+Compiled home.js  (133ms)  (pid 1226)
+Compiled users.js  (0ms)  (pid 1226)
+Compiled home.css  (19ms)  (pid 1226)
+Compiled scaffolds.css  (9ms)  (pid 1226)
+Compiled users.css  (1ms)  (pid 1226)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/_signin.html.erb (1.7ms)
+Rendered layouts/_header.html.erb (20.0ms)
+Rendered layouts/_index.html.erb (0.3ms)
+Completed 200 OK in 373ms (Views: 313.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 14:59:35 -0800
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 14:59:35 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/content_slide.js?body=1" for 127.0.0.1 at 2011-11-06 14:59:35 -0800
+Served asset /content_slide.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 14:59:35 -0800
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 14:59:35 -0800
+Served asset /home.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 14:59:35 -0800
+Served asset /users.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 14:59:35 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 14:59:35 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 14:59:35 -0800
+Served asset /custom.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 14:59:35 -0800
+Served asset /home.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-06 14:59:35 -0800
+Served asset /scaffolds.css - 200 OK (4ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 14:59:35 -0800
+Served asset /sessions.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2011-11-06 14:59:35 -0800
+Served asset /stylesheet.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 14:59:35 -0800
+Served asset /users.css - 304 Not Modified (5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-11-06 15:00:15 -0800
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (9.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered sessions/_signin.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (2.3ms)
+Rendered layouts/_index.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 15:00:15 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 15:00:15 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content_slide.js?body=1" for 127.0.0.1 at 2011-11-06 15:00:15 -0800
+Served asset /content_slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 15:00:15 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 15:00:15 -0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 15:00:15 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 15:00:15 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 15:00:15 -0800
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 15:00:15 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 15:00:15 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 15:00:15 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2011-11-06 15:00:15 -0800
+Served asset /stylesheet.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 15:00:15 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 15:01:21 -0800
+  Processing by HomeController#public as HTML
+Rendered home/public.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered sessions/_signin.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (2.5ms)
+Rendered layouts/_index.html.erb (0.0ms)
+Completed 200 OK in 45ms (Views: 12.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-06 15:01:21 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-06 15:01:21 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content_slide.js?body=1" for 127.0.0.1 at 2011-11-06 15:01:21 -0800
+Served asset /content_slide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-11-06 15:01:21 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-11-06 15:01:21 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-11-06 15:01:21 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-06 15:01:21 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-06 15:01:21 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2011-11-06 15:01:21 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-11-06 15:01:21 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2011-11-06 15:01:21 -0800
+Served asset /stylesheet.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-11-06 15:01:21 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-11-06 15:01:21 -0800
+Served asset /home.css - 304 Not Modified (0ms)

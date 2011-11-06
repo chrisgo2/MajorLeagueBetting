@@ -3,32 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Major League Betting</title>
-<<<<<<< HEAD
-
   <%= javascript_include_tag :application %>
   <%= stylesheet_link_tag    :application %>
-
-=======
-  <%= javascript_include_tag :application %>
-  <%= stylesheet_link_tag    :application %>
->>>>>>> 7d979320ddc157cf4b37677f33b1130f467fecbe
   <%= csrf_meta_tags %>
 </head>
 <body>
   <div class="container">
-<<<<<<< HEAD
-
-=======
->>>>>>> 7d979320ddc157cf4b37677f33b1130f467fecbe
     <%= render :partial => 'layouts/header' %>
     <% flash.each do |key, value| %>
     	<div class="flash <%= key %>">
           <%= value %>
         </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 7d979320ddc157cf4b37677f33b1130f467fecbe
     <% end %>
 	<%= render :partial => 'layouts/index' %>
     <%= yield %>
