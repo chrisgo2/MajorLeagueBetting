@@ -1,13 +1,17 @@
 Majorleaguebetting::Application.routes.draw do
-  get "sessions/new"
+
+  root :to => "home#private", :constraints => lambda{|r| r.cookies.key?(:remember_token) }
+  root :to => 'home#public'
+
+  get "/" => 'home#private', :as => "user_root"
 
   resources :users
-  resources :sessions, :path => "signin", :only => [:new, :create, :destroy]
+  resources :sessions, :path => "signin", :only => [:create, :destroy]
 
   get "home/public"
-  get "users/new"
 
   match '/signin',  :to => 'sessions#new'
+  match '/signup', :to => 'users#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -58,9 +62,7 @@ Majorleaguebetting::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  #if signed_in?
-  root :to => "home#public"
-
+  #  root :to => "home#public"
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

@@ -272,15 +272,29 @@ a.button:hover
 }
 
 /*********************************************************
+* Home_Public:   *
+*********************************************************/
+
+.welcomeForm {
+    width: 400px;
+    padding: 40px 0 0 0px;
+}
+
+.signupForm {
+    padding: 40px 0 0 10px;
+    width: 390px;
+}
+
+/*********************************************************
 * Decorative classes: news posts, signatures     *
 *********************************************************/
 
-.fltLeft
+.lFloat
 {
     float: left;
 }
 
-.fltRight
+.rFloat
 {
     float: right;
 }
