@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <%= form_for(user, :url => { :controller => :user, :action => :create }) do |f| %>
+=======
+<%= form_for(new_user_path(@user)) do |f| %>
+>>>>>>> 119e03691086fb6bbe791182c306b95321ad213a
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
