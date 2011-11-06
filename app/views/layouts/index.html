@@ -2,20 +2,26 @@
 <head>
 
 	<title>Major League Betting</title>
-	<!-- load stylesheets ---------------------------------------------------->
+	
 	<link rel="stylesheet" href="../../../public/stylesheets/stylesheet.css" type="text/css" />
-	<!-- load scripts -------------------------------------------------------->
 	<script type="text/javascript" src="../../../public/javascripts/jquery-1.2.6.min.js"></script>
 	<script type="text/javascript" src="../../../public/javascripts/content_slide.js"></script>
-	<!--
-	<%= stylesheet_link_tag 'stylesheet' %>
-	<%= javascript_include_tag :default %>
-	-->
+
 </head>
 
 <body>
-
-   
+	
+	<div id="topbar">
+        <div id="home">
+            <a href="">home page</a>
+        </div>
+       <div id="topnav" class="topnav">
+           <a href="" class="signin"><span>Sign in</span></a>
+       </div>
+          <fieldset id="signin_menu">
+            <%= render :partial => 'sessions/signin' %>
+          </fieldset>
+    </div>
     
 		<div id="navigation">
         

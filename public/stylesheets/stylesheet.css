@@ -22,6 +22,7 @@ html
  * Topbar Home / Sign-in                                                      *
  *                                                                            *
  *****************************************************************************/
+<<<<<<< HEAD
 
 #topbar
 {
@@ -68,6 +69,66 @@ html
 }
 
  /*****************************************************************************
+=======
+
+#topbar
+{
+    width:100%;
+    height:50px;
+    background-color:#EEE;
+}
+
+#home
+{
+    width:50px;
+    height:50px;
+    float:left;
+    margin-left:40px;
+}
+
+#home a:link, 
+#home a:active, 
+#home a:visited
+{
+    color:#AAA;
+    width:50px;
+    height:50px;
+    display:block;
+    background-image:url("../images/home-roll.png");
+    background-repeat:no-repeat;
+    background-position:top left;
+    text-indent:-9999px;
+}
+
+#home a:hover
+{
+    background-position:bottom left;
+}
+
+#sign-in
+{
+    float:right;
+    margin-right:40px;
+    text-align:right;
+    line-height:50px;
+}
+
+#sign-in a
+{
+    width:70px;
+    height:50px;
+    color:#BBB;
+    text-decoration:none;
+}
+
+#sign-in a:hover
+{
+    color:#CCC;
+
+}
+
+ /*****************************************************************************
+>>>>>>> 1fa29c28bb1486b9e3b92477ace0135c45312cb8
  *                                                                            *
  * Expandable buttons (left column)                                           *
  *                                                                            *
