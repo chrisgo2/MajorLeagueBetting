@@ -9,6 +9,7 @@ Majorleaguebetting::Application.routes.draw do
   resources :sessions, :path => "signin", :only => [:create, :destroy]
 
   get "home/public"
+ 
 
   match '/signin', :to => 'sessions#new'
   match '/signup', :to => 'users#new'
@@ -62,6 +63,8 @@ Majorleaguebetting::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+
+
   #  root :to => "home#public"
   # See how all your routes lay out with "rake routes"
 
