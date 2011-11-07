@@ -11,6 +11,13 @@
 #  created_at         :datetime
 #  updated_at         :datetime
 #
+#  money              :integer
+#  Achieve_TotalBets :integer
+#  Achieve_NumBetsWon:integer
+#  Achieve_WinStreak :integer
+#  Achieve_TotalEarned :integer
+#  Achieve_Highe$tWin  :integer
+#
 
 require 'spec_helper'
 
