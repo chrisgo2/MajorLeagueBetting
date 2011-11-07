@@ -3,7 +3,7 @@ Majorleaguebetting::Application.routes.draw do
   root :to => "home#private", :constraints => lambda{|r| r.cookies.key?("remember_token") }
   root :to => 'home#public'
 
-  get "/" => 'home#private', :as => "user_root"
+  # get "/" => 'home#private', :as => "user_root"
 
   resources :users
   resources :sessions, :path => "signin", :only => [:create, :destroy]
@@ -11,7 +11,7 @@ Majorleaguebetting::Application.routes.draw do
   get "home/public"
  
 
-  match '/signin',  :to => 'sessions#new'
+  match '/signin', :to => 'sessions#new'
   match '/signup', :to => 'users#new'
 
   # The priority is based upon order of creation:
