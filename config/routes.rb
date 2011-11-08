@@ -6,14 +6,13 @@ Majorleaguebetting::Application.routes.draw do
 
   get "/" => 'home#private', :as => "user_root"
 
-  resources :users
+  resources :users,    :path => "signup", :only => [:create]
   resources :sessions, :path => "signin", :only => [:create, :destroy]
 
   get "home/public"
- 
 
-  match '/signin', :to => 'sessions#new'
-  match '/signup', :to => 'users#new'
+  match '/signin',  :to => 'sessions#new'
+  match '/signup' => 'users#new'
   match '/signout', :to => 'sessions#destroy'
 
   # The priority is based upon order of creation:
