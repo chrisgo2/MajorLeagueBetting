@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def new
+    @title = "Sign Up"
     @user = User.new
   end
 
@@ -10,7 +11,8 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome to Major League Betting."
       redirect_to user_root_path
     else
-      flash.now[:error] = "Please fill in fields."
+      @title = "Sign Up"
+      render "new"
     end
   end
 end

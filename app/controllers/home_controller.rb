@@ -10,5 +10,6 @@ class HomeController < ApplicationController
   end
   
   def private
+    @title = "Home"
   end
 end
