@@ -1,20 +1,18 @@
 <header>
 	<div id="topbar">
-		<% if signed_in? %>
-			<div id="home">
-            	<a href="">home page</a>
-        	</div>
-			<div id="topnav" class="topnav">
-			<%= link_to "Sign out", signout_path, :method => :delete, :class => "signin" %>
-	    	</div>
-	    <% else %>
-			<div id="topnav" class="topnav">
-		    	<a href="" class="signin"><span>Sign in</span></a>
-		    </div>
-		    <fieldset id="signin_menu">
-		    	<%= render :partial => 'sessions/signin' %>
-		    </fieldset>
-	 	<% end %>         
+		<div id="home">
+        	<a href="">home page</a>
+        </div>
+		<div id="topnav" class="topnav">
+			<% if signed_in? %>
+				<%= link_to "Sign out", signout_path, :method => :delete, :class => "signin" %>
+			<% else %>
+				<a href="" class="signin"><span>Sign in</span></a>
+				<fieldset id="signin_menu">
+			    	<%= render :partial => 'sessions/signin' %>
+			    </fieldset>
+			<% end %>
+	    </div>  
     </div>
 </header>
 <script type="text/javascript">
