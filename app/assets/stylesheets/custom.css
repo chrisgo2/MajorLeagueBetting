@@ -8,11 +8,14 @@
 	margin:0;
 	padding:0;
 }
-
 html {
 	width:1000px;
 	margin-left:auto;
 	margin-right:auto;
+}
+body {
+	font-family:Arial, Helvetica, sans-serif;
+  	font-size:13px;
 }
 
 /******************************************************************************
@@ -20,44 +23,87 @@ html {
  * Library Styles: common used styles, decorative class styles                *
  *                                                                            *
  *****************************************************************************/
- .lFloat {
+
+.lFloat {
     float: left;
 }
 .rFloat {
     float: right;
 }
 
-
 /******************************************************************************
  *                                                                            *
  * Template Layouts: unique styles for elements, styles for website structure *
  *                                                                            *
  *****************************************************************************/
+
+
+	.info, .success, .warning, .error, .validation {
+		border: 1px solid;
+		margin: 10px 0px;
+		padding:15px 10px 15px 50px;
+		background-repeat: no-repeat;
+		background-position: 10px center;
+	}
+	.info {
+		color: #00529B;
+		background-color: #BDE5F8;
+		background-image: url('/assets/knobs/Knob_Info.png');
+	}
+	.success {
+		color: #4F8A10;
+		background-color: #DFF2BF;
+		background-image:url('/assets/knobs/Knob_ValidGreen.png');
+	}
+	.warning {
+		color: #9F6000;
+		background-color: #FEEFB3;
+		background-image: url('/assets/knobs/Knob_Attention.png');
+	}
+	.error {
+		color: #D8000C;
+		background-color: #FFBABA;
+		background-image: url('/assets/knobs/Knob_Cancel.png');
+	}
+	.validation {
+		color: #D63301;
+		background-color: #FFCCBA;
+		background-image: url('/assets/knobs/Knob_RemoveRed.png');
+	}
+        .validation ul {
+            padding:0px 0px 0px 10px;
+        }
+	
     /*********************************************************
-    * Topbar, Sign-in   *
+    * Topbar, Sign-in  										 *
     *********************************************************/
+
     #topbar {
         width:100%;
         height:50px;
         background-color:#EEE;
     }
     #home {
-        width:50px;
-        height:50px;
-        float:left;
-        margin-left:40px;
-    }
-    #home a:link,
-    #home a:active,
-    #home a:visited {
-        color:#AAA;
-        width:50px;
-        height:50px;
-        background-image:url("../images/home.png");
-        background-repeat:no-repeat;
-        background-position:top left;
-        text-indent:-9999px;
-    }
+	    width:50px;
+	    height:50px;
+	    float:left;
+	    margin-left:40px;
+	}
+	#home a:link, 
+	#home a:active, 
+	#home a:visited {
+	    color:#AAA;
+	    width:50px;
+	    height:50px;
+	    display:block;
+	    background-image:url("../images/home-roll.png");
+	    background-repeat:no-repeat;
+	    background-position:top left;
+	    text-indent:-9999px;
+	}
+	#home a:hover {
+	    background-position:bottom left;
+	}
     #sign-in {
         width:150px;
         height:50px;
@@ -203,7 +249,6 @@ html {
             cursor:pointer;
         }
 
-
 /******************************************************************************
  *                                                                            *
  * Individual Page Styles: unique styles for a page							  *
@@ -212,6 +257,7 @@ html {
     /*********************************************************
     * Home_Public:   *
     *********************************************************/
+
     .welcomeForm {
         width: 400px;
         padding: 40px 0 0 0px;

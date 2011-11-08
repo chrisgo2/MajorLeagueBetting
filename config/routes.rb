@@ -1,18 +1,18 @@
 Majorleaguebetting::Application.routes.draw do
 
-  root :to => "home#private", :constraints => lambda{|r| r.cookies.key?("remember_token") }
+  resources :users,    :path => "signup", :only => [:create]
+  resources :sessions, :path => "signin", :only => [:create, :destroy]
+  
+  root :to => "home#private", :constraints => lambda{|r| r.cookies.key?(:remember_token) }
+    
   root :to => 'home#public'
 
+  # what do these do??? unnecessary?
   get "/" => 'home#private', :as => "user_root"
-
-  resources :users
-  resources :sessions, :path => "signin", :only => [:create, :destroy]
-
   get "home/public"
- 
 
-  match '/signin', :to => 'sessions#new'
-  match '/signup', :to => 'users#new'
+  match '/signin',  :to => 'sessions#new'
+  match '/signup',  :to => 'users#new'
   match '/signout', :to => 'sessions#destroy'
 
   # The priority is based upon order of creation:
