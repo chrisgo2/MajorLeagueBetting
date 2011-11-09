@@ -1,0 +1,28 @@
+<!DOCTYPE PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%= title %></title>
+  <%= javascript_include_tag :application %>
+  <%= stylesheet_link_tag    :application %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <%= render :partial => 'layouts/header' %>
+    <% flash.each do |key, value| %>
+    	<div class="flash <%= key %>">
+          <%= value %>
+        </div>
+    <% end %>
+    <% if signed_in? %>
+	    <%= render :partial => 'layouts/navigation' %>
+	    <!-- <%= render #:partial => 'layouts/feed' %> -->
+    <% end %>
+    <%= yield %>
+  </div>
+</body>
+<footer>
+</footer>
+<%= debug(params) if Rails.env.development? %>
+</html>
