@@ -1,5 +1,5 @@
 <%= form_for(@user) do |f| %>
-  <%= render 'shared/validation' %>
+  <%= render 'shared/validation', :object => f.object %>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
