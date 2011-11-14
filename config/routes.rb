@@ -1,22 +1,25 @@
 Majorleaguebetting::Application.routes.draw do
 
-  resources :users,    :path => "signup", :only => [:create]
-  resources :sessions, :path => "signin", :only => [:create, :destroy]
+  # The priority is based upon order of creation:
+  # first created -> highest priority.
   
-  root :to => "home#private", :constraints => lambda{|r| r.cookies.key?(:remember_token) }
-    
+  root :to => "home#private", :constraints => lambda{|r| r.cookies.key?("remember_token") }   
   root :to => 'home#public'
 
-  # what do these do??? unnecessary?
   get "/" => 'home#private', :as => "user_root"
-  get "home/public"
-
+  
+  resources :users,    :path => "signup", :only => [:create]
+  resources :sessions, :path => "signin", :only => [:create, :destroy]
+  resources :games, :only => [:index, :show]
+  resources :statistics, :only => [:index]
+  resources :leaderboards, :only => [:index]
+  resources :achievements, :only => [:index, :show]
+  
+  match '/profile', :to => 'users#show', :as => "user"
   match '/signin',  :to => 'sessions#new'
   match '/signup',  :to => 'users#new'
   match '/signout', :to => 'sessions#destroy'
 
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

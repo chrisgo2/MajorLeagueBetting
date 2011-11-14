@@ -1,7 +1,7 @@
 <div id="navigation">
 
 	<div id="profile_button">
-		<a href="#" class="feed">&nbsp;</a>
+		<%= link_to "", current_user, :class => "feed" %>
 		<a href="#" class="button">Profile</a>
         
         <div id="profile" class="initially_closed">
@@ -29,7 +29,7 @@
 	</div>
 	
 	<div id="games_button">
-		<a href="#" class="feed">&nbsp;</a>
+		<%= link_to "", games_path, :class => "feed" %>
 		<a href="#" class="button">Games</a>
         
         <div id="games" class="initially_closed">
@@ -60,7 +60,7 @@
 	</div>
 	
 	<div id="statistics_button">
-		<a href="#" class="feed">&nbsp;</a>
+		<%= link_to "", statistics_path, :class => "feed" %>
 		<a href="#" class="button">Statistics</a>
         
         <div id="statistics" class="initially_closed">
@@ -69,7 +69,7 @@
 	</div>
 	
 	<div id="leaderboards_button">
-		<a href="#" class="feed">&nbsp;</a>
+		<%= link_to "", leaderboards_path, :class => "feed" %>
 		<a href="#" class="button">Leaderboards</a>
         
         <div id="leaderboards" class="initially_closed">
@@ -78,7 +78,7 @@
 	</div>
 	
 	<div id="achievements_button">
-		<a href="#" class="feed">&nbsp;</a>
+		<%= link_to '', achievements_path, :class => "feed" %>
 		<a href="#" class="button">Achievements</a>
         
         <div id="achievements" class="initially_closed">
