@@ -22,7 +22,7 @@ away_score = String.new
 hs = Integer
 as = Integer
 
-#Create a Nokogiri::HTML::Document for nfl.com
+#Create a Nokogiri::HTML::Document for www.nfl.com/schedules
 nfl = Nokogiri::HTML(open("http://www.nfl.com/schedules"))
 
 #Print all h3 text
