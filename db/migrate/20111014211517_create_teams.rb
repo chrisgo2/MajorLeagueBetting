@@ -8,7 +8,7 @@ class CreateTeams < ActiveRecord::Migration
       t.string   :short_name
       t.string   :logo_path
       t.integer  :wins
-      t.integer  :loses
+      t.integer  :losses
       t.integer  :ties
       t.integer  :home_wins
       t.integer  :home_losses

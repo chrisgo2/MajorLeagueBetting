@@ -40,7 +40,7 @@ Team.create :league_id => League.find_by_short_name("NFL").id,
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "East",
-            :name => "Miami Dolphis",
+            :name => "Miami Dolphins",
             :short_name => "MIA",
             :logo_path => "app/assests/images/nfl-images/nfl-miamidolphins.png"
 
