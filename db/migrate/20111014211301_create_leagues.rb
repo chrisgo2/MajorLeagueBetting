@@ -11,10 +11,5 @@ class CreateLeagues < ActiveRecord::Migration
 
     add_index :leagues, :name, :unique => true
   end
-  
-  league.create :name => "National Football League",
-                :short_name => "NFL",
-                :sport => "Football"
-  end
             
 end
