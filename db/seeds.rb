@@ -34,7 +34,7 @@ Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "East",
             :name => "Buffalo Bills",
-            :short_name => "BB",
+            :short_name => "BUF",
             :logo_path => "app/assests/images/nfl-images/nfl-buffalobills.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
@@ -49,7 +49,7 @@ Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "North",
             :name => "Pittsburgh Steelers",
-            :short_name => "Baltimore Ravens",
+            :short_name => "PIT",
             :logo_path => "app/assests/images/nfl-images/nfl-pitstburghsteelers.png"
   
 Team.create :league_id => League.find_by_short_name("NFL").id,
@@ -92,7 +92,7 @@ Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "South",
             :name => "Jacksonville Jaguars",
-            :short_name => "JAX",
+            :short_name => "JAC",
             :logo_path => "app/assests/images/nfl-images/nfl-jacksonvillejaguars.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
@@ -162,7 +162,7 @@ Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "NFC",
             :division => "North",
             :name => "Green Bay Packers",
-            :short_name => "GBP",
+            :short_name => "GB",
             :logo_path => "app/assests/images/nfl-images/nfl-greenbaypackers.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,

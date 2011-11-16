@@ -14,7 +14,6 @@
 
 class Team < ActiveRecord::Base
 
-#  attr_accessible :name, :short_name
 
   belongs_to :league
 
