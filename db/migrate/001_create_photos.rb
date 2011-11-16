@@ -6,3 +6,7 @@ class CreatePhotos < ActiveRecord::Migration
       t.column :filename, :string 
       t.column :binary_data, :binary 
    end
+ end
+end
+
+ 

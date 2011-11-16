@@ -92,6 +92,13 @@ ActiveRecord::Schema.define(:version => 20111110233337) do
     t.datetime "updated_at"
   end
 
+  create_table "photos", :force => true do |t|
+    t.string "description"
+    t.string "content_type"
+    t.string "filename"
+    t.binary "binary_data"
+  end
+
   create_table "teams", :force => true do |t|
     t.integer  "league_id"
     t.string   "conference"
@@ -124,6 +131,7 @@ ActiveRecord::Schema.define(:version => 20111110233337) do
     t.string   "email"
     t.string   "encrypted_password"
     t.string   "salt"
+    t.integer  "money"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

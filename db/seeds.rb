@@ -10,3 +10,12 @@ League.create :name => "National Football League",
                :short_name => "NFL",
                :sport => "Football",
                :logo_path => "app/assets/images/nfl.png"
+               
+League.create :name => "Major League Baseball",
+              :short_name => "MLB",
+              :sport => "Baseball"
+              
+Team.create :conference => "NFC",
+            :division => "South",
+            :name => "Tampa Bay Buccaneers",
+            :short_name => "TB"
