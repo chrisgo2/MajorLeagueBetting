@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+League.create :name => "National Football League",
+               :short_name => "NFL",
+               :sport => "Football",
+               :logo_path => "app/assets/images/nfl.png"
