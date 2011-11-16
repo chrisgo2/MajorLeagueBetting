@@ -18,6 +18,8 @@
 #  winner_points :integer
 #  loser_points  :integer
 #
-
 class Game < ActiveRecord::Base
+  
+  
+  
 end
