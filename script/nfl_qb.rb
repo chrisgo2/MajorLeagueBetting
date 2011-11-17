@@ -1,4 +1,4 @@
-#NFL Top 10 Quarterbacks Finder
+#NFL Top Quarterbacks Finder
 #Sean C. Allen
 #CSU, Chico
 #CSCI 430
