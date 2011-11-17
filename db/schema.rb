@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111110233337) do
+ActiveRecord::Schema.define(:version => 20111117081436) do
 
   create_table "bet_links", :force => true do |t|
     t.string   "bet_type"
@@ -70,6 +70,13 @@ ActiveRecord::Schema.define(:version => 20111110233337) do
     t.string   "type"
     t.integer  "game_id"
     t.boolean  "is_spread"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "headlines", :force => true do |t|
+    t.string   "title"
+    t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
