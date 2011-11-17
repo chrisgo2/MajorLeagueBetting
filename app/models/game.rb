@@ -25,7 +25,47 @@ class Game < ActiveRecord::Base
   end
   
   def self.update_spread!
+    home_wp = Float
+    away_wp = Float
+    home_hwp = Float
+    away_awp = Float
+    home_cwp = Float
+    away_cwp = Float
+    home_dwp = Float
+    away_dwp = Float
+    points = Integer
+    spread = Float
+    check = Float
     
+    Game.find(:all).each do |g|
+      home_team = Team.find(g.home_team_id)
+      away_team = Team.find(g.away_team_id)
+      
+      home_wp = (home_team.wins.to_f/(home_team.wins + home_team.losses + home_team.ties).to_f)
+      away_wp = (away_team.wins.to_f/(away_team.wins + away_team.losses + away_team.ties).to_f)
+      home_hwp = (home_team.home_wins.to_f/(home_team.home_wins + home_team.home_losses).to_f)
+      away_awp = (away_team.road_wins.to_f/(away_team.road_wins + away_team.road_losses).to_f)
+      home_cwp = (home_team.conf_wins.to_f/(home_team.conf_wins + home_team.conf_losses).to_f)
+      away_cwp = (away_team.conf_wins.to_f/(away_team.conf_wins + away_team.conf_losses).to_f)
+      home_dwp = (home_team.div_wins.to_f/(home_team.div_wins + home_team.div_losses).to_f)
+      away_dwp = (away_team.div_wins.to_f/(away_team.div_wins + away_team.div_losses).to_f)
+      points = (home_team.points_for - away_team.points_for + away_team.points_against - home_team.points_against)
+      
+      spread = (1 + (home_wp - away_wp) + (home_hwp - away_awp) + (points.to_f/10)) * -1
+      if (spread > 0)
+        spread = spread.floor + 0.5
+      else
+        spread = spread.ceil + 0.5
+      end
+      
+      check = ((g.away_score - g.home_score).to_f - spread).abs
+      
+      printf("\n%s @\n%s %f\n",Team.find(g.away_team_id).name, Team.find(g.home_team_id).name, spread)
+      g.spread = spread
+      g.spread_check = check
+      g.save!
+      
+    end
   end
   
   
