@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(:version => 20111110233337) do
   end
 
   create_table "football_team_stats", :force => true do |t|
+    t.integer  "winner_id"
+    t.integer  "loser_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -50,13 +52,10 @@ ActiveRecord::Schema.define(:version => 20111110233337) do
     t.integer  "home_score"
     t.integer  "away_score"
     t.integer  "spread"
+    t.integer  "week"
     t.datetime "start_time"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "winner_id"
-    t.integer  "loser_id"
-    t.integer  "winner_points"
-    t.integer  "loser_points"
   end
 
   create_table "general_bets", :force => true do |t|

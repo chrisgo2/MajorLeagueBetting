@@ -7,6 +7,7 @@ class CreateGames < ActiveRecord::Migration
       t.integer  :home_score
       t.integer  :away_score
       t.integer  :spread
+      t.integer  :week
       t.datetime :start_time
       
       t.timestamps
