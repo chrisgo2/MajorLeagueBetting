@@ -1,0 +1,48 @@
+/******************************************************************************
+ *                                                                            *
+ * Content feed (right column)                                                *
+ *                                                                            *
+ *****************************************************************************/
+ 
+#content_area
+{
+	float:left;
+}
+
+#profile_content, 
+#games_content, 
+#statistics_content,
+#leaderboards_content, 
+#achievements_content
+{
+    width:578px;
+	position:absolute;
+	padding:10px;
+	background-color:#F9F9F9;
+    border:1px solid #EEE;
+}
+
+#profile_content
+{
+	z-index:100;
+}
+
+#games_content
+{
+	z-index:200;
+}
+
+#statistics_content
+{
+	z-index:300;
+}
+
+#leaderboards_content
+{
+	z-index:400;
+}
+
+#achievements_content
+{
+	z-index:500;
+}

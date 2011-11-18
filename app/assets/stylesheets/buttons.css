@@ -1,0 +1,218 @@
+ /*****************************************************************************
+ *                                                                            *
+ * Expandable buttons (left column)                                           *
+ *                                                                            *
+ *****************************************************************************/
+
+#navigation
+{
+	width:400px;
+	background-color:#FFF;
+	float:left;
+}
+
+#profile_button, 
+#games_button, 
+#statistics_button, 
+#leaderboards_button, 
+#achievements_button
+{
+	height:50px; 
+}
+
+a.feed
+{
+	width:40px;
+	height:50px;
+	display:block;
+    background-image:url("../images/feed.png");
+	float:left;
+    clear:both;
+    text-indent:-9999px;
+    
+}
+
+a.feed:hover
+{
+	background-color:#EEE;
+}
+
+a.button
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:18px;
+	width:360px;
+	height:50px;
+	line-height:50px;
+	color:#FFF;
+	display:block;
+	text-decoration:none;
+    background-image:url("../images/430.png");
+    text-indent:15px;
+    text-shadow:2px 2px #AAA;
+    float:left;
+}
+
+a.button:hover
+{
+	background-color:#CCC;
+}
+
+/* * * * * * * * * * * * * * *
+ *                           *
+ * jQuery button sliders:    *
+ * when clicked on, expands  *
+ * content area beneath it   *
+ *                           *
+ * * * * * * * * * * * * * * */
+ 
+.initially_closed
+{
+	/* initially closed, cannot be visible */
+	display:none;
+}
+
+.content_open
+{
+	/* Empty class, used as boolean to
+	 * tell if content slides up or down */
+}
+
+#navigation a.button_open
+{
+	/* Changes active button's color when 
+	 * area is expanded (current button) */
+	background-color:#CCC;
+}
+
+#navigation a.feed_open
+{
+	/* Changes feed's color when 
+	 * feed is loaded (current feed) */
+	background-color:#EEE;
+}
+
+ /*****************************************************************************
+ *                                                                            *
+ * Expandable buttons content (expanded when button is clicked)               *
+ *                                                                            *
+ *****************************************************************************/
+
+#profile, 
+#games, 
+#statistics, 
+#leaderboards, 
+#achievements
+{
+	background-color:#EEE;
+    width:330px;
+    float:right;
+    padding:15px;
+}
+
+/* Profile expanded */
+#profile
+{
+	height:200px;
+}
+#profile img
+{
+	float:left;
+}
+#profile h1
+{
+	text-indent:15px;
+	line-height:100px;
+}
+#profile table
+{
+	margin-top:8px;
+}
+#profile th
+{
+	text-align:center;
+	font-size:14px;
+	line-height:14px;
+}
+#profile td
+{
+	width:180px;
+	height:22px;
+	text-indent:8px;
+	font-size:14px;
+	line-height:14px;
+	border:1px solid #CCC;
+}
+
+/* Games expanded */
+#games
+{
+	height:200px;
+}
+#games table
+{
+	margin-top:-5px;
+}
+#games th
+{
+	width:360px;
+	height:30px;
+	font-size:18px;
+	line-height:18px;
+	text-align:center;
+}
+#games td.games_upcoming
+{
+	width:240px;
+	height:22px;
+	font-size:14px;
+	line-height:14px;
+	text-indent:8px;
+	border:1px solid #CCC;
+}
+#games td.games_bets
+{
+	width:120px;
+	height:22px;
+	font-size:14px;
+	line-height:14px;
+	text-align:center;
+}
+#games td.games_past
+{
+	width:360px;
+	height:22px;
+	font-size:14px;
+	line-height:14px;
+}
+#games td.games_past_won
+{
+	border:1px solid green;
+}
+#games td.games_past_lost
+{
+	border:1px solid red;
+}
+#games td
+{
+	
+}
+
+/* Statistics expanded */
+#statistics
+{
+	height:200px;
+}
+
+/* Leaderboards expanded */
+#leaderboards
+{
+	height:200px;
+}
+
+/* Achievements expanded */
+#achievements
+{
+	height:200px;
+}
