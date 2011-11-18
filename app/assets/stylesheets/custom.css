@@ -42,8 +42,18 @@ body {
 	min-height: 600px;
 	margin: 0;
 	padding: 0;
-	width: auto;
+	width:1000px;
 }
+#navigation {
+	width:400px;
+	background-color:#FFF;
+}
+#feedContent {
+	
+	min-height:600px;
+	min-width:600px;
+}
+
 	.info, .success, .warning, .error, .validation {
 		border: 1px solid;
 		margin: 10px 0px;
