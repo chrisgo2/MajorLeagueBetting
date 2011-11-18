@@ -298,7 +298,7 @@ nfl.xpath('//table/tbody/tr').each do |rowNode|
         hs = home_score.to_i
         as = away_score.to_i
                     
-        printf("\n    %s %d at %s %d", away_team, as, home_team, hs) 
+        #printf("\n    %s %d at %s %d", away_team, as, home_team, hs) 
         Game.create :league_id => League.find_by_short_name("NFL").id,
                     :home_team_id => Team.find_by_short_name(home_team).id,
                     :away_team_id => Team.find_by_short_name(away_team).id,
