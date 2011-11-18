@@ -1,11 +1,7 @@
 <header>
 	<div id="topbar">
 		<div id="home">
-			<%= link_to root_path do %>
-				MLB
-				<!--<%= image_tag :class => "homeImage" %>-->
-				<% end %>
-			<!--<%= link_to "Home", root_path, :class => "homeImage" %>-->
+			<%= link_to "MLB", root_path, :class => 'homeLink' %>
 		</div>
 		<div id="topnav" class="topnav">
 			<% if signed_in? %>
