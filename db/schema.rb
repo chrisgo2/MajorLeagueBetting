@@ -69,13 +69,6 @@ ActiveRecord::Schema.define(:version => 20111118155113) do
     t.datetime "updated_at"
   end
 
-  create_table "photos", :force => true do |t|
-    t.string "description"
-    t.string "content_type"
-    t.string "filename"
-    t.binary "binary_data"
-  end
-
   create_table "quarterbacks", :force => true do |t|
     t.string   "name"
     t.string   "link"
