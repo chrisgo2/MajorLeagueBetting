@@ -1,6 +1,8 @@
-<h1>Games#index</h1>
-<p>Find me in app/views/games/index.html.erb</p>
+<div id="gameFeed">
+  <h1>Games#index</h1>
+  <p>Find me in app/views/games/index.html.erb</p>
+  This is the Games Feed for <%= current_user.name %>
+</div>
 
-This is the Games Feed for <%= current_user.name %>
-
+<p><%= Team.find(1).name%></p>
 

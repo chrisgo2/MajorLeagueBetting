@@ -18,8 +18,12 @@
       <% end %>
       <% if signed_in? %>
 	<%= render :partial => 'layouts/navigation' %>
-      <% end %>
-      <%= yield %>
+	<div id="feedContent">
+	  <%= yield %>
+	</div>
+      <% else %>
+	<%= yield %>
+      <% end %>	
     </div>
     <div id="footer">
       footer
