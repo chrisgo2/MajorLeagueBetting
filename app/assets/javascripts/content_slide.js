@@ -39,12 +39,12 @@ function content_clicked ($button, $content)
 			previous_content_collapse($previous_button, $previous_content);
 		}
 		// content area collapsed
-		if ( $content.hasClass("content_open") == false ) {			
+		if ( $content.hasClass("content_open") == false ) {
 			$content.slideDown("slow", function() {
 				// Animation done
-				$content.removeClass("initially_closed")
 				$content.addClass("content_open");
 				$button.addClass("button_open");
+				
 				$previous_content = $content;
 				$previous_button  = $button;
 			});
@@ -80,7 +80,6 @@ function content_stream_clicked ($stream_button, $stream_content)
 		// stream feed is hidden
 		if ( $stream_content.hasClass("content_open") == false ) {
 			$stream_content.slideDown('fast', function(){});
-			$stream_content.removeClass("initially_closed")
 			$stream_content.addClass("content_open");
             $stream_button.addClass("feed_open");
 			$previous_feed = $stream_content;
