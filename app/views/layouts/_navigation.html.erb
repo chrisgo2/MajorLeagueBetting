@@ -39,29 +39,29 @@
 				</tr>
 				<tr>
 					<td class="games_upcoming">
-						<%= Team.find(Game.find(148).away_team_id).short_name%>
-						<%= Game.find(148).away_score%> @ 
-						<%= Team.find(Game.find(148).home_team_id).short_name%>   
-						<%= Game.find(148).home_score%>
-						<%= Game.find(148).spread%></td>
+						<%= Team.find(Game.find(148).away_team_id).short_name %>
+						<%= Game.find(148).away_score %> @ 
+						<%= Team.find(Game.find(148).home_team_id).short_name %>   
+						<%= Game.find(148).home_score %>
+						<%= Game.find(148).spread %></td>
 					<td class="games_bets">202 bets</td>
 				</tr>
 				<tr>
 					<td class="games_upcoming">
-						<%= Team.find(Game.find(149).away_team_id).short_name%>
-						<%= Game.find(149).away_score%> @ 
-						<%= Team.find(Game.find(149).home_team_id).short_name%>   
-						<%= Game.find(149).home_score%>
-						<%= Game.find(149).spread%></td>
+						<%= Team.find(Game.find(149).away_team_id).short_name %>
+						<%= Game.find(149).away_score %> @ 
+						<%= Team.find(Game.find(149).home_team_id).short_name %>   
+						<%= Game.find(149).home_score %>
+						<%= Game.find(149).spread %></td>
 					<td class="games_bets">1 bet</td>
 				</tr>
 				<tr>
 					<td class="games_upcoming">
-						<%= Team.find(Game.find(159).away_team_id).short_name%>
-						<%= Game.find(159).away_score%> @ 
-						<%= Team.find(Game.find(159).home_team_id).short_name%>   
-						<%= Game.find(159).home_score%>
-						<%= Game.find(159).spread%></td>
+						<%= Team.find(Game.find(159).away_team_id).short_name %>
+						<%= Game.find(159).away_score %> @ 
+						<%= Team.find(Game.find(159).home_team_id).short_name %>   
+						<%= Game.find(159).home_score %>
+						<%= Game.find(159).spread %></td>
 					<td class="games_bets">48 bets</td>
 				</tr>
 				
@@ -70,29 +70,29 @@
 				</tr>
 				<tr>
 					<td class="games_upcoming">
-						<%= Team.find(Game.find(147).away_team_id).short_name%>
-						<%= Game.find(147).away_score%> @ 
-						<%= Team.find(Game.find(147).home_team_id).short_name%>   
-						<%= Game.find(147).home_score%>
-						<%= Game.find(147).spread%></td>
+						<%= Team.find(Game.find(147).away_team_id).short_name %>
+						<%= Game.find(147).away_score %> @ 
+						<%= Team.find(Game.find(147).home_team_id).short_name %>   
+						<%= Game.find(147).home_score %>
+						<%= Game.find(147).spread %></td>
 					<td class="games_bets">202 bets</td>
 				</tr>
 				<tr>
 					<td class="games_upcoming">
-					<%= Team.find(Game.find(1).away_team_id).short_name%>
-					<%= Game.find(1).away_score%> @ 
-					<%= Team.find(Game.find(1).home_team_id).short_name%>   
-					<%= Game.find(1).home_score%>
-					<%= Game.find(1).spread%></td>
+					<%= Team.find(Game.find(1).away_team_id).short_name %>
+					<%= Game.find(1).away_score %> @ 
+					<%= Team.find(Game.find(1).home_team_id).short_name %>   
+					<%= Game.find(1).home_score %>
+					<%= Game.find(1).spread %></td>
 					<td class="games_bets">1 bet</td>
 				</tr>
 				<tr>
 					<td class="games_upcoming"> 
-						<%= Team.find(Game.find(24).away_team_id).short_name%>
-						<%= Game.find(24).away_score%> @ 
-						<%= Team.find(Game.find(24).home_team_id).short_name%>   
-						<%= Game.find(24).home_score%>
-						<%= Game.find(24).spread%></td>
+						<%= Team.find(Game.find(24).away_team_id).short_name %>
+						<%= Game.find(24).away_score %> @ 
+						<%= Team.find(Game.find(24).home_team_id).short_name %>   
+						<%= Game.find(24).home_score %>
+						<%= Game.find(24).spread %></td>
 					<td class="games_bets">48 bets</td>
 				</tr>
 			</table>
@@ -104,7 +104,20 @@
 		<a href="#" class="button">Statistics</a>
         
         <div id="statistics" class="initially_closed">
-            Game, player, career, seasonal, and league statistics 
+            <table align="center">
+				<tr>
+					<th>Current Streak:</th>
+					<td>+3</td>
+				</tr>
+				<tr>
+					<th>Win/Loss Ratio:</th>
+					<td>3.12</td>
+				</tr>
+				<tr>
+					<th>Total $ Won:</th>
+					<td>$199</td>
+				</tr>
+			</table>
         </div>
 	</div> <!-- statistics button -->
 	
@@ -113,7 +126,20 @@
 		<a href="#" class="button">Leaderboards</a>
         
         <div id="leaderboards" class="initially_closed">
-            How users in the world of Major LeaguedBetting rate comparatively
+            <table align="center">
+				<tr>
+					<th>Total $:</th>
+					<td>$23 (1025th place)</td>
+				</tr>
+				<tr>
+					<th>Total Wins:</th>
+					<td>551 (100th place)</td>
+				</tr>
+				<tr>
+					<th>Achievements:</th>
+					<td>61 (322nd place)</td>
+				</tr>
+			</table>
         </div>
 	</div> <!-- leaderboards button -->
 	
@@ -122,7 +148,23 @@
 		<a href="#" class="button">Achievements</a>
         
         <div id="achievements" class="initially_closed">
-            Personal achievements for current user will be displayed here.
+            <table align="center">
+				<tr>
+					<th colspan="2">Achievements 20/100</th>
+				</tr>
+				<tr>
+					<td class="achievement_name">5 In A Row</td>
+					<td class="achievement_progress">4/5</td>
+				</tr>
+				<tr>
+					<td class="achievement_name">Win One Hundo</td>
+					<td class="achievement_progress">88/100</td>
+				</tr>
+				<tr>
+					<td class="achievement_name">Get 'Em!</td>
+					<td class="achievement_progress">2/3</td>
+				</tr>
+			</table>
         </div>
 	</div> <!-- achievements button -->
 	

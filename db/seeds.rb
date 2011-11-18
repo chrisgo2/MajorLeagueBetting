@@ -308,3 +308,5 @@ nfl.xpath('//table/tbody/tr').each do |rowNode|
         end
       end
     end
+
+Game.update_spread!
