@@ -3,6 +3,7 @@
  * Universal Styles: specific to commonly used HTML tag						  *
  *                                                                            *
  *****************************************************************************/
+
 html {
 	width:1000px;
 	margin-left:auto;
@@ -13,7 +14,6 @@ body {
   	font-size:13px;
 	margin-top: 0;
 }
-
 
 /******************************************************************************
  *                                                                            *
@@ -27,12 +27,19 @@ body {
 .rFloat {
     float: right;
 }
+.txtLeft {
+	text-align:left;
+}
+.txtRight {
+	text-align:right;
+}
 
 /******************************************************************************
  *                                                                            *
  * Template Layouts: unique styles for elements, styles for website structure *
  *                                                                            *
  *****************************************************************************/
+
 #container {
 	width:1000px;
 	margin: 0 auto;
@@ -265,11 +272,3 @@ body {
             background-position:0 -5px;
             cursor:pointer;
         }
-
-/******************************************************************************
- *                                                                            *
- * Individual Page Styles: unique styles for a page							  *
- *                                                                            *
- *****************************************************************************/
-    
-    
