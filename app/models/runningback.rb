@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: runningbacks
+#
+#  id         :integer         not null, primary key
+#  name       :string(255)
+#  link       :string(255)
+#  rank       :integer
+#  league_id  :integer
+#  team_id    :integer
+#  td         :integer
+#  yds_per_g  :float
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Runningback < ActiveRecord::Base
   
   def self.update_from_web!

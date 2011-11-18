@@ -1,8 +1,12 @@
 <header>
 	<div id="topbar">
 		<div id="home">
-			<%= link_to "Home", root_path, :class => "homeImage" %>
-        </div>
+			<%= link_to root_path do %>
+				MLB
+				<!--<%= image_tag :class => "homeImage" %>-->
+				<% end %>
+			<!--<%= link_to "Home", root_path, :class => "homeImage" %>-->
+		</div>
 		<div id="topnav" class="topnav">
 			<% if signed_in? %>
 				<%= link_to "Sign out", signout_path, :method => :delete, :class => "signin" %>

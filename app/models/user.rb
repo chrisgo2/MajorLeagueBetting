@@ -8,6 +8,7 @@
 #  email              :string(255)
 #  encrypted_password :string(255)
 #  salt               :string(255)
+#  money              :integer
 #  created_at         :datetime
 #  updated_at         :datetime
 #
