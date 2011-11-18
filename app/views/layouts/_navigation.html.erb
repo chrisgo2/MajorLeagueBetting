@@ -38,15 +38,30 @@
 					<th colspan="2">Upcoming Games:</th>
 				</tr>
 				<tr>
-					<td class="games_upcoming">Game 4</td>
+					<td class="games_upcoming">
+						<%= Team.find(Game.find(148).away_team_id).short_name%>
+						<%= Game.find(148).away_score%> @ 
+						<%= Team.find(Game.find(148).home_team_id).short_name%>   
+						<%= Game.find(148).home_score%>
+						<%= Game.find(148).spread%></td>
 					<td class="games_bets">202 bets</td>
 				</tr>
 				<tr>
-					<td class="games_upcoming">Game 5</td>
+					<td class="games_upcoming">
+						<%= Team.find(Game.find(149).away_team_id).short_name%>
+						<%= Game.find(149).away_score%> @ 
+						<%= Team.find(Game.find(149).home_team_id).short_name%>   
+						<%= Game.find(149).home_score%>
+						<%= Game.find(149).spread%></td>
 					<td class="games_bets">1 bet</td>
 				</tr>
 				<tr>
-					<td class="games_upcoming">Game 6</td>
+					<td class="games_upcoming">
+						<%= Team.find(Game.find(159).away_team_id).short_name%>
+						<%= Game.find(159).away_score%> @ 
+						<%= Team.find(Game.find(159).home_team_id).short_name%>   
+						<%= Game.find(159).home_score%>
+						<%= Game.find(159).spread%></td>
 					<td class="games_bets">48 bets</td>
 				</tr>
 				
@@ -54,15 +69,30 @@
 					<th colspan="2">Previous Games:</th>
 				</tr>
 				<tr>
-					<td class="games_upcoming">Game 4</td>
+					<td class="games_upcoming">
+						<%= Team.find(Game.find(147).away_team_id).short_name%>
+						<%= Game.find(147).away_score%> @ 
+						<%= Team.find(Game.find(147).home_team_id).short_name%>   
+						<%= Game.find(147).home_score%>
+						<%= Game.find(147).spread%></td>
 					<td class="games_bets">202 bets</td>
 				</tr>
 				<tr>
-					<td class="games_upcoming">Game 5</td>
+					<td class="games_upcoming">
+					<%= Team.find(Game.find(1).away_team_id).short_name%>
+					<%= Game.find(1).away_score%> @ 
+					<%= Team.find(Game.find(1).home_team_id).short_name%>   
+					<%= Game.find(1).home_score%>
+					<%= Game.find(1).spread%></td>
 					<td class="games_bets">1 bet</td>
 				</tr>
 				<tr>
-					<td class="games_upcoming">Game 6</td>
+					<td class="games_upcoming"> 
+						<%= Team.find(Game.find(24).away_team_id).short_name%>
+						<%= Game.find(24).away_score%> @ 
+						<%= Team.find(Game.find(24).home_team_id).short_name%>   
+						<%= Game.find(24).home_score%>
+						<%= Game.find(24).spread%></td>
 					<td class="games_bets">48 bets</td>
 				</tr>
 			</table>
