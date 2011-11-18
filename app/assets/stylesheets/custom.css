@@ -42,14 +42,15 @@ body {
 	min-height: 600px;
 	margin: 0;
 	padding: 0;
-	width:1000px;
+	width:1000px !important;
 }
 #navigation {
 	width:400px;
 	background-color:#FFF;
+	float:left;
 }
 #feedContent {
-	
+	float:right;
 	min-height:600px;
 	min-width:600px;
 }
