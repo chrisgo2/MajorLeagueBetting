@@ -8,8 +8,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="container">
-    <%= render :partial => 'layouts/header' %>
+  <%= render :partial => 'layouts/header' %>
+  <div id="container"> 
     <div id="content">
       <% flash.each do |key, value| %>
     	<div class="flash <%= key %>">
