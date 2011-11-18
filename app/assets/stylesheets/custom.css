@@ -50,6 +50,8 @@ body {
 	margin: 0;
 	padding: 0;
 	width:1000px !important;
+	clear: both;
+	display: block;
 }
 #navigation {
 	width:400px;
@@ -101,7 +103,9 @@ body {
     /*********************************************************
     * Topbar, Sign-in  					     *
     *********************************************************/
-
+    #topHolder {
+	height:50px;
+    }
     #topbar {
         width:100%;
         height:50px;
@@ -114,7 +118,9 @@ body {
     #topHead {
         margin: 0 auto;
 	width: 1000px;
-	display:block;
+	clear: both;
+	content: ".";
+	display: block;
     }
     #home {
 	    width:50px;
@@ -153,10 +159,9 @@ body {
     #content {
         width:520px;
         min-height:500px;
-    }
-    a:link #stephen, a:visited #stephen {
-        color:#27b;
-        text-decoration:none;
+	clear: both;
+	content: ".";
+	display: block;
     }
     #topnav {
         padding:10px 0px 12px;
