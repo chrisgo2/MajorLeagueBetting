@@ -1,8 +1,14 @@
-<div class="welcomeForm lFloat">
-   <h1> Weclome</h1>
-</div>
-<div class="signupForm rFloat">
-  <%= link_to "Sign up", signup_path %>
+<div id="homePublic">
+   <div class="welcomeForm lFloat">
+      <h1> Welcome</h1>
+      
+   </div>
+   <div class="signupForm rFloat">
+      <a href="" class="signup"><span>Sign up</span></a>
+      <fieldset id="signup_menu">
+         <%= render :partial => "users/signup" , :locals => {:user => User.new}%>
+      </fieldset>
+   </div>
 </div>
 
 

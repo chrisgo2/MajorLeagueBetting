@@ -8,20 +8,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
+  <div id="container">
     <%= render :partial => 'layouts/header' %>
-    <% flash.each do |key, value| %>
+    <div id="content">
+      <% flash.each do |key, value| %>
     	<div class="flash <%= key %>">
           <%= value %>
         </div>
-    <% end %>
-    <% if signed_in? %>
-	    <%= render :partial => 'layouts/navigation' %>
-    <% end %>
-    <%= yield %>
+      <% end %>
+      <% if signed_in? %>
+	<%= render :partial => 'layouts/navigation' %>
+      <% end %>
+      <%= yield %>
+    </div>
+    <div id="footer">
+      footer
+    </div>
   </div>
 </body>
-<footer>
-</footer>
 <%= debug(params) if Rails.env.development? %>
 </html>
