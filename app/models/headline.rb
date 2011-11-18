@@ -23,7 +23,7 @@ class Headline < ActiveRecord::Base
     open(source) do |s| content = s.read end
     nflNews = RSS::Parser.parse(content, false)
 
-    print "\n\n\n", topNews.channel.description, "\n"
+    #print "\n\n\n", topNews.channel.description, "\n"
     for i in 0...topNews.items.length
         #print topNews.items[i].title, "\n"
         #print topNews.items[i].link,"\n"
@@ -31,7 +31,7 @@ class Headline < ActiveRecord::Base
                         :link => topNews.items[i].link
                         
     end
-    print "\n\n\n", nflNews.channel.description, "\n"
+    #print "\n\n\n", nflNews.channel.description, "\n"
     for i in 0...nflNews.items.length
         #print nflNews.items[i].title, "\n"
         Headline.create :title => nflNews.items[i].title,
