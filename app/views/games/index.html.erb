@@ -1,4 +1,31 @@
-<h1>Games#index</h1>
-<p>Find me in app/views/games/index.html.erb</p>
+<div id="gameFeed">
+  <h1>Games#index</h1>
+  <p>Find me in app/views/games/index.html.erb</p>
+  This is the Games Feed for <%= current_user.name %>
+</div>
 
-This is the Games Feed for <%= current_user.name %>
+<p><%= Team.find(1).name%></p>
+
+<table>
+  <tr>
+    <th>Week 11</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% Game.find(:all, :conditions => {:week => 11}).each do |game| %>
+  <tr>
+    <td><%= Team.find(game.away_team_id).short_name %></td>
+		<td><%= game.away_score %> @ </td>
+    <td><%= Team.find(game.home_team_id).short_name %></td>
+    <td><%= game.away_score %></td>
+    <td><%= game.spread %></td>
+    
+  </tr>
+<% end %>
+</table>
+
+<br /
