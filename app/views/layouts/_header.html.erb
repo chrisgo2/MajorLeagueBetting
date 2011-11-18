@@ -9,29 +9,13 @@
 			<% else %>
 				<a href="" class="signin"><span>Sign in</span></a>
 				<fieldset id="signin_menu">
-			    	<%= render :partial => 'sessions/signin' %>
-			    </fieldset>
+					<%= render :partial => 'sessions/signin' %>
+				</fieldset>
 			<% end %>
 	    </div>  
     </div>
 </header>
 <script type="text/javascript">
-        jQuery(function($) {
-            $(".signin").click(function(e) {
-                e.preventDefault();
-                $("fieldset#signin_menu").toggle();
-                $(".signin").toggleClass("menu-open");
-            });
-
-            $("fieldset#signin_menu").mouseup(function() {
-                return false
-            });
-            $(document).mouseup(function(e) {
-                if($(e.target).parent("a.signin").length==0) {
-                    $(".signin").removeClass("menu-open");
-                    $("fieldset#signin_menu").hide();
-                }
-            });
-
-        });
+	
+        
 </script>

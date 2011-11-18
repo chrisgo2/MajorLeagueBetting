@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   #   end
   
   def public
-    @user = User.new
+
   end
   
   def private

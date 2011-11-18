@@ -10,29 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111117212246) do
-
-  create_table "bet_links", :force => true do |t|
-    t.string   "bet_type"
-    t.integer  "bet_id"
-    t.integer  "wager"
-    t.boolean  "is_win"
-    t.string   "wager_selection"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "football_game_stats", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "football_team_stats", :force => true do |t|
-    t.integer  "winner_id"
-    t.integer  "loser_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20111118155113) do
 
   create_table "game_bets_h2hs", :force => true do |t|
     t.integer  "user_id"
@@ -59,21 +37,6 @@ ActiveRecord::Schema.define(:version => 20111117212246) do
     t.datetime "updated_at"
   end
 
-  create_table "general_bets", :force => true do |t|
-    t.string   "type"
-    t.integer  "item_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "head2head_bets", :force => true do |t|
-    t.string   "type"
-    t.integer  "game_id"
-    t.boolean  "is_spread"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "headlines", :force => true do |t|
     t.string   "title"
     t.string   "link"
@@ -92,9 +55,15 @@ ActiveRecord::Schema.define(:version => 20111117212246) do
 
   add_index "leagues", ["name"], :name => "index_leagues_on_name", :unique => true
 
-  create_table "overunder_bets", :force => true do |t|
-    t.string   "type"
+  create_table "over_under_bets", :force => true do |t|
+    t.string   "position"
+    t.integer  "user_id"
     t.integer  "game_id"
+    t.integer  "position_id"
+    t.integer  "wager"
+    t.float    "line"
+    t.boolean  "status"
+    t.boolean  "won_or_lost"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

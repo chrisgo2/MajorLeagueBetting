@@ -34,10 +34,10 @@ class Widereceiver < ActiveRecord::Base
 
            if (team == "WSH") #ESPN uses WSH and NFL uses WAS
                team = "WAS"    # We will also use WAS
-             end
+           end
 
              if (rank != "RK")
-               printf("\n\n%s\n\n",rec)
+               #printf("\n\n%s\n\n",rec)
                Runningback.create :rank => rank.to_i,
                                   :name => name,
                                   :link => link,

@@ -3,11 +3,6 @@
  * Universal Styles: specific to commonly used HTML tag						  *
  *                                                                            *
  *****************************************************************************/
-
-* {
-	margin:0;
-	padding:0;
-}
 html {
 	width:1000px;
 	margin-left:auto;
@@ -16,7 +11,9 @@ html {
 body {
 	font-family:Arial, Helvetica, sans-serif;
   	font-size:13px;
+	margin-top: 0;
 }
+
 
 /******************************************************************************
  *                                                                            *
@@ -36,8 +33,17 @@ body {
  * Template Layouts: unique styles for elements, styles for website structure *
  *                                                                            *
  *****************************************************************************/
-
-
+#container {
+	width:1000px;
+	margin: 0 auto;
+	position: relative;
+}
+#content {
+	min-height: 600px;
+	margin: 0;
+	padding: 0;
+	width: auto;
+}
 	.info, .success, .warning, .error, .validation {
 		border: 1px solid;
 		margin: 10px 0px;
@@ -75,7 +81,7 @@ body {
         }
 	
     /*********************************************************
-    * Topbar, Sign-in  										 *
+    * Topbar, Sign-in  					     *
     *********************************************************/
 
     #topbar {
@@ -254,15 +260,5 @@ body {
  * Individual Page Styles: unique styles for a page							  *
  *                                                                            *
  *****************************************************************************/
-    /*********************************************************
-    * Home_Public:   *
-    *********************************************************/
-
-    .welcomeForm {
-        width: 400px;
-        padding: 40px 0 0 0px;
-    }
-    .signupForm {
-        padding: 40px 0 0 10px;
-        width: 390px;
-    }
+    
+    
