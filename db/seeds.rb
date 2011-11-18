@@ -244,6 +244,11 @@ Team.create :league_id => League.find_by_short_name("NFL").id,
             :short_name => "STL",
             :logo_path => "app/assests/images/nfl-images/nfl-stlouisrams.png"
             
+
+Team.update_from_web!
+Headline.update_from_web!
+Quarterback.update_from_web!
+Runningback.update_from_web!
             
 #NFL Schedule Finder
 #Sean C. Allen

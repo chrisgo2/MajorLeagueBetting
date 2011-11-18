@@ -1,7 +1,7 @@
 class Headline < ActiveRecord::Base
   
   def self.update_from_web!
-    Headline.delete_all
+    Headline.delete_all #Clear the Headline Table
 
     #rss news feeds
     #Sean C. Allen

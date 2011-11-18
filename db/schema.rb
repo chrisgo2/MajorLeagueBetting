@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111117081436) do
+ActiveRecord::Schema.define(:version => 20111117212246) do
 
   create_table "bet_links", :force => true do |t|
     t.string   "bet_type"
@@ -106,6 +106,31 @@ ActiveRecord::Schema.define(:version => 20111117081436) do
     t.binary "binary_data"
   end
 
+  create_table "quarterbacks", :force => true do |t|
+    t.string   "name"
+    t.string   "link"
+    t.integer  "rank"
+    t.integer  "league_id"
+    t.integer  "team_id"
+    t.integer  "td"
+    t.integer  "int"
+    t.float    "yds_per_g"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "runningbacks", :force => true do |t|
+    t.string   "name"
+    t.string   "link"
+    t.integer  "rank"
+    t.integer  "league_id"
+    t.integer  "team_id"
+    t.integer  "td"
+    t.float    "yds_per_g"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "teams", :force => true do |t|
     t.integer  "league_id"
     t.string   "conference"
@@ -145,5 +170,18 @@ ActiveRecord::Schema.define(:version => 20111117081436) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["username"], :name => "index_users_on_username", :unique => true
+
+  create_table "widereceivers", :force => true do |t|
+    t.string   "name"
+    t.string   "link"
+    t.integer  "rank"
+    t.integer  "league_id"
+    t.integer  "team_id"
+    t.integer  "rec"
+    t.integer  "td"
+    t.float    "yds_per_g"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
