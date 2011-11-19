@@ -14,7 +14,7 @@
     <th></th>
   </tr>
 
-<% Game.find(:all, :conditions => {:week => 11}).each do |game| %>
+<% Game.find(:all, :conditions => {:week => 12}).each do |game| %>
   <tr>
     <td><%= Team.find(game.away_team_id).short_name %></td>
 		<td><%= game.away_score %> @ </td>
