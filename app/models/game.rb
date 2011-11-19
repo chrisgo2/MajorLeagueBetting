@@ -2,6 +2,24 @@
 #
 # Table name: games
 #
+#  id           :integer         not null, primary key
+#  league_id    :integer
+#  home_team_id :integer
+#  away_team_id :integer
+#  home_score   :integer
+#  away_score   :integer
+#  spread       :float
+#  spread_check :float
+#  week         :integer
+#  start_time   :datetime
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+
+# == Schema Information
+#
+# Table name: games
+#
 #  id            :integer         not null, primary key
 #  home_team_id  :integer
 #  away_team_id  :integer
