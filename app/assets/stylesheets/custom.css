@@ -33,6 +33,12 @@ body {
 .txtRight {
 	text-align:right;
 }
+.label {
+	font-size: 13px;
+	padding-right: 3px;
+	width: 105px;
+	text-align:right;
+}
 
 /******************************************************************************
  *                                                                            *
@@ -63,14 +69,13 @@ body {
 	min-height:600px;
 	min-width:600px;
 }
-
-	.info, .success, .warning, .error, .validation {
-		border: 1px solid;
-		margin: 10px 0px;
-		padding:15px 10px 15px 50px;
-		background-repeat: no-repeat;
-		background-position: 10px center;
-	}
+.info, .success, .warning, .error, .validation {
+	border: 1px solid;
+	margin: 10px 0px;
+	padding:15px 10px 15px 50px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
 	.info {
 		color: #00529B;
 		background-color: #BDE5F8;
@@ -159,9 +164,9 @@ body {
     #content {
         width:520px;
         min-height:500px;
-	clear: both;
-	content: ".";
-	display: block;
+		clear: both;
+		content: ".";
+		display: block;
     }
     #topnav {
         padding:10px 0px 12px;
@@ -208,13 +213,6 @@ body {
             /* background-image:url("images/toggle_up_dark.png");        */
             color:#789;
         }
-    #small_signup {
-        display:inline;
-        float:none;
-        line-height:23px;
-        margin:25px 0 0;
-        width:170px;
-    }
     #signin_menu {
         -moz-border-radius-topleft:5px;
         -moz-border-radius-bottomleft:5px;

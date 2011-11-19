@@ -10,15 +10,15 @@
 <body>
   <%= render :partial => 'layouts/header' %>
   <div id="container"> 
-    <div id="content">
-      <% flash.each do |key, value| %>
-    	<div class="flash <%= key %>">
-          <%= value %>
-        </div>
-      <% end %>
+    <div id="content">   
       <% if signed_in? %>
 	<%= render :partial => 'layouts/navigation' %>
 	<div id="feedContent">
+	  <% flash.each do |key, value| %>
+	    <div class="flash <%= key %>">
+	      <%= value %>
+	    </div>
+	  <% end %>
 	  <%= yield %>
 	</div>
       <% else %>
