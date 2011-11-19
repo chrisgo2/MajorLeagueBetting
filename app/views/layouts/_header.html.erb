@@ -1,9 +1,10 @@
-<div id="topbar">
-	<div id="topHead">
-		<div id="home">
-			<%= link_to "MLBetting", root_path %>
-		</div>
-		<div id="topnav" class="topnav">
+<div id="topHolder">
+	<div id="topbar">
+		<div id="topHead">
+			<div id="home">
+				<%= link_to "MLBetting", root_path %>
+			</div>
+			<div id="topnav" class="topnav">
 			<% if signed_in? %>
 				<%= link_to "Sign out", signout_path, :method => :delete, :class => "signin" %>
 			<% else %>
@@ -12,6 +13,7 @@
 					<%= render :partial => 'sessions/signin' %>
 				</fieldset>
 			<% end %>
+			</div>
 		</div>
 	</div>
 </div>
