@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -44,20 +45,17 @@ ActiveRecord::Schema.define(:version => 20111118155113) do
   end
 
   create_table "games", :force => true do |t|
+    t.integer  "league_id"
     t.integer  "home_team_id"
     t.integer  "away_team_id"
-    t.string   "game_type"
-    t.integer  "league_id"
-    t.integer  "game_stat_id"
+    t.integer  "home_score"
+    t.integer  "away_score"
+    t.float    "spread"
+    t.float    "spread_check"
+    t.integer  "week"
     t.datetime "start_time"
-    t.datetime "end_time"
-    t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "winner_id"
-    t.integer  "loser_id"
-    t.integer  "winner_points"
-    t.integer  "loser_points"
   end
 
   create_table "general_bets", :force => true do |t|
@@ -86,6 +84,7 @@ ActiveRecord::Schema.define(:version => 20111118155113) do
     t.string   "name"
     t.string   "short_name"
     t.string   "sport"
+    t.string   "logo_path"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -145,11 +144,25 @@ ActiveRecord::Schema.define(:version => 20111118155113) do
   end
 
   create_table "teams", :force => true do |t|
-    t.string   "name"
-    t.string   "conference"
     t.integer  "league_id"
-    t.string   "stat_type"
-    t.integer  "stat_id"
+    t.string   "conference"
+    t.string   "division"
+    t.string   "name"
+    t.string   "short_name"
+    t.string   "logo_path"
+    t.integer  "wins"
+    t.integer  "losses"
+    t.integer  "ties"
+    t.integer  "home_wins"
+    t.integer  "home_losses"
+    t.integer  "road_wins"
+    t.integer  "road_losses"
+    t.integer  "div_wins"
+    t.integer  "div_losses"
+    t.integer  "conf_wins"
+    t.integer  "conf_losses"
+    t.integer  "points_for"
+    t.integer  "points_against"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -162,6 +175,7 @@ ActiveRecord::Schema.define(:version => 20111118155113) do
     t.string   "email"
     t.string   "encrypted_password"
     t.string   "salt"
+    t.integer  "money"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
