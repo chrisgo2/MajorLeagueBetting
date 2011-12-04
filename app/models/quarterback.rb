@@ -24,6 +24,8 @@ class Quarterback < ActiveRecord::Base
     #Sean C. Allen
     #CSU, Chico
     #CSCI 430
+    
+    belongs_to :team
 
     require 'rubygems'
     require 'nokogiri'

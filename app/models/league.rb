@@ -13,6 +13,11 @@
 
 class League < ActiveRecord::Base
 
+has_many :teams
+has_many :games
+has_many :quarterbacks
+has_many :runningbacks
+has_many :widereceivers
 
 
 end

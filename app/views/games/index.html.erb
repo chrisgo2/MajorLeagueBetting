@@ -14,7 +14,11 @@
     <th></th>
   </tr>
 
+<<<<<<< HEAD
 <% Game.find(:all, :conditions => {:week => 13}).each do |game| %>
+=======
+<% Game.find(:all, :conditions => {:week => 12}).each do |game| %>
+>>>>>>> b3b38123a506fb762da68ad86c9c60b45ddd469b
   <tr>
 		<td><img src=<%= Team.find(game.away_team_id).logo_path %> width="37" height="37"/></td>
     <td><%= Team.find(game.away_team_id).short_name %></td>
