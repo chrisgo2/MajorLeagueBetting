@@ -12,17 +12,35 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></tv>
   </tr>
 
 <% Game.find(:all, :conditions => {:week => 12}).each do |game| %>
   <tr>
-		<td><img src=<%= Team.find(game.away_team_id).logo_path %> width="37" height="37"/></td>
-    <td><%= Team.find(game.away_team_id).short_name %></td>
-		<td><%= game.away_score %> @ </td>
-		<td><img src=<%= Team.find(game.home_team_id).logo_path %> width="37" height="37"/></td>
-    <td><%= Team.find(game.home_team_id).short_name %></td>
-    <td><%= game.away_score %></td>
-    <td><%= game.spread %></td>
+    <td>
+      <img src=<%= Team.find(game.away_team_id).logo_path %> width="37" height="37"/>
+    </td>
+    <td>
+      <%= Team.find(game.away_team_id).short_name %>
+      </td>
+    <td>
+      <%= game.away_score %> @
+    </td>
+    <td>
+      <img src=<%= Team.find(game.home_team_id).logo_path %> width="37" height="37"/>
+    </td>
+    <td>
+      <%= Team.find(game.home_team_id).short_name %>
+      </td>
+    <td>
+      <%= game.away_score %>
+      </td>
+    <td>
+      <%= game.spread %>
+      </td>
+    <td>
+      <a id='betLink' >Bet</a>
+    </td>
   </tr>
 	<tr>
 		
