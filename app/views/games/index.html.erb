@@ -6,7 +6,7 @@
 
 <table>
   <tr>
-    <th><img src = <%= League.find(1).logo_path %> width="37" height="37"/>Week 11</th>
+    <th><img src = <%= League.find(1).logo_path %> width="37" height="37"/>Week 13</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,7 +14,7 @@
     <th></th>
   </tr>
 
-<% Game.find(:all, :conditions => {:week => 11}).each do |game| %>
+<% Game.find(:all, :conditions => {:week => 13}).each do |game| %>
   <tr>
 		<td><img src=<%= Team.find(game.away_team_id).logo_path %> width="37" height="37"/></td>
     <td><%= Team.find(game.away_team_id).short_name %></td>
