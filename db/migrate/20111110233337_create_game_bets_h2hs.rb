@@ -8,6 +8,7 @@ class CreateGameBetsH2hs < ActiveRecord::Migration
       t.boolean :status
       t.boolean :won_or_lost
 
+
       t.timestamps
     end
   end
