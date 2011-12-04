@@ -13,6 +13,7 @@
     <th></th>
     <th></th>
   </tr>
+<<<<<<< HEAD
 </table>
 <div style="height:350px;width:300px;overflow-y:scroll;overflow-x:hidden;background-color:#DDD">
 <% Game.find(:all, :conditions => {:week => 13}).each do |game| %>
@@ -26,6 +27,10 @@
     
     
   </tr>
+=======
+
+<% Game.find(:all, :conditions => {:week => 13}).each do |game| %>
+>>>>>>> 3293ce42574a9f4a66ff9692eb138d4ff261841e
   <tr>
     <td><img src=<%= Team.find(game.home_team_id).logo_path %> width="37" height="37" border="1"/></td>
     <td><%= Team.find(game.home_team_id).short_name %></td>
@@ -35,8 +40,12 @@
 
   </tr>
 
+<<<<<<< HEAD
 </table>
 </br>
 <% end %>
 </div>
 Submit!
+=======
+<br />
+>>>>>>> 3293ce42574a9f4a66ff9692eb138d4ff261841e
