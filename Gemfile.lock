@@ -143,7 +143,7 @@ PLATFORMS
 DEPENDENCIES
   annotate!
   coffee-rails
-  colorbox-rails (~> 0.0.3)
+  colorbox-rails (~> 0.0.7)
   execjs
   factory_girl_rails (= 1.0)
   faker (= 0.3.1)
