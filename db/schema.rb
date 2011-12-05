@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20111118155113) do
     t.integer  "away_score"
     t.float    "spread"
     t.float    "spread_check"
+    t.boolean  "completed"
     t.integer  "week"
     t.datetime "start_time"
     t.datetime "created_at"

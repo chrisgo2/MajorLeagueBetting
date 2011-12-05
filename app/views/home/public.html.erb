@@ -1,8 +1,8 @@
 <div id="homePublic">
-   <div class="welcomeForm lFloat">
+   <div id="welcomeCol" class="lFloat">
       <h1> Welcome</h1>    
    </div>
-   <div class="signupForm rFloat">
+   <div id="signupCol" class="rFloat">
       <a href="" class="signup"><span>Sign up</span></a>
       <fieldset id="signup_menu">
          <%= render :partial => "users/signup" , :locals => {:user => User.new}%>
