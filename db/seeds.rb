@@ -258,15 +258,19 @@ Runningback.update_from_web!
 require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
-
+require 'date'
 
 week       = String.new
 date       = String.new
 time       = String.new
+combine_date = String.new
 home_team  = String.new
 away_team  = String.new
 home_score = String.new
 away_score = String.new
+over = false
+
+date_test = DateTime.now
 
 hs = Integer
 as = Integer
@@ -297,14 +301,30 @@ nfl.xpath('//table/tbody/tr').each do |rowNode|
         away_score = away_score.delete("^0-9")
         hs = home_score.to_i
         as = away_score.to_i
-                    
+        
+        combine_date = [date, time].join(" ")
+        #printf("\nCombine Date: %s\n", combine_date)
+        
+        my_date = DateTime._strptime(combine_date, '%a, %b %d %I:%M %p')
+        
+        #puts date_test.strftime("%a, %b %d") 
+        if my_date == nil
+          #printf("\This Game Is Over!")
+          over = true
+        else
+          #printf("\nThis Game Has Not Played")
+          over = false
+        end
+        
         #printf("\n    %s %d at %s %d", away_team, as, home_team, hs) 
         Game.create :league_id => League.find_by_short_name("NFL").id,
                     :home_team_id => Team.find_by_short_name(home_team).id,
                     :away_team_id => Team.find_by_short_name(away_team).id,
                     :home_score => hs,
                     :away_score => as,
-                    :week => week_num
+                    :week => week_num,
+                    :completed => over,
+                    :start_time => my_date
         end
       end
     end
