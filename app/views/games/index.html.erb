@@ -9,7 +9,7 @@
 <% Game.find(:all, :conditions => {:week => 13}).each do |game| %>
 <table>
   <tr>
-    <td width = 37px><img src='<%= Team.find(game.away_team_id).logo_path %>' width="37" height="37" border="1"/></td>
+    <td><img src=<%= Team.find(game.away_team_id).logo_path %> width="37" height="37" border="1"/></td>
     <td width = 50px><%= Team.find(game.away_team_id).short_name %></td>
     <td width = 45px> @ </td>
     <td width = 20px>C</td>
@@ -22,7 +22,7 @@
     <td><img src='<%= Team.find(game.home_team_id).logo_path %>' width="37" height="37" border="1"/></td>
     <td><%= Team.find(game.home_team_id).short_name %></td>
     <td><%= game.spread %></td>
-    <td width = 20px>C</td>
+    <td width>C</td>
     <td> #field# <td>
 
   </tr>
@@ -33,5 +33,3 @@
 <% end %>
 </div>
 Submit!
-
-<br />

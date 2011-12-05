@@ -78,7 +78,7 @@ class Game < ActiveRecord::Base
       
       check = ((g.away_score - g.home_score).to_f - spread).abs
       
-      printf("\n%s @\n%s %f\n",Team.find(g.away_team_id).name, Team.find(g.home_team_id).name, spread)
+      #printf("\n%s @\n%s %f\n",Team.find(g.away_team_id).name, Team.find(g.home_team_id).name, spread)
       g.spread = spread
       g.spread_check = check
       g.save!
