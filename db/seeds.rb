@@ -9,7 +9,7 @@
 League.create :name => "National Football League",
                :short_name => "NFL",
                :sport => "Football",
-               :logo_path => "images/nfl.png"
+               :logo_path => "/assets/nfl-images/nfl.png"
                
 League.create :name => "Major League Baseball",
               :short_name => "MLB",
@@ -21,28 +21,28 @@ Team.create :league_id => League.find_by_short_name("NFL").id,
             :division => "East",
             :name => "New England Patriots",
             :short_name => "NE",
-            :logo_path => "images/nfl-images/nfl-newenglandpatriots.png"
+            :logo_path => "/assets/nfl-images/nfl-newenglandpatriots.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "East",
             :name => "New York Jets",
             :short_name => "NYJ",
-            :logo_path => "images/nfl-images/nfl-nyjets.png"
+            :logo_path => "/assets/nfl-images/nfl-nyjets.png"
             
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "East",
             :name => "Buffalo Bills",
             :short_name => "BUF",
-            :logo_path => "images/nfl-images/nfl-buffalobills.png"
+            :logo_path => "/assets/nfl-images/nfl-buffalobills.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "East",
             :name => "Miami Dolphins",
             :short_name => "MIA",
-            :logo_path => "images/nfl-images/nfl-miamidolphins.png"
+            :logo_path => "/assets/nfl-images/nfl-miamidolphins.png"
 
 #AFC NORTH
 Team.create :league_id => League.find_by_short_name("NFL").id,
@@ -50,28 +50,28 @@ Team.create :league_id => League.find_by_short_name("NFL").id,
             :division => "North",
             :name => "Pittsburgh Steelers",
             :short_name => "PIT",
-            :logo_path => "images/nfl-images/nfl-pitstburghsteelers.png"
+            :logo_path => "/assets/nfl-images/nfl-pitstburghsteelers.png"
   
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "North",
             :name => "Baltimore Ravens",
             :short_name => "BAL",
-            :logo_path => "images/nfl-images/nfl-baltimoreravens.png"
+            :logo_path => "/assets/nfl-images/nfl-baltimoreravens.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "North",
             :name => "Cincinnati Bengals",
             :short_name => "CIN",
-            :logo_path => "images/nfl-images/nfl-cincinnatibengals.png"
+            :logo_path => "/assets/nfl-images/nfl-cincinnatibengals.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "North",
             :name => "Cleveland Browns",
             :short_name => "CLE",
-            :logo_path => "images/nfl-images/nfl-clevelandbrowns.png"
+            :logo_path => "/assets/nfl-images/nfl-clevelandbrowns.png"
 
 #AFC SOUTH
 Team.create :league_id => League.find_by_short_name("NFL").id,
@@ -79,112 +79,112 @@ Team.create :league_id => League.find_by_short_name("NFL").id,
             :division => "South",
             :name => "Houston Texans",
             :short_name => "HOU",
-            :logo_path => "images/nfl-images/nfl-houstontexans.png"
+            :logo_path => "/assets/nfl-images/nfl-houstontexans.png"
          
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "South",
             :name => "Tennessee Titans",
             :short_name => "TEN",
-            :logo_path => "images/nfl-images/nfl-tennesseetitans.png"
+            :logo_path => "/assets/nfl-images/nfl-tennesseetitans.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "South",
             :name => "Jacksonville Jaguars",
             :short_name => "JAC",
-            :logo_path => "images/nfl-images/nfl-jacksonvillejaguars.png"
+            :logo_path => "/assets/nfl-images/nfl-jacksonvillejaguars.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "South",
             :name => "Indianapolis Colts",
             :short_name => "IND",
-            :logo_path => "images/nfl-images/nfl-indianapoliscolts.png"
+            :logo_path => "/assets/nfl-images/nfl-indianapoliscolts.png"
 #AFC WEST
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "West",
             :name => "Oakland Raiders",
             :short_name => "OAK",
-            :logo_path => "images/nfl-images/nfl-oaklandraiders.png"
+            :logo_path => "/assets/nfl-images/nfl-oaklandraiders.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "West",
             :name => "San Diego Chargers",
             :short_name => "SD",
-            :logo_path => "images/nfl-images/nfl-sandiegochargers.png"
+            :logo_path => "/assets/nfl-images/nfl-sandiegochargers.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "West",
             :name => "Denver Broncos",
             :short_name => "DEN",
-            :logo_path => "images/nfl-images/nfl-denverbroncos.png"
+            :logo_path => "/assets/nfl-images/nfl-denverbroncos.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "AFC",
             :division => "West",
             :name => "Kansas City Chiefs",
             :short_name => "KC",
-            :logo_path => "images/nfl-images/nfl-kansascitychiefs.png"
+            :logo_path => "/assets/nfl-images/nfl-kansascitychiefs.png"
 #NFC EAST
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "NFC",
             :division => "East",
             :name => "New York Giants",
             :short_name => "NYG",
-            :logo_path => "images/nfl-images/nfl-nygiants.png"
+            :logo_path => "/assets/nfl-images/nfl-nygiants.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "NFC",
             :division => "East",
             :name => "Dallas Cowboys",
             :short_name => "DAL",
-            :logo_path => "images/nfl-images/nfl-dallascowboys.png"
+            :logo_path => "/assets/nfl-images/nfl-dallascowboys.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "NFC",
             :division => "East",
             :name => "Philadelphia Eagles",
             :short_name => "PHI",
-            :logo_path => "images/nfl-images/nfl-philadelphiaeagles.png"
+            :logo_path => "/assets/nfl-images/nfl-philadelphiaeagles.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "NFC",
             :division => "East",
             :name => "Washington Redskins",
             :short_name => "WAS",
-            :logo_path => "images/nfl-images/nfl-washingtonredskins.png"
+            :logo_path => "/assets/nfl-images/nfl-washingtonredskins.png"
 #NFC NORTH
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "NFC",
             :division => "North",
             :name => "Green Bay Packers",
             :short_name => "GB",
-            :logo_path => "images/nfl-images/nfl-greenbaypackers.png"
+            :logo_path => "/assets/nfl-images/nfl-greenbaypackers.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "NFC",
             :division => "North",
             :name => "Detroit Lions",
             :short_name => "DET",
-            :logo_path => "images/nfl-images/nfl-detroitlions.png"
+            :logo_path => "/assets/nfl-images/nfl-detroitlions.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "NFC",
             :division => "North",
             :name => "Chicago Bears",
             :short_name => "CHI",
-            :logo_path => "images/nfl-images/nfl-chicagobears.png"
+            :logo_path => "/assets/nfl-images/nfl-chicagobears.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "NFC",
             :division => "North",
             :name => "Minnesota Vikings",
             :short_name => "MIN",
-            :logo_path => "images/nfl-images/nfl-minnesotavikings.png"
+            :logo_path => "/assets/nfl-images/nfl-minnesotavikings.png"
 
 #NFC SOUTH
 Team.create :league_id => League.find_by_short_name("NFL").id,
@@ -192,28 +192,28 @@ Team.create :league_id => League.find_by_short_name("NFL").id,
             :division => "South",
             :name => "New Orleans Saints",
             :short_name => "NO",
-            :logo_path => "images/nfl-images/nfl-neworleanssaints.png"
+            :logo_path => "/assets/nfl-images/nfl-neworleanssaints.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "NFC",
             :division => "South",
             :name => "Atlanta Falcons",
             :short_name => "ATL",
-            :logo_path => "images/nfl-images/nfl-atlantafalcons.png"
+            :logo_path => "/assets/nfl-images/nfl-atlantafalcons.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "NFC",
             :division => "South",
             :name => "Carolina Panthers",
             :short_name => "CAR",
-            :logo_path => "images/nfl-images/nfl-carolinapanthers.png"
+            :logo_path => "/assets/nfl-images/nfl-carolinapanthers.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "NFC",
             :division => "South",
             :name => "Tampa Bay Buccaneers",
             :short_name => "TB",
-            :logo_path => "images/nfl-images/nfl-tampabaybuccaneers.png"
+            :logo_path => "/assets/nfl-images/nfl-tampabaybuccaneers.png"
             
 #NFC WEST
 Team.create :league_id => League.find_by_short_name("NFL").id,
@@ -221,28 +221,28 @@ Team.create :league_id => League.find_by_short_name("NFL").id,
             :division => "West",
             :name => "San Francisco 49ers",
             :short_name => "SF",
-            :logo_path => "images/nfl-images/nfl-sanfrancisco49ers.png"
+            :logo_path => "/assets/nfl-images/nfl-sanfrancisco49ers.png"
             
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "NFC",
             :division => "West",
             :name => "Seattle Seahawks",
             :short_name => "SEA",
-            :logo_path => "images/nfl-images/nfl-seattleseahawks.png"
+            :logo_path => "/assets/nfl-images/nfl-seattleseahawks.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "NFC",
             :division => "West",
             :name => "Arizona Cardinals",
             :short_name => "ARI",
-            :logo_path => "images/nfl-images/nfl-arizonacardinals.png"
+            :logo_path => "/assets/nfl-images/nfl-arizonacardinals.png"
 
 Team.create :league_id => League.find_by_short_name("NFL").id,
             :conference => "NFC",
             :division => "West",
             :name => "St. Louis Rams",
             :short_name => "STL",
-            :logo_path => "images/nfl-images/nfl-stlouisrams.png"
+            :logo_path => "/assets/nfl-images/nfl-stlouisrams.png"
             
 
 Team.update_from_web!

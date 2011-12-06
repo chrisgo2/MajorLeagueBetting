@@ -11,15 +11,13 @@
 <% @games.each do |game| %>
   <table>
     <tr>
-      <td><img src=<%= game.away_team.logo_path %> width="37" height="37" border="1"/></td>
-      <td width = 50px><%= game.away_team.short_name %></td>
+      <td><%= link_to game.away_team.short_name, game.away_team, :class => "logo nfl" + game.away_team.short_name + "-small" %></td>
       <td width = 45px> @ </td>
       <td width = 20px>C</td>
       <td> #field# <td>     
     </tr> 
     <tr>
-      <td><img src='<%=  game.home_team.logo_path %>' width="37" height="37" border="1"/></td>
-      <td><%=  game.home_team.short_name %></td>
+      <td><%= link_to game.home_team.short_name, game.home_team, :class => "logo nfl" + game.home_team.short_name + "-small" %></td>
       <td><%= game.spread %></td>
       <td width>C</td>
       <td> #field# <td>
