@@ -1,11 +1,12 @@
 db/*.sqlite3
-
+/rails/
 log/*.log
 tmp/**/*
 .idea/workspace.xml
 db/development.sqlite3
 log/development.log
 /.idea/
+.bundle
 
 g/*.log
 *.log

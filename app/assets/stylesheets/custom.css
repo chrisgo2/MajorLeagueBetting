@@ -68,6 +68,17 @@ body {
 	min-height:600px;
 	min-width:620px;
 }
+
+.logo {
+	height:37px;
+	width:37px;
+	background-repeat:no-repeat;
+}
+	.nflNE {		
+		background-image: url('images/nfl-images/nfl-newenglandpatriots.png');
+		background-position:top left;
+	}
+	
 .info, .success, .warning, .error, .validation {
 	border: 1px solid;
 	margin: 10px 0px;
