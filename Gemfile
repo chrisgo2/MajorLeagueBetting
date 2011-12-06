@@ -19,6 +19,8 @@ gem 'therubyracer'
 gem 'jquery-rails'
 gem 'nokogiri', '1.5.0'
 gem "colorbox-rails", "~> 0.0.7"
+gem 'formtastic'
+gem 'tabletastic'
 
 # Use unicorn as the web server
 # gem 'unicorn'

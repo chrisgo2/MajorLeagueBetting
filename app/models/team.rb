@@ -29,6 +29,8 @@
 class Team < ActiveRecord::Base
 
   belongs_to :league
+  has_many :away_games, :class_name => "Game"
+  has_many :home_games, :class_name => "Game"
 
   def self.update_from_web!
     #NFL Team Stats Finder
