@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
+    @user = User.create(params[:user])
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to Major League Betting."
@@ -21,4 +21,17 @@ class UsersController < ApplicationController
       render "new"
     end
   end
+  
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user])
+      flash[:success] = "Profile Image Updated!"
+      redirect_to user_root_path
+    end
+  end
+    
+  def edit
+    @title = "Edit user"
+  end  
+    
 end

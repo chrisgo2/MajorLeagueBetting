@@ -21,6 +21,7 @@ gem 'nokogiri', '1.5.0'
 gem "colorbox-rails", "~> 0.0.7"
 gem 'formtastic'
 gem 'tabletastic'
+gem "paperclip", "~> 2.4"
 
 # Use unicorn as the web server
 # gem 'unicorn'
