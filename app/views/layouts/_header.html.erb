@@ -6,6 +6,7 @@
 			</div>
 			<div id="topnav" class="topnav">
 			<% if signed_in? %>
+				 <%= image_tag current_user.avatar.url(:header) %>
 				<%= link_to "Sign out", signout_path, :method => :delete, :class => "signin" %>
 			<% else %>
 				<a href="" class="signin"><span>Sign in</span></a>

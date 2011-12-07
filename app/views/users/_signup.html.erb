@@ -40,8 +40,18 @@
         </td>
         <td>
           <%= f.password_field :password_confirmation %>
+        </td>  
+      </tr>
+      
+      <tr>
+        <td class="label">
+          <%= f.label :avatar, "Profile Image" %>
+        </td>
+        <td>
+          <%= f.file_field :avatar %>
         </td>
       </tr>
+      
     </tbody>
   </table>
   <div class="btn">
