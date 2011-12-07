@@ -3,45 +3,27 @@
   <p>Find me in app/views/games/index.html.erb</p>
   This is the Games Feed for <%= current_user.name %><br></br>
 </div>
-<img src = <%= League.find(1).logo_path %> width="37" height="37"/>  Week 13
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<img src ='<%= League.find(1).logo_path %>' width="37" height="37"/>  Week 13
 
-</table>
 <div style="height:350px;width:300px;overflow-y:scroll;overflow-x:hidden;background-color:#DDD">
-<% Game.find(:all, :conditions => {:week => 13}).each do |game| %>
-<table>
-  <tr>
-    <td width = 37px><img src=<%= Team.find(game.away_team_id).logo_path %> width="37" height="37" border="1"/></td>
-    <td width = 50px><%= Team.find(game.away_team_id).short_name %></td>
-    <td width = 45px> @ </td>
-    <td width = 20px>C</td>
-    <td> #field# <td>
-    
-    
-  </tr>
-
-  <tr>
-    <td><img src=<%= Team.find(game.home_team_id).logo_path %> width="37" height="37" border="1"/></td>
-    <td><%= Team.find(game.home_team_id).short_name %></td>
-    <td><%= game.spread %></td>
-    <td width = 20px>C</td>
-    <td> #field# <td>
-
-  </tr>
-
-
-</table>
-</br>
+  
+  
+<% @games.each do |game| %>
+  <table>
+    <tr>
+      <td><%= link_to game.away_team.short_name, game.away_team, :class => "logo nfl" + game.away_team.short_name + "-small" %></td>
+      <td width = 45px> @ </td>
+      <td width = 20px>C</td>
+      <td> #field# <td>     
+    </tr> 
+    <tr>
+      <td><%= link_to game.home_team.short_name, game.home_team, :class => "logo nfl" + game.home_team.short_name + "-small" %></td>
+      <td><%= game.spread %></td>
+      <td width>C</td>
+      <td> #field# <td>
+    </tr>
+  </table>
+  </br>
 <% end %>
 </div>
 Submit!
-
-<br />

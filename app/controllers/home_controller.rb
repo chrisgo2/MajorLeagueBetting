@@ -10,6 +10,12 @@ class HomeController < ApplicationController
   end
   
   def private
+    
+    if !signed_in?
+      cookies.delete(:remember_token)
+      redirect_to public_root_path
+    end
+    
     @title = "Home"
   end
 end

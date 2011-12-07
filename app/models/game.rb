@@ -10,33 +10,18 @@
 #  away_score   :integer
 #  spread       :float
 #  spread_check :float
+#  completed    :boolean
 #  week         :integer
 #  start_time   :datetime
 #  created_at   :datetime
 #  updated_at   :datetime
 #
 
-# == Schema Information
-#
-# Table name: games
-#
-#  id            :integer         not null, primary key
-#  home_team_id  :integer
-#  away_team_id  :integer
-#  game_type     :string(255)
-#  league_id     :integer
-#  game_stat_id  :integer
-#  start_time    :datetime
-#  end_time      :datetime
-#  location      :string(255)
-#  created_at    :datetime
-#  updated_at    :datetime
-#  winner_id     :integer
-#  loser_id      :integer
-#  winner_points :integer
-#  loser_points  :integer
-#
+
 class Game < ActiveRecord::Base
+  
+  belongs_to :away_team, :class_name => "Team"
+  belongs_to :home_team, :class_name => "Team"
   
   def self.update_from_web!
     #NFL Schedule Finder

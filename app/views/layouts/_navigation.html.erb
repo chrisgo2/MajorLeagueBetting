@@ -1,12 +1,12 @@
 <div id="navigation">
 
 	<div id="profile_button">
-		<%= link_to "", current_user, :class => "feed" %>
+		<%= link_to "", current_user, :class => "feed", :colorbox => true %>
 		<a href="#" class="button">Profile</a>
         
         <div id="profile" class="initially_closed">
             <img src="" alt="players_picture" />
-			<h1 style="profile_money">$100,000,000</h1>
+			<h1 style="profile_money"><%= number_to_currency(current_user.money, :precision=>0) %></h1>
 			<table align="center">
 				<tr>
 					<th>Pending Bets</th>

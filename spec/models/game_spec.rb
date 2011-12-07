@@ -10,6 +10,7 @@
 #  away_score   :integer
 #  spread       :float
 #  spread_check :float
+#  completed    :boolean
 #  week         :integer
 #  start_time   :datetime
 #  created_at   :datetime

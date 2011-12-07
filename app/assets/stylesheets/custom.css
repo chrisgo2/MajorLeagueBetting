@@ -27,6 +27,10 @@ body {
 .rFloat {
     float: right;
 }
+.rFloat .nfl-ne {		
+	background-image: url('images/nfl-images/nfl-newenglandpatriots.png');
+	background-position:top left;
+}
 .txtLeft {
 	text-align:left;
 }
@@ -60,15 +64,152 @@ body {
 	display: block;
 }
 #navigation {
-	width:400px;
-	background-color:#FFF;
+	width:358px;
 	float:left;
 }
 #feedContent {
 	float:right;
 	min-height:600px;
-	min-width:600px;
+	min-width:620px;
 }
+.logo {
+	border:1px;
+	height:32px;
+	background-repeat:no-repeat;
+	display:block;
+	text-decoration:none;
+	text-shadow: 2px 2px 3px;
+	padding: 5px 0 0 35px;
+	color:#000000;
+}
+	.logo.nflNE-small {		
+		background-image: url('/assets/nfl-images/nfl-newenglandpatriots-small.png');
+		background-position:top left;
+	}
+	.logo.nflNYJ-small {		
+		background-image: url('/assets/nfl-images/nfl-nyjets-small.png');
+		background-position:top left;
+	}
+	.logo.nflBUF-small {		
+		background-image: url('/assets/nfl-images/nfl-buffalobills-small.png');
+		background-position:top left;
+	}
+	.logo.nflMIA-small {		
+		background-image: url('/assets/nfl-images/nfl-miamidolphins-small.png');
+		background-position:top left;
+	}
+	.logo.nflPIT-small {		
+		background-image: url('/assets/nfl-images/nfl-pitstburghsteelers-small.png');
+		background-position:top left;
+	}
+	.logo.nflBAL-small {		
+		background-image: url('/assets/nfl-images/nfl-baltimoreravens-small.png');
+		background-position:top left;
+	}
+	.logo.nflCIN-small {		
+		background-image: url('/assets/nfl-images/nfl-cincinnatibengals-small.png');
+		background-position:top left;
+	}
+	.logo.nflCLE-small {		
+		background-image: url('/assets/nfl-images/nfl-clevelandbrowns-small.png');
+		background-position:top left;
+	}
+	.logo.nflHOU-small {		
+		background-image: url('/assets/nfl-images/nfl-houstontexans-small.png');
+		background-position:top left;
+	}
+	.logo.nflTEN-small {		
+		background-image: url('/assets/nfl-images/nfl-tennesseetitans-small.png');
+		background-position:top left;
+	}
+	.logo.nflJAC-small {		
+		background-image: url('/assets/nfl-images/nfl-jacksonvillejaguars-small.png');
+		background-position:top left;
+	}
+	.logo.nflIND-small {		
+		background-image: url('/assets/nfl-images/nfl-indianapoliscolts-small.png');
+		background-position:top left;
+	}
+	.logo.nflOAK-small {		
+		background-image: url('/assets/nfl-images/nfl-oaklandraiders-small.png');
+		background-position:top left;
+	}
+	.logo.nflSD-small {		
+		background-image: url('/assets/nfl-images/nfl-sandiegochargers-small.png');
+		background-position:top left;
+	}
+	.logo.nflDEN-small {		
+		background-image: url('/assets/nfl-images/nfl-denverbroncos-small.png');
+		background-position:top left;
+	}
+	.logo.nflKC-small {		
+		background-image: url('/assets/nfl-images/nfl-kansascitychiefs-small.png');
+		background-position:top left;
+	}
+	.logo.nflNYG-small {		
+		background-image: url('/assets/nfl-images/nfl-nygiants-small.png');
+		background-position:top left;
+	}
+	.logo.nflDAL-small {		
+		background-image: url('/assets/nfl-images/nfl-dallascowboys-small.png');
+		background-position:top left;
+	}
+	.logo.nflPHI-small {		
+		background-image: url('/assets/nfl-images/nfl-philadelphiaeagles-small.png');
+		background-position:top left;
+	}
+	.logo.nflWAS-small {		
+		background-image: url('/assets/nfl-images/nfl-washingtonredskins-small.png');
+		background-position:top left;
+	}
+	.logo.nflGB-small {		
+		background-image: url('/assets/nfl-images/nfl-greenbaypackers-small.png');
+		background-position:top left;
+	}
+	.logo.nflDET-small {		
+		background-image: url('/assets/nfl-images/nfl-detroitlions-small.png');
+		background-position:top left;
+	}
+	.logo.nflCHI-small {		
+		background-image: url('/assets/nfl-images/nfl-chicagobears-small.png');
+		background-position:top left;
+	}
+	.logo.nflMIN-small {		
+		background-image: url('/assets/nfl-images/nfl-minnesotavikings-small.png');
+		background-position:top left;
+	}
+	.logo.nflNO-small {		
+		background-image: url('/assets/nfl-images/nfl-neworleanssaints-small.png');
+		background-position:top left;
+	}
+	.logo.nflATL-small {		
+		background-image: url('/assets/nfl-images/nfl-atlantafalcons-small.png');
+		background-position:top left;
+	}
+	.logo.nflCAR-small {		
+		background-image: url('/assets/nfl-images/nfl-carolinapanthers-small.png');
+		background-position:top left;
+	}
+	.logo.nflTB-small {		
+		background-image: url('/assets/nfl-images/nfl-tampabaybuccaneers-small.png');
+		background-position:top left;
+	}
+	.logo.nflSF-small {		
+		background-image: url('/assets/nfl-images/nfl-sanfrancisco49ers-small.png');
+		background-position:top left;
+	}
+	.logo.nflSEA-small {		
+		background-image: url('/assets/nfl-images/nfl-seattleseahawks-small.png');
+		background-position:top left;
+	}
+	.logo.nflARI-small {		
+		background-image: url('/assets/nfl-images/nfl-arizonacardinals-small.png');
+		background-position:top left;
+	}
+	.logo.nflSTL-small {		
+		background-image: url('/assets/nfl-images/nfl-stlouisrams-small.png');
+		background-position:top left;
+	}
 .info, .success, .warning, .error, .validation {
 	border: 1px solid;
 	margin: 10px 0px;
@@ -119,6 +260,10 @@ body {
 		top:0;
 		left:0;
 		z-index: 300;
+        border-bottom:1px solid #D2D2D2;
+        -moz-box-shadow:0px 2px 12px #E2E2E2;
+        -webkit-box-shadow:0px 2px 12px #E2E2E2;
+        box-shadow:0px 2px 12px #E2E2E2;
     }
     #topHead {
         margin: 0 auto;
@@ -131,7 +276,6 @@ body {
 	    width:50px;
 	    height:50px;
 	    float:left;
-	    margin-left:40px;
 	}
 	#home a {
 	    color:#797979;

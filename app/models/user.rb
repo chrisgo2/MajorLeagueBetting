@@ -16,6 +16,8 @@
 class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :name, :email, :username, :password, :password_confirmation
+  
+  after_initialize :starting_money
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -65,6 +67,11 @@ class User < ActiveRecord::Base
     def secure_hash(string)
       Digest::SHA2.hexdigest(string)
     end
+    
+    def starting_money
+      self.money ||= 10000
+    end
+
 end
 
  
