@@ -8,6 +8,7 @@ log/development.log
 /.idea/
 .bundle
 
+
 g/*.log
 *.log
 /tmp/
