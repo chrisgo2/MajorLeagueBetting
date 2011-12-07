@@ -19,6 +19,11 @@ class User < ActiveRecord::Base
     
   has_attached_file :avatar, :styles => { :medium => "200x200>", :thumb => "100x100>", :header => "37x37" }
   
+    
+  has_many :achievements
+  has_many :over_under_bets
+  has_many :head2head_bets, :class_name => "Game_bets_h2h"
+  
   after_initialize :starting_money
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
