@@ -77,11 +77,18 @@ body {
 	height:32px;
 	background-repeat:no-repeat;
 	display:block;
-	text-decoration:none;
-	text-shadow: 2px 2px 3px;
-	padding: 5px 0 0 35px;
-	color:#000000;
+	
 }
+	a.logo { 
+		text-decoration:none;
+		text-shadow: 2px 2px 2px;
+		padding: 5px 4px 0 35px;
+		color:#000000;
+	}
+	a.logo:hover { 
+		background-color:#FFF6A9;
+		text-decoration:underline;
+	}
 	.logo.nflNE-small {		
 		background-image: url('/assets/nfl-images/nfl-newenglandpatriots-small.png');
 		background-position:top left;
