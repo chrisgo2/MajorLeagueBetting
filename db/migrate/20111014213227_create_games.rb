@@ -8,7 +8,7 @@ class CreateGames < ActiveRecord::Migration
       t.integer  :away_score
       t.float    :spread
       t.float    :spread_check
-      t.boolean  :complete
+      t.boolean  :completed
       t.integer  :week
       t.datetime :start_time
       
