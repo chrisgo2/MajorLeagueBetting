@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111118155113) do
+ActiveRecord::Schema.define(:version => 20111207051514) do
+
+  create_table "achievements", :force => true do |t|
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "game_bets_h2hs", :force => true do |t|
     t.integer  "user_id"
@@ -32,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20111118155113) do
     t.integer  "away_score"
     t.float    "spread"
     t.float    "spread_check"
-    t.boolean  "complete"
+    t.boolean  "completed"
     t.integer  "week"
     t.datetime "start_time"
     t.datetime "created_at"

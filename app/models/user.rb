@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
     
   has_many :achievements
   has_many :over_under_bets
+  has_many :head2head_bets, :class_name => "Game_bets_h2h"
   
   after_initialize :starting_money
 
