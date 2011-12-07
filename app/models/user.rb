@@ -17,12 +17,12 @@ class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :name, :email, :username, :password, :password_confirmation
   
-    
-  has_many :achievements
-  has_many :over_under_bets
+   has_many :achievements
+   has_many :over_under_bets
+ 	 
   has_many :head2head_bets, :class_name => "Game_bets_h2h"
   
-  after_initialize :starting_money
+  
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 

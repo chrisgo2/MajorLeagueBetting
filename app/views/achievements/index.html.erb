@@ -5,13 +5,7 @@
 This is the Achievements Feed for <%= current_user.name %>
 
 <style type="text/css">
-.newStyle1 {	   
-   border-style: dotted;
-   padding: 1em;
-   margin-bottom: 2em;
-   font: bold smaller sans-serif;
-   background-image: url(<%= asset_path 'bk_shelf.png' %>)    
-}
+
 .auto-style1 {
 	border: 1px solid #800080;
 	
@@ -25,8 +19,14 @@ This is the Achievements Feed for <%= current_user.name %>
 	text-align: center;
 	background-color: #FFFFFF;
 }
+
+body {background-image:url('/public/images/bk_shelf.png')}
 </style>
 
+<div id="topbar">
+</div>
+
+<body>
 <form id="form1" runat="server">
 	<table align="center" class="auto-style1" style="width: 100%; height: 150px">
 		<tr>
@@ -49,7 +49,7 @@ This is the Achievements Feed for <%= current_user.name %>
 			
 			
 			
-		<% end %>
+			<% end %>
 		
 			
 			
@@ -144,6 +144,7 @@ This is the Achievements Feed for <%= current_user.name %>
 		</tr>
 	</table>
 </form>
+</body>
 </div>
 
 
