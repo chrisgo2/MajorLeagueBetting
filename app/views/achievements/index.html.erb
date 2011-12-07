@@ -44,7 +44,9 @@ This is the Achievements Feed for <%= current_user.name %>
 			
 			<% if current_user.name == "Cory" %>
 			<%= image_tag '/public/images/nfl.png' %>						
-			<img src ='<%= League.find(1).logo_path %>' width="37" height="37"/>  Week 13						
+			<img src ='<%= League.find(1).logo_path %>' width="37" height="37"/>  Week 13
+			<%=Game.find(148).away_team.short_name%>
+			<%=User.find(1).over_under_bet.won_or_lost.count%>
 			<% end %>
 			
 			
