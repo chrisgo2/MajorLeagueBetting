@@ -1,10 +1,7 @@
 class AchievementsController < ApplicationController
-  
-  #belongs_to :user, :class_name => "Achievement"
-  
+    
   def index
-    
-    
+    #@achievements = over_under_bet.find(:all)    
   end
 
 end

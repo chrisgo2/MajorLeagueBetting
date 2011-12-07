@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-  
-  has_many :achievements
-  has_many :over_under_bets
+
   
   def index
     
