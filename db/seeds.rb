@@ -323,7 +323,7 @@ nfl.xpath('//table/tbody/tr').each do |rowNode|
                     :home_score => hs,
                     :away_score => as,
                     :week => week_num,
-                    :completed => over,
+                    :complete => over,
                     :start_time => my_date
         end
       end

@@ -81,6 +81,8 @@ class Team < ActiveRecord::Base
       else if rowNode['class'] == "tbdy1"
 
         name = rowNode.child.text.strip #Team Name
+    
+        name = name.split("-").last.strip
 
         temp = rowNode.child.next_sibling.next_sibling.text.strip #Wins
         wins = temp.to_i
