@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -32,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20111118155113) do
     t.integer  "away_score"
     t.float    "spread"
     t.float    "spread_check"
-    t.boolean  "completed"
+    t.boolean  "complete"
     t.integer  "week"
     t.datetime "start_time"
     t.datetime "created_at"

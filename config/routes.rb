@@ -6,11 +6,13 @@ Majorleaguebetting::Application.routes.draw do
   root :to => "home#private", :constraints => lambda{|r| r.cookies.key?("remember_token") }   
   root :to => 'home#public'
 
+  get "/" => 'home#public', :as => "public_root"
   get "/" => 'home#private', :as => "user_root"
   
   resources :users,    :path => "signup", :only => [:create]
   resources :sessions, :path => "signin", :only => [:create, :destroy]
   resources :games, :only => [:index, :show]
+  resources :teams, :only => [:index, :show]
   resources :statistics, :only => [:index]
   resources :leaderboards, :only => [:index]
   resources :achievements, :only => [:index, :show]
