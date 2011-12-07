@@ -81,6 +81,8 @@ class Team < ActiveRecord::Base
       else if rowNode['class'] == "tbdy1"
 
         name = rowNode.child.text.strip #Team Name
+    
+        name = name.split("-").last.strip
 
         temp = rowNode.child.next_sibling.next_sibling.text.strip #Wins
         wins = temp.to_i
@@ -121,21 +123,24 @@ class Team < ActiveRecord::Base
         #printf("\n    Conf Record: %d-%d",conf_wins,conf_losses)
         #printf("\n    Div Record:  %d-%d",div_wins,div_losses)
         
+        #printf("\n  Name: %s",name)
         team = Team.find_by_name(name)
-        team.wins = wins
-        team.losses = losses
-        team.ties = ties
-        team.home_wins = home_wins
-        team.home_losses = home_losses
-        team.road_wins = away_wins
-        team.road_losses = away_losses
-        team.conf_wins = conf_wins
-        team.conf_losses = conf_losses
-        team.div_wins = div_wins
-        team.div_losses = div_losses
-        team.points_for = points_for
-        team.points_against = points_against
-        team.save!
+        if !team.nil? 
+          team.wins = wins
+          team.losses = losses
+          team.ties = ties
+          team.home_wins = home_wins
+          team.home_losses = home_losses
+          team.road_wins = away_wins
+          team.road_losses = away_losses
+          team.conf_wins = conf_wins
+          team.conf_losses = conf_losses
+          team.div_wins = div_wins
+          team.div_losses = div_losses
+          team.points_for = points_for
+          team.points_against = points_against
+          team.save! 
+        end
         
       else
         #do nothing for now

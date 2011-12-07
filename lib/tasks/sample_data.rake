@@ -8,8 +8,7 @@ namespace :db do
                  :email => "example@railstutorial.org",
                  :username => "ExampleUsername",
                  :password => "foobar",
-                 :password_confirmation => "foobar",
-                 :money => '99')
+                 :password_confirmation => "foobar")
     99.times do |n|
       name  = Faker::Name.name
       email = "example-#{n+1}@railstutorial.org"
@@ -20,8 +19,7 @@ namespace :db do
                    :email => email,
                    :username => username,
                    :password => password,
-                   :password_confirmation => password,
-                   :money => money)
-    end
+                   :password_confirmation => password)
+      end
   end
 end
