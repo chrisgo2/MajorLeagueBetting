@@ -4,26 +4,19 @@
   This is the Games Feed for <%= current_user.name %><br></br>
 </div>
 <img src ='<%= League.find(1).logo_path %>' width="37" height="37"/>  Week 13
-
-<div style="height:350px;width:300px;overflow-y:scroll;overflow-x:hidden;background-color:#DDD">
   
   
 <% @games.each do |game| %>
   <table>
     <tr>
       <td><%= link_to game.away_team.short_name, game.away_team, :class => "logo nfl" + game.away_team.short_name + "-small" %></td>
-      <td width = 45px> @ </td>
-      <td width = 20px>C</td>
-      <td> #field# <td>     
-    </tr> 
-    <tr>
       <td><%= link_to game.home_team.short_name, game.home_team, :class => "logo nfl" + game.home_team.short_name + "-small" %></td>
       <td><%= game.spread %></td>
-      <td width>C</td>
-      <td> #field# <td>
-    </tr>
+      <td><%= link_to_colorbox "Bet", new_game_bet_path(game) %> </td>
+      <td><%= game.id %> </td>
+    </tr> 
   </table>
   </br>
 <% end %>
-</div>
+
 Submit!

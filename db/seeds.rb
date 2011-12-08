@@ -637,6 +637,69 @@ Team.update_from_web!
 #Quarterback.update_from_web!
 #Runningback.update_from_web!
             
+            
+            Achievement.create :title => "First Bet",
+                               :description => "The user has made their 1st - bet",
+                               :type => "Betting",
+                               :logo_path => "/public/images/achievements/Bonus.png"
+                               
+            Achievement.create :title => "Fifth Bet",
+                               :description => "The user has made their 5rd - bet",
+                               :type => "Betting",
+                               :logo_path => "/public/images/achievements/Bonus.png"
+            
+            Achievement.create :title => "Tenth Bet",
+                               :description => "The user has made their 10th - bet",
+                               :type => "Betting",
+                               :logo_path => "/public/images/achievements/Bonus.png"
+                               
+            Achievement.create :title => "25th Bet",
+                               :description => "The user has made their 25th - bet",
+                               :type => "Betting",
+                               :logo_path => "/public/images/achievements/Bonus.png"
+                               
+            Achievement.create :title => "50th Bet",
+                               :description => "The user has made their 50th - bet",
+                               :type => "Betting",
+                               :logo_path => "/public/images/achievements/Bonus.png"
+                               
+            Achievement.create :title => "100th Bet",
+                               :description => "The user has made their 100th - bet",
+                               :type => "Betting",
+                               :logo_path => "/public/images/achievements/Bonus.png"
+           #U S E R     W I N S
+           
+           Achievement.create :title => "First Win",
+                               :description => "The user has won their first bet",
+                               :type => "Wins",
+                               :logo_path => "/public/images/achievements/WinsA.png"
+            
+            Achievement.create :title => "Fifth Win",
+                               :description => "The user has won their fifth bet ",
+                               :type => "Wins",
+                               :logo_path => "/public/images/achievements/WinsA.png"
+            
+            Achievement.create :title => "Tenth Win",
+                               :description => "The user has won their tenth bet",
+                               :type => "Wins",
+                               :logo_path => "/public/images/achievements/WinsA.png"
+            
+            Achievement.create :title => "25th Win",
+                               :description => "The user has won their 25th bet",
+                               :type => "Wins",
+                               :logo_path => "/public/images/achievements/WinsA.png"
+            
+            
+            
+            Achievement.update_from_web!
+            
+            
+            
+            
+            
+            
+            
+            
 #NFL Schedule Finder
 #Sean C. Allen
 #CSU, Chico
@@ -710,7 +773,7 @@ nfl.xpath('//table/tbody/tr').each do |rowNode|
                     :home_score => hs,
                     :away_score => as,
                     :week => week_num,
-                    :complete => over,
+                    :completed => over,
                     :start_time => my_date
         end
       end

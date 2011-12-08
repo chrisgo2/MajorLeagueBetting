@@ -15,9 +15,14 @@
 
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :name, :email, :username, :password, :password_confirmation
-  
-  after_initialize :starting_money
+  attr_accessible :name, :email, :username, :password, :password_confirmation, :avatar
+    
+  has_attached_file :avatar, :styles => { :medium => "200x200>", :thumb => "100x100>", :header => "37x37" }
+  has_and_belongs_to_many :user_achievements  	 
+  has_many :head2head_bets, :class_name => "Game_bets_h2h"
+
+  after_initialize :init
+  before_save :encrypt_password
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -31,9 +36,11 @@ class User < ActiveRecord::Base
             :uniqueness => { :case_sensitive => false }
   validates :password, :presence     => true,
                        :confirmation => true,
-                       :length       => { :within => 6..50 }
+                       :length       => { :within => 6..50 }                       
 
-  before_save :encrypt_password
+  def init
+    self.money ||= 1000
+  end
 
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
@@ -67,11 +74,6 @@ class User < ActiveRecord::Base
     def secure_hash(string)
       Digest::SHA2.hexdigest(string)
     end
-    
-    def starting_money
-      self.money ||= 10000
-    end
-
 end
 
  
