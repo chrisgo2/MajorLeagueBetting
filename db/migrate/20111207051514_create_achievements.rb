@@ -1,9 +1,9 @@
 class CreateAchievements < ActiveRecord::Migration
   def change
     create_table :achievements do |t|
+      t.string    :title
       t.string    :description
-      t.integer   :user.id
-      t.bool      :done
+      t.string    :type
       t.timestamps
     end
   end
