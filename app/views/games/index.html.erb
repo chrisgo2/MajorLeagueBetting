@@ -12,7 +12,8 @@
       <td><%= link_to game.away_team.short_name, game.away_team, :class => "logo nfl" + game.away_team.short_name + "-small" %></td>
       <td><%= link_to game.home_team.short_name, game.home_team, :class => "logo nfl" + game.home_team.short_name + "-small" %></td>
       <td><%= game.spread %></td>
-      <td><%= link_to_colorbox "Bet", new_bet_path %> </td>
+      <td><%= link_to_colorbox "Bet", new_game_bet_path(game) %> </td>
+      <td><%= game.id %> </td>
     </tr> 
   </table>
   </br>

@@ -11,12 +11,14 @@ Majorleaguebetting::Application.routes.draw do
   
   resources :users,    :path => "signup", :only => [:create]
   resources :sessions, :path => "signin", :only => [:create, :destroy]
-  resources :games, :only => [:index, :show]
+  resources :games, :only => [:index, :show] do
+     resources :bets, :only => [:index, :show, :new, :destroy]
+  end
   resources :teams, :only => [:index, :show]
   resources :statistics, :only => [:index]
   resources :leaderboards, :only => [:index]
   resources :achievements, :only => [:index, :show]
-  resources :bets, :only => [:index, :show, :new, :destroy]
+ 
   
   match '/profile', :to => 'users#show', :as => "user"
   match '/signin',  :to => 'sessions#new'
