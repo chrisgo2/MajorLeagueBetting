@@ -10,8 +10,9 @@
 					<%= number_to_currency(current_user.money, :precision=>0) %>
 				</span>
 				<% if current_user.avatar? %>
+					
 				<% end %>
-				<%= link_to image_tag(current_user.avatar.url(:header), :border => 0 ) + current_user.username, current_user, :id => "userLink" %>
+<%= link_to image_tag(current_user.avatar.url(:header), :border => 0 ) + current_user.username, current_user, :id => "userLink" %>
 				<%= link_to "Sign out", signout_path, :method => :delete, :class => "signin" %>
 			<% else %>
 				<a href="" class="signin"><span>Sign in</span></a>
