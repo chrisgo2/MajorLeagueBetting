@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20111208001433) do
     t.string   "title"
     t.string   "description"
     t.string   "type"
+    t.string   "logo_path"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

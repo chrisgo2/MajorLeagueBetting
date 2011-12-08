@@ -637,6 +637,21 @@ Team.update_from_web!
 #Quarterback.update_from_web!
 #Runningback.update_from_web!
             
+            
+            Achievement.create :title => "First Bet",
+                               :description => "The user has made their 1st - bet",
+                               :type => "Betting",
+                               :logo_path => "/public/images/achievements/Bonus.png"
+            
+            Achievement.update_from_web!
+            
+            
+            
+            
+            
+            
+            
+            
 #NFL Schedule Finder
 #Sean C. Allen
 #CSU, Chico
