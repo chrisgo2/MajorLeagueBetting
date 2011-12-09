@@ -691,7 +691,7 @@ Headline.update_from_web!
             
             
             
-            Achievement.update_from_web!
+            Achievement.update_A!
 
 
             
