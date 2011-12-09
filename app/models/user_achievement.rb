@@ -5,7 +5,7 @@ class UserAchievement < ActiveRecord::Base
    has_and_belongs_to_many :users
    
   
-  def self.update_from_web!
+  def self.update_A
   require 'date'
   
   user_id = current_user.id
@@ -14,6 +14,6 @@ class UserAchievement < ActiveRecord::Base
   
   
   
-  
+    self.update_A
   end
   end

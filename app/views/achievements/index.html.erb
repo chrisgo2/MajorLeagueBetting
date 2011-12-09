@@ -33,7 +33,7 @@ body {background-image:url('/public/images/bk_shelf.png')}
 	
 	<% else %>
 		<p> These are the current bets: </p>
-		<% @bets.each do |c| %>
+		<% @bets.find(:all).each do |c| %>
 		<%= link_to c.team_id, {:action => 'new', :id => current_user.id} -%>
 	<% end %>
 	<% end %>
