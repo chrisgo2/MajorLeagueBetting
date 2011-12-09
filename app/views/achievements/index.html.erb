@@ -50,9 +50,7 @@ body {background-image:url('/public/images/bk_shelf.png')}
 			<img src ='<%= League.find(1).logo_path %>' width="37" height="37"/>  Week 13
 			<% end %>
 			
-			<% if (betCollection.count > 1 && current_user.achievements.find(1).empty?) %>
-			<% @achievement.create (:user_id => current_user.id, :achievement_id => 1) %>
-			<% end %>
+			
 
 			
 			
