@@ -12,40 +12,23 @@
 #
 
 
-      #t.string    :title
-      #t.string    :description
-      #t.string    :type
-      #t.string   :logo_path
-
 class Achievement < ActiveRecord::Base
   belongs_to :user_achievement
-    
+  
     def self.update_A
-      
-    require 'rubygems'
-    require 'date'
-    
-    title = String.new
-    description = String.new
-    type = String.new
-    logo_path = String.new
-    
-    
 
-      Bet.each do |f|
+      #Bet.each do |f|
+      #
+      #      if (( Bet.find(:all, :conditions => ["win_status=?", true])).count == 0 )
+      #            Achievement.find(1).title
+      #            
+      #            Achievement.each do |g|
+      #              g.create(:user_id => current_user.id, :achievement_id => 1)
+      #            end
+      #            g.save!
+      #              f.save!
+      #      end
+      #end
     
-            if (( Bet.find(:all, :conditions => ["win_status=?", true])).count == 0 )
-                  Achievement.find(1).title
-                  
-                  Achievement.each do |g|
-                    g.create(:user_id => current_user.id, :achievement_id => 1)
-                  end
-                  g.save!
-                    f.save!
-            end
-      end
-      
-      
-      self.update_A
     end 
 end

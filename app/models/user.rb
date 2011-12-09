@@ -18,7 +18,7 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessor :password
+  attr_accessor    :password
   attr_accessible :name, :email, :username, :password, :password_confirmation, :avatar
     
   has_attached_file       :avatar, :styles => { :medium => "200x200>", :thumb => "100x100>", :header => "37x37" }
