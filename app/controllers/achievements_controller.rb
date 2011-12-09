@@ -8,9 +8,9 @@ class AchievementsController < ApplicationController
     end
   
   def create
-      if (( Bet.find(:all, :conditions => ["win_status=?", true])).count == 0 )
-        flash[:notice] = 'The win status was found'
-      end
+      #if (( Bet.find(:all, :conditions => ["win_status=?", true])).count == 1 )
+        @user_achievement = user_achievement.new(params[:user_id => current_user.id, :achievement_id => 1])
+      #end
       
   end
 
