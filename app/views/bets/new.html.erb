@@ -1,14 +1,14 @@
 <h2><%= @game.home_team.name%> VS. <%= @game.away_team.name%></h2>
+<span> Spread: <%= @game.spread%> </span>
 <div>
-  <%= semantic_form_for @head2head do |f| %>
-    <%= f.inputs do %>
-      <%= f.input :winner_selection, :as => :select,  :collection => { @game.home_team.short_name =>  @game.home_team.id, @game.away_team.short_name =>  @game.away_team.id } %>
-      <%= f.input :categories %>
-      <%= f.input :created_at, :as => :string %>
-    <% end %>
-    <%= f.buttons do %>
-      <%= f.commit_button %>
-    <% end %>
+  <%= semantic_form_for @bet do |f| %>
+      <%= f.inputs do %>
+        <%= f.input :team_id, :label => "Choose winner", :as => :select,  :collection => { @game.home_team.short_name =>  @game.home_team.id, @game.away_team.short_name =>  @game.away_team.id } %>
+        <%= f.input :wager, :as => :number, :min => 1 %>
+      <% end %>
+      <%= f.buttons do %>
+        <%= f.commit_button %>
+      <% end %>
   <% end %>
 </div>
 

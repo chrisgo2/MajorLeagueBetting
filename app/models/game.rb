@@ -22,8 +22,7 @@ class Game < ActiveRecord::Base
   
   belongs_to :away_team, :class_name => "Team"
   belongs_to :home_team, :class_name => "Team"
-  has_many :head2head_bets
-  has_many :overunder_bets
+  has_many   :bets
 
 
   

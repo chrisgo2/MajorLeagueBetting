@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: achievements
+#
+#  id          :integer         not null, primary key
+#  title       :string(255)
+#  description :string(255)
+#  type        :string(255)
+#  logo_path   :string(255)
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
 
       #t.string    :title
       #t.string    :description

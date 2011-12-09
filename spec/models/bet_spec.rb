@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe Head2headBet do
+describe Bet do
   pending "add some examples to (or delete) #{__FILE__}"
 end
