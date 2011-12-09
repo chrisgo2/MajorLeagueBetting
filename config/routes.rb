@@ -6,22 +6,22 @@ Majorleaguebetting::Application.routes.draw do
   root :to => "home#private", :constraints => lambda{|r| r.cookies.key?("remember_token") }   
   root :to => 'home#public'
 
-  get "/" => 'home#public', :as => "public_root"
+  get "/" => 'home#public',  :as => "public_root"
   get "/" => 'home#private', :as => "user_root"
   
-  resources :users,    :path => "signup", :only => [:create]
+  resources :users,      :path => "signup", :only => [:create]
   resources :sessions, :path => "signin", :only => [:create, :destroy]
-  resources :games, :only => [:index, :show] do
-     resources :bets, :only => [:index, :show, :new, :destroy]
+  resources :games,    :only => [:index, :show] do
+     resources :bets, :only => [:index, :show, :new, :create, :destroy]
   end
-  resources :teams, :only => [:index, :show]
-  resources :statistics, :only => [:index]
-  resources :leaderboards, :only => [:index]
+  resources :teams,              :only => [:index, :show]
+  resources :statistics,         :only => [:index]
+  resources :leaderboards,   :only => [:index]
   resources :achievements, :only => [:index, :show]
  
   
-  match '/profile', :to => 'users#show', :as => "user"
-  match '/signin',  :to => 'sessions#new'
+  match '/profile',   :to => 'users#show', :as => "user"
+  match '/signin',   :to => 'sessions#new'
   match '/signup',  :to => 'users#new'
   match '/signout', :to => 'sessions#destroy'
 

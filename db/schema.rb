@@ -11,24 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111208001433) do
+ActiveRecord::Schema.define(:version => 20111209021641) do
 
   create_table "achievements", :force => true do |t|
     t.string   "title"
     t.string   "description"
     t.string   "type"
     t.string   "logo_path"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "game_bets_h2hs", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "game_id"
-    t.integer  "team_id"
-    t.integer  "wager"
-    t.boolean  "status"
-    t.boolean  "won_or_lost"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -44,6 +33,17 @@ ActiveRecord::Schema.define(:version => 20111208001433) do
     t.boolean  "completed"
     t.integer  "week"
     t.datetime "start_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "head2head_bets", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "game_id"
+    t.integer  "winner_selection_id"
+    t.integer  "wager"
+    t.boolean  "is_over"
+    t.boolean  "win_status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -66,15 +66,15 @@ ActiveRecord::Schema.define(:version => 20111208001433) do
 
   add_index "leagues", ["name"], :name => "index_leagues_on_name", :unique => true
 
-  create_table "over_under_bets", :force => true do |t|
-    t.string   "position"
+  create_table "overunder_bets", :force => true do |t|
     t.integer  "user_id"
     t.integer  "game_id"
-    t.integer  "position_id"
-    t.integer  "wager"
     t.float    "line"
-    t.boolean  "status"
-    t.boolean  "won_or_lost"
+    t.integer  "type"
+    t.integer  "team_id"
+    t.integer  "wager"
+    t.boolean  "is_over"
+    t.boolean  "win_status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
