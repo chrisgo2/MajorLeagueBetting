@@ -31,19 +31,19 @@ class Achievement < ActiveRecord::Base
     logo_path = String.new
     
     
-
-      Bet.each do |f|
     
-            if (( Bet.find(:all, :conditions => ["win_status=?", true])).count == 0 )
-                  Achievement.find(1).title
-                  
-                  Achievement.each do |g|
-                    g.create(:user_id => current_user.id, :achievement_id => 1)
-                  end
-                  g.save!
-                    f.save!
-            end
-      end
+      #Bet.each do |f|
+      #
+      #      if (( Bet.find(:all, :conditions => ["win_status=?", true])).count == 0 )
+      #            Achievement.find(1).title
+      #            
+      #            Achievement.each do |g|
+      #              g.create(:user_id => current_user.id, :achievement_id => 1)
+      #            end
+      #            g.save!
+      #              f.save!
+      #      end
+      #end
       
       
       self.update_from_web!

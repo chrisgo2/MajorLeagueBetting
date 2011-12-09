@@ -15,6 +15,5 @@ class CreateBets < ActiveRecord::Migration
     end
     
     drop_table :head2head_bets
-    drop_table :overunder_bets
   end
 end
