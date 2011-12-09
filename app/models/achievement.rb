@@ -20,7 +20,7 @@
 class Achievement < ActiveRecord::Base
   belongs_to :user_achievement
     
-    def self.update_from_web!
+    def self.update_A
       
     require 'rubygems'
     require 'date'
@@ -46,6 +46,6 @@ class Achievement < ActiveRecord::Base
       #end
       
       
-      self.update_from_web!
+      self.update_A
     end 
 end
