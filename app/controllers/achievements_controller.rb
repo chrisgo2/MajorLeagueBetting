@@ -1,7 +1,7 @@
 class AchievementsController < ApplicationController
     
   def index
-    #@achievements = over_under_bet.find(:all)    
+    @achievements = Achievement.find(:all)   
   end
 
 end
