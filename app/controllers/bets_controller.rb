@@ -2,6 +2,7 @@ class BetsController < ApplicationController
   before_filter :authenticate
   
   def index
+    @game = Game.find(params[:game_id])
   end
 
   def new

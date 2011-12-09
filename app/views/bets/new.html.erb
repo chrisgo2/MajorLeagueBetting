@@ -1,5 +1,5 @@
 <div>
-  <h2><%= @game.home_team.name%> VS. <%= @game.away_team.name%></h2>
+  <h3><%= @game.home_team.name%> VS. <%= @game.away_team.name%></h3>
   <label class="bluebox spr"> Spread: <%= @game.spread%> </label>
     <%= semantic_form_for ([@game, @bet]) do |f| %>
 	  <%= render 'shared/validation', :object => f.object %>

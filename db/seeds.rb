@@ -688,6 +688,7 @@ Headline.update_from_web!
                                :description => "The user has won their 25th bet",
                                :type => "Wins",
                                :logo_path => "/public/images/achievements/WinsA.png"
+
             #Achievement.update_A!
 
 

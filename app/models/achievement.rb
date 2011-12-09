@@ -15,7 +15,18 @@
 class Achievement < ActiveRecord::Base
   belongs_to :user_achievement
   
-    def self.update_A
+  def self.update_A
+  end
+      
+    #require 'rubygems'
+    #require 'date'
+    #
+    #title = String.new
+    #description = String.new
+    #type = String.new
+    #logo_path = String.new
+    #
+    #
 
       #Bet.each do |f|
       #
@@ -29,6 +40,4 @@ class Achievement < ActiveRecord::Base
       #              f.save!
       #      end
       #end
-    
-    end 
 end
