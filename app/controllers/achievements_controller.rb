@@ -1,15 +1,17 @@
 class AchievementsController < ApplicationController
     
   def index
-    #@achievements = Achievement.find(:all)
-    #@betCollection = BetCollection.find(:all)
+    @achievements = Achievement.find(:all)
+    #@bets = Bet.find(:all)
     #@user_achievement = User_achievement.find(:all)
     
-
-  end
-      
-    def create
-      @user_achievement = User_achievement.create(params[:user_id, achievement_id])
     end
+  
+  def create
+      if (( Bet.find(:all, :conditions => ["win_status=?", true])).count == 0 )
+        flash[:notice] = 'The win status was found'
+      end
+      
+  end
 
 end
