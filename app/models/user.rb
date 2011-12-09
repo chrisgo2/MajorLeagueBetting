@@ -2,24 +2,28 @@
 #
 # Table name: users
 #
-#  id                 :integer         not null, primary key
-#  name               :string(255)
-#  username           :string(255)
-#  email              :string(255)
-#  encrypted_password :string(255)
-#  salt               :string(255)
-#  money              :integer
-#  created_at         :datetime
-#  updated_at         :datetime
+#  id                  :integer         not null, primary key
+#  name                :string(255)
+#  username            :string(255)
+#  email               :string(255)
+#  encrypted_password  :string(255)
+#  salt                :string(255)
+#  money               :integer
+#  created_at          :datetime
+#  updated_at          :datetime
+#  avatar_file_name    :string(255)
+#  avatar_content_type :string(255)
+#  avatar_file_size    :integer
+#  avatar_updated_at   :datetime
 #
 
 class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :name, :email, :username, :password, :password_confirmation, :avatar
     
-  has_attached_file :avatar, :styles => { :medium => "200x200>", :thumb => "100x100>", :header => "37x37" }
+  has_attached_file       :avatar, :styles => { :medium => "200x200>", :thumb => "100x100>", :header => "37x37" }
   has_and_belongs_to_many :user_achievements  	 
-  has_many :head2head_bets, :class_name => "Game_bets_h2h"
+  has_many                :bets
 
   after_initialize :init
   before_save :encrypt_password

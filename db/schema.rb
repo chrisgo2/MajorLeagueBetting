@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111208001433) do
+ActiveRecord::Schema.define(:version => 20111209034129) do
 
   create_table "achievements", :force => true do |t|
     t.string   "title"
@@ -21,13 +21,16 @@ ActiveRecord::Schema.define(:version => 20111208001433) do
     t.datetime "updated_at"
   end
 
-  create_table "game_bets_h2hs", :force => true do |t|
+  create_table "bets", :force => true do |t|
+    t.string   "bet_type"
     t.integer  "user_id"
     t.integer  "game_id"
     t.integer  "team_id"
     t.integer  "wager"
-    t.boolean  "status"
-    t.boolean  "won_or_lost"
+    t.integer  "stat_type"
+    t.float    "line"
+    t.boolean  "is_over"
+    t.boolean  "win_status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -64,19 +67,6 @@ ActiveRecord::Schema.define(:version => 20111208001433) do
   end
 
   add_index "leagues", ["name"], :name => "index_leagues_on_name", :unique => true
-
-  create_table "over_under_bets", :force => true do |t|
-    t.string   "position"
-    t.integer  "user_id"
-    t.integer  "game_id"
-    t.integer  "position_id"
-    t.integer  "wager"
-    t.float    "line"
-    t.boolean  "status"
-    t.boolean  "won_or_lost"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "quarterbacks", :force => true do |t|
     t.string   "name"

@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: user_achievements
+#
+#  id             :integer         not null, primary key
+#  user_id        :integer
+#  achievement_id :integer
+#  name           :string(255)
+#  created_at     :datetime
+#  updated_at     :datetime
+#
+
       #t.integer :user_id
       #t.integer :achievement_id
       #t.string :name
