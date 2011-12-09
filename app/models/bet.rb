@@ -35,11 +35,14 @@ class Bet < ActiveRecord::Base
   def is_head2head?
     bet_type == "head2head"
   end
-<<<<<<< HEAD
-    
-    
-    
-    
+  
+  def is_overunder?
+    bet_type == "overunder"
+  end
+  
+  def is_overunder?
+    bet_type == "overunder" && stat_type == "teamscore"
+  end 
     
   def self.update_bet!
     #NFL Bet Checker
@@ -117,15 +120,6 @@ class Bet < ActiveRecord::Base
   end
 
  end
-
-=======
   
-  def is_overunder?
-    bet_type == "overunder"
-  end
   
-  def is_overunder?
-    bet_type == "overunder" && stat_type == "teamscore"
-  end
 end
->>>>>>> 3004429f151f3ac0dc6c3b1fed29477cbe9afefb
