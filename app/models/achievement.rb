@@ -15,8 +15,8 @@
 class Achievement < ActiveRecord::Base
   belongs_to :user_achievement
   
-    def self.update_A
-<<<<<<< HEAD
+  def self.update_A
+  end
       
     #require 'rubygems'
     #require 'date'
@@ -27,10 +27,7 @@ class Achievement < ActiveRecord::Base
     #logo_path = String.new
     #
     #
-    
-=======
 
->>>>>>> d5608698cae2f643fd68036f5f8f3fec55a4cbb8
       #Bet.each do |f|
       #
       #      if (( Bet.find(:all, :conditions => ["win_status=?", true])).count == 0 )
@@ -43,12 +40,8 @@ class Achievement < ActiveRecord::Base
       #              f.save!
       #      end
       #end
-<<<<<<< HEAD
+
       
       
-      self.update_A
-=======
-    
->>>>>>> d5608698cae2f643fd68036f5f8f3fec55a4cbb8
-    end 
+    self.update_A 
 end
