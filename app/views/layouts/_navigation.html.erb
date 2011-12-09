@@ -38,65 +38,33 @@
 				<tr>
 					<th colspan="2">Upcoming Games:</th>
 				</tr>
-				<tr>
-					
+
+                <%= Game.find(:all, :conditions => {:completed => false}, :limit => 3).each do |game| %>
+                <tr>					
 					<td class="games_upcoming">
-						<%= Team.find(Game.find(148).away_team_id).short_name %>
-						<%= Game.find(148).away_score %> @ 
-						<%= Team.find(Game.find(148).home_team_id).short_name %>   
-						<%= Game.find(148).home_score %>
-						<%= Game.find(148).spread %></td>
-					<td class="games_bets">202 bets</td>
-				</tr>
-				<tr>
-					<td class="games_upcoming">
-						<%= Team.find(Game.find(149).away_team_id).short_name %>
-						<%= Game.find(149).away_score %> @ 
-						<%= Team.find(Game.find(149).home_team_id).short_name %>   
-						<%= Game.find(149).home_score %>
-						<%= Game.find(149).spread %></td>
-					<td class="games_bets">1 bet</td>
-				</tr>
-				<tr>
-					<td class="games_upcoming">
-						<%= Team.find(Game.find(159).away_team_id).short_name %>
-						<%= Game.find(159).away_score %> @ 
-						<%= Team.find(Game.find(159).home_team_id).short_name %>   
-						<%= Game.find(159).home_score %>
-						<%= Game.find(159).spread %></td>
-					<td class="games_bets">48 bets</td>
-				</tr>
-				
+						<%= Team.find(game.away_team_id).short_name %>
+						<%= Team.find(game.home_team_id).short_name %>   
+						<%= game.spread %></td>
+					<td class="games_bets"> 0 bets</td>
+                </tr>
+				<% end %>
+
 				<tr>
 					<th colspan="2">Previous Games:</th>
 				</tr>
+
+                <%= Game.find(:all, :order => "id DESC", :conditions => {:completed => true}, :limit => 3).each do |game| %>
 				<tr>
 					<td class="games_upcoming">
-						<%= Team.find(Game.find(147).away_team_id).short_name %>
-						<%= Game.find(147).away_score %> @ 
-						<%= Team.find(Game.find(147).home_team_id).short_name %>   
-						<%= Game.find(147).home_score %>
-						<%= Game.find(147).spread %></td>
+						<%= Team.find(game.away_team_id).short_name %>
+						<%= game.away_score %> @ 
+						<%= Team.find(game.home_team_id).short_name %>   
+						<%= game.home_score %>
+						<%= game.spread %></td>
 					<td class="games_bets">202 bets</td>
 				</tr>
-				<tr>
-					<td class="games_upcoming">
-					<%= Team.find(Game.find(1).away_team_id).short_name %>
-					<%= Game.find(1).away_score %> @ 
-					<%= Team.find(Game.find(1).home_team_id).short_name %>   
-					<%= Game.find(1).home_score %>
-					<%= Game.find(1).spread %></td>
-					<td class="games_bets">1 bet</td>
-				</tr>
-				<tr>
-					<td class="games_upcoming"> 
-						<%= Team.find(Game.find(24).away_team_id).short_name %>
-						<%= Game.find(24).away_score %> @ 
-						<%= Team.find(Game.find(24).home_team_id).short_name %>   
-						<%= Game.find(24).home_score %>
-						<%= Game.find(24).spread %></td>
-					<td class="games_bets">48 bets</td>
-				</tr>
+                <% end %>
+				
 			</table>
         </div>
 	</div> <!-- games button -->
@@ -135,7 +103,7 @@
 				</tr>
 				<tr>
 					<th>Total Wins:</th>
-					<td> (100th place)</td>
+					<td> <%= Bet.find(:all, :conditions => {:user_id => current_user.id, :win_status => true}).count %> (100th place)</td>
 				</tr>
 				<tr>
 					<th>Achievements:</th>
