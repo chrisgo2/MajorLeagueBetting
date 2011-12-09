@@ -692,13 +692,8 @@ Team.update_from_web!
             
             
             Achievement.update_from_web!
-            
-            
-            
-            
-            
-            
-            
+
+
             
 #NFL Schedule Finder
 #Sean C. Allen

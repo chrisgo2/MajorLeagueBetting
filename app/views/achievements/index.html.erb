@@ -41,21 +41,16 @@ body {background-image:url('/public/images/bk_shelf.png')}
 		</tr>
 		<tr>
 			<td class="auto-style2"><strong><br />
-			
+			<%=Achievement.find(1).title %>
+			<br />
+			<%=Achievement.find(1).type%>
+			<br />
 			<% if current_user.name == "Cory" %>
 			<%= image_tag '/public/images/nfl.png' %>						
 			<img src ='<%= League.find(1).logo_path %>' width="37" height="37"/>  Week 13
-			<%=Game.find(148).away_team.short_name%>
-			
-			
-			
-			<% end %>
-		
-			
-			
+			<% end %>		
 			<br />
 			<br />
-			First bet</strong></td>
 			<td class="auto-style2"><strong><br />
 			<br />
 			<br />
