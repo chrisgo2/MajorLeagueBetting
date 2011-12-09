@@ -41,7 +41,7 @@ class User < ActiveRecord::Base
   validates :password, :presence        => true,
                                      :confirmation  => true,
                                     :length             => { :within => 6..50 },
-                                    :if                     => :password?
+                                    :if                     => :password
   validates :money,    :presence => true, :numericality => { :greater_than => 0 }                       
 
   def init
