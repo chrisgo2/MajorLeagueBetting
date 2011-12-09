@@ -18,7 +18,7 @@
           <tr>
             <td><%= f.wager %></td>
             <td><%= f.bet_type %></td>
-            <td><%= f.team_id %></td>
+            <td><%= link_to f.team.short_name, f.team, :class => "logo nfl" + f.team.short_name + "-small" %></td>
             <td><%= f.win_status %> </td>
           </tr>
         <% end %>
