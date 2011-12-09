@@ -4,3 +4,20 @@
 
   This is the Statistics Feed for <%= current_user.name %>
 </div>
+<% Team.find(:all, :order => "wins DESC").each do |team| %>
+  <table>
+    <tr>
+      <td><img src=<%= team.logo_path %> width="37" height="37"/></td>
+      <td> <%= team.short_name%> </td>
+      <td><%=team.wins%>-<%=team.losses%>-<%=team.ties%></td>
+      <td><%=team.conf_wins%>-<%=team.conf_losses%></td>
+      <td><%=team.div_wins%>-<%=team.div_losses%></td>
+      <td><%=team.home_wins%>-<%=team.home_losses%></td>
+      <td><%=team.road_wins%>-<%=team.road_losses%></td>
+      <td><%=team.points_for%></td>
+      <td><%=team.points_against%></td>
+    </tr>
+  </table>
+  </br>
+
+<% end %>

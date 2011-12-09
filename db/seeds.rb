@@ -633,7 +633,7 @@ Team.create :league_id => League.find_by_short_name("NFL").id,
             :points_against => 0
 
 Team.update_from_web!
-#Headline.update_from_web!
+Headline.update_from_web!
 #Quarterback.update_from_web!
 #Runningback.update_from_web!
             
