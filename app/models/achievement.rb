@@ -40,8 +40,4 @@ class Achievement < ActiveRecord::Base
       #              f.save!
       #      end
       #end
-
-      
-      
-    self.update_A 
 end
