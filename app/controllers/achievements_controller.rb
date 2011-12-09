@@ -1,7 +1,7 @@
 class AchievementsController < ApplicationController
     
   def index
-    @achievements = Achievement.find(:all)
+    @achievements = Achievement.find(params[:win_status])
     #@bets = Bet.find(:all)
     #@user_achievement = User_achievement.find(:all)
     

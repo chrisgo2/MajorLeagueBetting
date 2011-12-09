@@ -28,15 +28,7 @@ body {background-image:url('/public/images/bk_shelf.png')}
 
 <body>
 	
-	<% if @bets.nil? %>
-		<p> There are currently no bets </p>
 	
-	<% else %>
-		<p> These are the current bets: </p>
-		<% @bets.find(:all).each do |c| %>
-		<%= link_to c.team_id, {:action => 'new', :id => current_user.id} -%>
-	<% end %>
-	<% end %>
 	
 	
 <form id="form1" runat="server">
@@ -63,11 +55,6 @@ body {background-image:url('/public/images/bk_shelf.png')}
 			<% end %>
 			
 			
-
-			
-			
-
-
 
 
 			<br />
