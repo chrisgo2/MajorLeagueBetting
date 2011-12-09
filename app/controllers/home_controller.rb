@@ -17,5 +17,7 @@ class HomeController < ApplicationController
     end
     
     @title = "Home"
+    
+    @upcoming_games = Game.find(:all, :limit => 3, :order => "date DESC")
   end
 end

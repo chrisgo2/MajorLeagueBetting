@@ -1,22 +1,22 @@
-<div id="gameFeed">
-  <h1>Games#index</h1>
-  <p>Find me in app/views/games/index.html.erb</p>
-  This is the Games Feed for <%= current_user.name %><br></br>
-</div>
+<div id='games_index'>
 <img src ='<%= League.find(1).logo_path %>' width="37" height="37"/>  Week 13
   
   
-<% @games.each do |game| %>
+
   <table>
+	<tr>
+	    <th>Home</th>
+	    <th>Away</th>
+		<th>Spread</th>
+		<th></th>
+	</tr>
+	<% @games.each do |game| %>
     <tr>
+	  <td><%= link_to game.home_team.short_name, game.home_team, :class => "logo nfl" + game.home_team.short_name + "-small" %></td>
       <td><%= link_to game.away_team.short_name, game.away_team, :class => "logo nfl" + game.away_team.short_name + "-small" %></td>
-      <td><%= link_to game.home_team.short_name, game.home_team, :class => "logo nfl" + game.home_team.short_name + "-small" %></td>
       <td><%= game.spread %></td>
       <td><%= link_to_colorbox "Bet", new_game_bet_path(game) %> </td>
-      <td><%= game.id %> </td>
     </tr> 
+	<% end %>
   </table>
-  </br>
-<% end %>
-
-Submit!
+<div>

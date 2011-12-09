@@ -44,6 +44,40 @@ body {
 	text-align:right;
 }
 
+.bluebox, .bluetab {
+    background-color:#2C71E0;
+}
+
+.redbox, .redtab {
+    background-color:#D44937;
+}
+
+.redbox,
+.bluebox {
+	display:block;
+	-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border:1px transparent;
+    text-align:left;
+    color:#fff;
+    font-size:11px;
+	padding:5px;
+}
+
+.redtab,
+.bluetab {
+	display:block;
+	-moz-border-radius-topleft:5px;
+	-moz-border-radius-topright:5px;
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    border:1px transparent;
+    text-align:left;
+    color:#fff;
+    font-size:11px;
+	padding:5px;
+}
+
 /******************************************************************************
  *                                                                            *
  * Template Layouts: unique styles for elements, styles for website structure *
@@ -62,22 +96,30 @@ body {
 	width:1000px !important;
 	clear: both;
 	display: block;
+	content: ".";
 }
 #navigation {
 	width:358px;
 	float:left;
 }
-#content {
-    width:520px;
-    min-height:500px;
-	clear: both;
-	content: ".";
-	display: block;
-}
 #feedContent {
 	float:right;
 	min-height:600px;
 	min-width:620px;
+}
+#footer {
+    margin-bottom: 30px;
+    padding: 8px;
+    position: relative;
+    border-top: 1px solid #EEEEEE;
+    margin-bottom: 30px;
+    padding: 8px;
+    position: relative;
+}
+.debug_dump {
+	clear: both;
+	display: block;
+	content: ".";
 }
 .logo {
 	border:1px;
