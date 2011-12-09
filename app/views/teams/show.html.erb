@@ -1,0 +1,72 @@
+
+<%= image_tag @team.logo_path %>
+<p>
+Current stats for
+<h1>The <%= @team.name %></h1>
+</p>
+<div style="height:250px;width:300px;overflow-y:scroll;overflow-x:hidden;background-color:#DDD">
+  
+  <table>
+    <tr height = 30px>
+      <td width= 200px>Total Wins:</td>
+      <td><%= @team.wins %></td>     
+    </tr> 
+    <tr height = 30px>
+      <td>Total Losses:</td>
+      <td><%= @team.losses %></td>
+    </tr>
+    <tr height = 30px>
+      <td>Total Ties:</td>
+      <td><%= @team.ties %></td>
+    </tr>
+    <tr height = 30px>
+      <td>Points For:</td>
+      <td><%= @team.points_for %></td>     
+    </tr> 
+    <tr height = 30px>
+      <td>Points Against:</td>
+      <td><%= @team.points_against %></td>
+    </tr>
+    <tr height = 30px>
+      <td>Home Wins:</td>
+      <td><%= @team.home_wins %></td>     
+    </tr> 
+    <tr height = 30px>
+      <td>Home Losses:</td>
+      <td><%= @team.home_losses %></td>
+    </tr>
+    <tr height = 30px>
+      <td>Away Wins:</td>
+      <td><%= @team.road_wins %></td>     
+    </tr> 
+    <tr height = 30px>
+      <td>Away Losses:</td>
+      <td><%= @team.road_losses %></td>
+    </tr>
+    <tr height = 30px>
+      <td>Conference:</td>
+      <td><%= @team.conference %></td>     
+    </tr> 
+    <tr height = 30px>
+      <td>Conference Wins:</td>
+      <td><%= @team.conf_wins %></td>
+    </tr>
+    <tr height = 30px>
+      <td>Conference Losses:</td>
+      <td><%= @team.conf_losses %></td>     
+    </tr> 
+    <tr height = 30px>
+      <td>Division:</td>
+      <td><%= @team.division %></td>
+    </tr>
+    <tr height = 30px>
+      <td>Division Wins:</td>
+      <td><%= @team.div_wins %></td>     
+    </tr> 
+    <tr height = 30px>
+      <td>Division Losses:</td>
+      <td><%= @team.div_losses %></td>
+    </tr>
+  </table>
+  
+</div>

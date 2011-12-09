@@ -12,7 +12,7 @@ Majorleaguebetting::Application.routes.draw do
   resources :users,        :path => "signup", :only => [:create]
   resources :sessions,     :path => "signin", :only => [:create, :destroy]
   resources :games,        :only => [:index, :show] do
-     resources :bets, :only => [:index, :show, :new, :create]
+     resources :bets, :only => [:new, :create, :index] 
   end
   resources :teams,        :only => [:index, :show]
   resources :statistics,   :only => [:index]

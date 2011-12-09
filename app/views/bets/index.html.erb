@@ -1,2 +1,16 @@
-<h1>Bets#index</h1>
-<p>Find me in app/views/bets/index.html.erb</p>
+ <h3><%= @game.home_team.name%> VS. <%= @game.away_team.name%></h3>
+  <table>
+      <tr>
+        <th>Wager Amount</th>
+        <th>Type</th>
+        <th>Team</th>
+        <th>Win</th>
+      </tr>
+        <% @game_bets.bets.each do |f| %>
+          <tr>
+            <td><%= f.wager %></td>
+            <td><%= f.bet_type %></td>
+            <td><%= f.win_status %> </td>
+          </tr>
+        <% end %>
+    </table>

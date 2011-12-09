@@ -2,6 +2,8 @@ class BetsController < ApplicationController
   before_filter :authenticate
   
   def index
+    @game = Game.find(params[:game_id])
+    @bets = @game.bets.where("user_id = ?", current_user.id)
   end
 
   def new

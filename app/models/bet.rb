@@ -22,7 +22,7 @@ class Bet < ActiveRecord::Base
   belongs_to :game
   
   validates :bet_type,  :presence => true
-  validates :user_id,   :presence => true
+  validates :user_id,    :presence => true
   validates :game_id,   :presence => true
   validates :team_id,   :presence => true, 
                         :if => :is_head2head?

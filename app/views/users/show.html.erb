@@ -7,18 +7,25 @@
 
 
 
-  <%= form_for(current_user, :html => { :multipart => true }) do |f| %>
-   <%= render 'shared/validation', :object => f.object %>
-    <div class="label">
-      <%= f.label      :avatar %>
-    </div>
-    <td>
-      <%= f.text_field :name %>
-      <%= f.file_field :avatar %>
-    </td>
-    <div class="btn">
-     <%= f.submit "Upload" %>
-    </div>
-  <% end %>
-  
+    <table>
+      <tr>
+        <th>Wager Amount</th>
+        <th>Type</th>
+        <th>Team</th>
+        <th>Win</th>
+      </tr>
+        <% current_user.bets.each do |f| %>
+          <tr>
+            <td><%= f.wager %></td>
+            <td><%= f.bet_type %></td>
+            <td><%= link_to f.team.short_name, f.team, :class => "logo nfl" + f.team.short_name + "-small" %></td>
+            <td><%= f.win_status %> </td>
+          </tr>
+        <% end %>
+    </table>
+
+    no bets placed!
+    
+
+
 
