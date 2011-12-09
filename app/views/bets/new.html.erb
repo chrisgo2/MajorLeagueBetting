@@ -1,15 +1,20 @@
-<h2><%= @game.home_team.name%> VS. <%= @game.away_team.name%></h2>
-<span> Spread: <%= @game.spread%> </span>
 <div>
-  <%= semantic_form_for ([@game, @bet]) do |f| %>
-	<%= render 'shared/validation', :object => f.object %>
-    <%= f.inputs do %>
-      <%= f.input :team_id, :label => "Choose winner", :as => :select,  :collection => { @game.home_team.short_name =>  @game.home_team.id, @game.away_team.short_name =>  @game.away_team.id } %>
-      <%= f.input :wager, :as => :number, :min => 1 %>
+  <h2><%= @game.home_team.name%> VS. <%= @game.away_team.name%></h2>
+  <label class="bluebox spr"> Spread: <%= @game.spread%> </label>
+    <%= semantic_form_for ([@game, @bet]) do |f| %>
+	  <%= render 'shared/validation', :object => f.object %>
+	  <%= f.inputs do %>
+	    <%= f.input :bet_type, :label => "Bet:", :wrapper_html => { :class => "redtab", :style => "width:150px; margin:0 !important" }, :as => :select, :collection => { "Head2Head" =>  "head2head", "Over Under" =>  "overunder" } %>
+	  <% end %>
+	  <div class="redbox">
+      <%= f.inputs do %>
+        <%= f.input :team_id, :label => "Choose winner:", :as => :select,  :collection => { @game.home_team.short_name =>  @game.home_team.id, @game.away_team.short_name =>  @game.away_team.id } %>
+        <%= f.input :wager, :as => :number, :min => 1, :input_html => { :style => "width:60px;" } %>
+      <% end %>
+      <%= f.buttons do %>
+        <%= f.commit_button "Place bet" %>
+      <% end %>
+	  </div>
     <% end %>
-    <%= f.buttons do %>
-      <%= f.commit_button %>
-    <% end %>
-  <% end %>
-</div>
+<div>
 
