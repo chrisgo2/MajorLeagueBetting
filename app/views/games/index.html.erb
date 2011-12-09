@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-<div id="gameFeed">
-  <h1>Games#index</h1>
-  <p>Find me in app/views/games/index.html.erb</p>
-  This is the Games Feed for <%= current_user.name %><br></br>
-</div>
-<img src ='<%= League.find(1).logo_path %>' width="37" height="37"/>  Week 14
-=======
 <div id='games_index'>
-<img src ='<%= League.find(1).logo_path %>' width="37" height="37"/>  Week 13
->>>>>>> 3004429f151f3ac0dc6c3b1fed29477cbe9afefb
-  
-  
+<img src ='<%= League.find(1).logo_path %>' width="37" height="37"/>  Week <%= @week %>
 
   <table>
 	<tr>

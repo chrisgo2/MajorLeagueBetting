@@ -34,13 +34,15 @@ class User < ActiveRecord::Base
                    :length => { :maximum => 50}
   validates :username, :presence => true,
                        :length => { :maximum => 20},
-            :uniqueness => { :case_sensitive => false }
-  validates :email, :presence => true,
-            :format => { :with => email_regex },
-            :uniqueness => { :case_sensitive => false }
-  validates :password, :presence     => true,
-                       :confirmation => true,
-                       :length       => { :within => 6..50 }                       
+                       :uniqueness => { :case_sensitive => false }
+  validates :email,    :presence => true,
+                       :format => { :with => email_regex },
+                       :uniqueness => { :case_sensitive => false }
+  validates :password, :presence        => true,
+                                     :confirmation  => true,
+                                    :length             => { :within => 6..50 },
+                                    :if                     => :password
+  validates :money,    :presence => true, :numericality => { :greater_than => 0 }                       
 
   def init
     self.money ||= 1000

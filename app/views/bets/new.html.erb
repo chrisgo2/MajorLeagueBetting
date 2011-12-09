@@ -3,6 +3,7 @@
   <label class="bluebox spr"> Spread: <%= @game.spread%> </label>
     <%= semantic_form_for ([@game, @bet]) do |f| %>
 	  <%= render 'shared/validation', :object => f.object %>
+	  <%= render 'shared/validation', :object  => current_user %>
 	  <%= f.inputs do %>
 	    <%= f.input :bet_type, :label => "Bet:", :wrapper_html => { :class => "redtab", :style => "width:150px; margin:0 !important" }, :as => :select, :collection => { "Head2Head" =>  "head2head", "Over Under" =>  "overunder" } %>
 	  <% end %>

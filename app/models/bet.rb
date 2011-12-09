@@ -24,13 +24,20 @@ class Bet < ActiveRecord::Base
   validates :bet_type,  :presence => true
   validates :user_id,   :presence => true
   validates :game_id,   :presence => true
-  validates :team_id,   :presence => true, :if => :is_head2head?
-  validates :stat_type, :presence => true, :if => :is_overunder?
-  validates :line,      :presence => true, :if => :is_overunder?
-  validates :team_id,   :presence => true, :if => :is_overunder_and_teamscore?
-  validates :wager,     :presence => true, :numericality => { :greater_than => 0 }
-  validates :user_id,   :uniqueness => { :scope => [:game_id], :message => "user has already placed this bet" }, :if => :is_head2head?
-  validates :user_id,   :uniqueness => { :scope => [:game_id, :stat_type], :message => "user has already placed this bet" }, :if => :is_overunder?
+  validates :team_id,   :presence => true, 
+                        :if => :is_head2head?
+  validates :stat_type, :presence => true, 
+                        :if => :is_overunder?
+  validates :line,      :presence => true,
+                        :if => :is_overunder?
+  validates :team_id,   :presence => true, 
+                        :if => :is_overunder_and_teamscore?
+  validates :wager,     :presence => true, 
+                        :numericality => { :greater_than => 0 }
+  validates :user_id,   :uniqueness => { :scope => [:game_id], :message => "user has already placed this bet" },
+                        :if => :is_head2head?
+  validates :user_id,   :uniqueness => { :scope => [:game_id, :stat_type], :message => "user has already placed this bet" },
+                        :if => :is_overunder?
   
   def is_head2head?
     bet_type == "head2head"
@@ -40,7 +47,7 @@ class Bet < ActiveRecord::Base
     bet_type == "overunder"
   end
   
-  def is_overunder?
+  def is_overunder_and_teamscore?
     bet_type == "overunder" && stat_type == "teamscore"
   end 
     
@@ -118,8 +125,4 @@ class Bet < ActiveRecord::Base
       end
     end
   end
-
- end
-  
-  
 end

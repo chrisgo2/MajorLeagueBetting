@@ -1,7 +1,9 @@
 class GamesController < ApplicationController
+  before_filter :authenticate
   
   def index
-    @games = Game.find(:all, :conditions => {:week => 13})
+    @week = 13
+    @games = Game.find(:all, :conditions => {:week => @week})
   end
   
   def show
