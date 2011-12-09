@@ -22,15 +22,15 @@ class Achievement < ActiveRecord::Base
     
     def self.update_A
       
-    require 'rubygems'
-    require 'date'
-    
-    title = String.new
-    description = String.new
-    type = String.new
-    logo_path = String.new
-    
-    
+    #require 'rubygems'
+    #require 'date'
+    #
+    #title = String.new
+    #description = String.new
+    #type = String.new
+    #logo_path = String.new
+    #
+    #
     
       #Bet.each do |f|
       #
