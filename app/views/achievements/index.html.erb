@@ -27,6 +27,18 @@ body {background-image:url('/public/images/bk_shelf.png')}
 </div>
 
 <body>
+	
+	<% if @bets.nil? %>
+		<p> There are currently no bets </p>
+	
+	<% else %>
+		<p> These are the current bets: </p>
+		<% @bets.each do |c| %>
+		<%= link_to c.team_id, {:action => 'new', :id => current_user.id} -%>
+	<% end %>
+	<% end %>
+	
+	
 <form id="form1" runat="server">
 	<table align="center" class="auto-style1" style="width: 100%; height: 150px">
 		<tr>
@@ -50,9 +62,7 @@ body {background-image:url('/public/images/bk_shelf.png')}
 			<img src ='<%= League.find(1).logo_path %>' width="37" height="37"/>  Week 13
 			<% end %>
 			
-			<% if (betCollection.count > 1 && current_user.achievements.find(1).empty?) %>
-			<% @achievement.create (:user_id => current_user.id, :achievement_id => 1) %>
-			<% end %>
+			
 
 			
 			
@@ -148,7 +158,9 @@ body {background-image:url('/public/images/bk_shelf.png')}
 			<td class="auto-style2">&nbsp;</td>
 			<td class="auto-style2">&nbsp;</td>
 		</tr>
+		
 	</table>
+	<%= link_to 'Back', {:action => 'index'} %>
 </form>
 </body>
 </div>

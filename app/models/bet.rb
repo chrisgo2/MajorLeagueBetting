@@ -43,7 +43,7 @@ class Bet < ActiveRecord::Base
     bet_type == "head2head"
   end
   
-  def is_overunder?
+   def is_overunder?
     bet_type == "overunder"
   end
   
@@ -112,17 +112,19 @@ class Bet < ActiveRecord::Base
             end
             printf("\nbet %d on %s", cash, Team.find(team).short_name)
             user.update_attribute :money, user.money - cash
-            Bet.create :bet_type => "head2head",
-                       :user_id => user.id,
+              Bet.create :user_id => user.id,
                        :game_id => game,
                        :team_id => team,
                        :wager => cash,
                        :is_over => false
         
-          end
+              end
           self.update_bet!
         end
       end
     end
   end
 end
+  
+  
+
