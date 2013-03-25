@@ -22,6 +22,7 @@ gem "colorbox-rails", "~> 0.0.7"
 gem 'formtastic'
 gem 'tabletastic'
 gem "paperclip", "~> 2.4"
+  gem 'faker', '0.3.1'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -37,9 +38,8 @@ gem "paperclip", "~> 2.4"
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.6'
-
   gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
-  gem 'faker', '0.3.1'
+
 end
 
 group :test do
