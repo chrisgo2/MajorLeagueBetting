@@ -23,7 +23,9 @@ gem "colorbox-rails", "~> 0.0.7"
 gem 'formtastic'
 gem 'tabletastic'
 gem "paperclip", "~> 2.4"
-  gem 'faker', '0.3.1'
+gem 'faker', '0.3.1'
+gem 'thin'
+gem 'pg'
 
 # Use unicorn as the web server
 # gem 'unicorn'
