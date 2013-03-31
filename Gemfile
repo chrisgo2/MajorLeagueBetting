@@ -2,6 +2,17 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'railties', '3.2.13'
+gem 'execjs'
+gem 'therubyracer', '0.11.4'
+gem 'jquery-rails'
+gem 'nokogiri', '1.5.0'
+gem "colorbox-rails", "~> 0.0.7"
+gem 'formtastic'
+gem 'tabletastic'
+gem "paperclip", "~> 2.4"
+gem 'faker', '0.3.1'
+gem 'thin'
+gem 'pg'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -15,17 +26,7 @@ group :assets do
   gem 'uglifier'
 end
 
-gem 'execjs'
-gem 'therubyracer', '0.11.4'
-gem 'jquery-rails'
-gem 'nokogiri', '1.5.0'
-gem "colorbox-rails", "~> 0.0.7"
-gem 'formtastic'
-gem 'tabletastic'
-gem "paperclip", "~> 2.4"
-gem 'faker', '0.3.1'
-gem 'thin'
-gem 'pg'
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
