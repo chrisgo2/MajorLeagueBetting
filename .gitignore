@@ -3,6 +3,7 @@ db/*.sqlite3
 log/*.log
 tmp/**/*
 .idea/workspace.xml
+config/database.yml
 db/development.sqlite3
 log/development.log
 /.idea/
